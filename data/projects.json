@@ -4,9 +4,10 @@
     "types": ["Software / Web"],
     "status": "In Progress",
     "description": [
-      "Built using Angular standalone components with TypeScript and Node.js.",
-      "Includes dynamic Experience and Projects pages with expandable cards.",
-      "Hosted on local server with GitHub integration for version control."
+      "Built with Angular standalone components using TypeScript.",
+      "Project and experience data is statically defined and rendered at build time, with client-side filtering and expansion logic.",
+      "Features dynamic Projects and Experience pages with expandable, responsive cards and image carousels.",
+      "Deployed as a static site on GitHub Pages with Git-based version control and CI-driven builds."
     ],
     "tags": ["Angular", "Node.js", "TypeScript", "Portfolio"],
     "github": "https://github.com/eb613819/personal-website",
