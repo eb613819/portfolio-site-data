@@ -43,10 +43,12 @@
     "types": ["Electronics / Raspberry Pi", "3D Print / Maker"],
     "status": "Not Started",
     "description": [
-      "Build an insulin vial holder for the fridge.",
-      "Include a temp monitor that alerts if the temp is outside range."
+      "Design a safety-focused insulin holder for fridge storage with real temperature awareness.",
+      "Use a microcontroller (not a Pi) mounted outside the fridge with a wired probe inside an insulin vial filled with liquid for thermal mass.",
+      "Display current temperature locally and send email/SMS alerts if insulin risks freezing or overheating.",
+      "Include a pass-through power bank for outage resilience and a dumb thermometer in the holder for redundancy."
     ],
-    "tags": ["Raspberry Pi", "Temperature Monitor", "Smart Home", "Fridge"],
+    "tags": ["ESP32", "Temperature Monitor", "Medical Adjacent", "Fridge", "Alerts", "3D Printing"],
     "images": []
   },
   {
