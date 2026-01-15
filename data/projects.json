@@ -10,7 +10,7 @@
     ],
     "tags": ["Angular", "Node.js", "TypeScript", "Portfolio"],
     "github": "https://github.com/eb613819/personal-website",
-    "images": ["images/site_logo.png"]
+    "images": ["https://raw.githubusercontent.com/eb613819/portfolio-site-data/main/images/site_logo.png"]
   },
   {
     "title": "NAS Build",
@@ -35,7 +35,7 @@
       "Focused on physical assembly, wiring, and enclosure construction."
     ],
     "tags": ["Raspberry Pi", "IoT", "Smart Home", "Hardware"],
-    "images": ["images/magic-mirror.jpg"],
+    "images": ["https://raw.githubusercontent.com/eb613819/portfolio-site-data/main/images/magic-mirror.jpg"],
     "github": "https://github.com/MichMich/MagicMirror"
   },
   {
@@ -60,7 +60,7 @@
       "Included 3D printed mounts and enclosures for components to keep it organized and portable."
     ],
     "tags": ["PenTesting", "Raspberry Pi", "Kali Linux", "3D Printing", "Cybersecurity"],
-    "images": ["images/pentest.jpg"]
+    "images": ["https://raw.githubusercontent.com/eb613819/portfolio-site-data/main/images/pentest.jpg"]
   },
   {
     "title": "Home Lab Server Build",
@@ -74,7 +74,7 @@
       "Installed Proxmox VE to run multiple virtual machines, experimenting with virtualization, networking, and containerized workloads."
     ],
     "tags": ["Homelab", "Server", "Supermicro", "Linux", "Proxmox", "Virtualization"],
-    "images": ["images/server.jpg"]
+    "images": ["https://raw.githubusercontent.com/eb613819/portfolio-site-data/main/images/server.jpg"]
   },
   {
     "title": "3D Printed Stool Foot",
@@ -100,7 +100,7 @@
       "Controlled by Arduino for dynamic visual feedback while playing."
     ],
     "tags": ["Arduino", "LED", "Sensors"],
-    "images": ["images/drum_lights.jpg"]
+    "images": ["https://raw.githubusercontent.com/eb613819/portfolio-site-data/main/images/drum_lights.jpg"]
   },
   {
     "title": "H2Load HTTP/3 Docker Container",
