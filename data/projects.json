@@ -63,7 +63,11 @@
       "Included 3D printed mounts and enclosures for components to keep it organized and portable."
     ],
     "tags": ["PenTesting", "Raspberry Pi", "Kali Linux", "3D Printing", "Cybersecurity"],
-    "images": ["https://raw.githubusercontent.com/eb613819/portfolio-site-data/main/images/pentest.jpg"]
+    "images": [
+      "https://raw.githubusercontent.com/eb613819/portfolio-site-data/main/images/pentest.jpg",
+      "https://raw.githubusercontent.com/eb613819/portfolio-site-data/main/images/pentest2.jpg",
+      "https://raw.githubusercontent.com/eb613819/portfolio-site-data/main/images/pentest3.jpg"
+    ]
   },
   {
     "title": "Home Lab Server Build",
