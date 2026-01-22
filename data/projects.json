@@ -24,7 +24,7 @@
       "Learned hands-on networking and Linux system administration."
     ],
     "tags": ["NAS", "Linux", "RAID", "Networking"],
-    "images": []
+    "images": ["https://raw.githubusercontent.com/eb613819/portfolio-site-data/main/images/hdd.jpg"]
   },
   {
     "title": "Magic Mirror Build",
@@ -51,7 +51,7 @@
       "Include a pass-through power bank for outage resilience and a dumb thermometer in the holder for redundancy."
     ],
     "tags": ["ESP32", "Temperature Monitor", "Medical Adjacent", "Fridge", "Alerts", "3D Printing"],
-    "images": []
+    "images": ["https://raw.githubusercontent.com/eb613819/portfolio-site-data/main/images/insulin.jpg"]
   },
   {
     "title": "Raspberry Pi Pen Testing Rig",
@@ -121,7 +121,7 @@
       "Tested HTTP/3 and HTTP/2 endpoints for performance and stress testing."
     ],
     "tags": ["Docker", "HTTP/3", "HTTP/2", "Networking", "Containerization"],
-    "images": [],
+    "images": ["https://raw.githubusercontent.com/eb613819/portfolio-site-data/main/images/network.jpg"],
     "dockerhub": "https://hub.docker.com/repository/docker/eb613819/h2load-http3"
   },
   {
@@ -143,5 +143,18 @@
       "https://raw.githubusercontent.com/eb613819/portfolio-site-data/main/images/walk_pad3.jpg",
       "https://raw.githubusercontent.com/eb613819/portfolio-site-data/main/images/walk_pad4.jpg"
     ]
+  },
+    {
+    "title": "3D Printer Closet Environment Monitor",
+    "types": ["Electronics / Raspberry Pi", "3D Print / Maker"],
+    "status": "Not Started",
+    "description": [
+      "Use a Raspberry Pi with an Enviro-style sensor hat to continuously monitor temperature, humidity, and air quality in the 3D printer closet.",
+      "Detect abnormal heat buildup, humidity levels that affect filament, and sudden temperature spikes that could indicate fire or enclosure failure.",
+      "Provide local status display and remote alerts (email/text) for thermal runaway, ventilation failure, or unsafe conditions.",
+      "Log environmental trends to help tune enclosure airflow and filament storage while prioritizing early fire detection."
+    ],
+    "tags": ["Raspberry Pi", "Enviro Hat", "3D Printing", "Fire Safety", "Temperature", "Humidity", "Air Quality", "Alerts"],
+    "images": ["https://raw.githubusercontent.com/eb613819/portfolio-site-data/main/images/thermometer.jpg"]
   }
 ]
