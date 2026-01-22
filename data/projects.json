@@ -137,7 +137,11 @@
     ],
     "tags": ["3D Printing", "CAD", "PLA", "Maker", "STL"],
     "printables": "https://www.printables.com/model/1566219-walking-pad-accessories-laptop-stand-mouse-pad-cup",
-    "images": ["https://raw.githubusercontent.com/eb613819/portfolio-site-data/main/images/walk_pad1.jpg","https://raw.githubusercontent.com/eb613819/portfolio-site-data/main/images/walk_pad2.jpg","https://raw.githubusercontent.com/eb613819/portfolio-site-data/main/images/walk_pad3.jpg","https://raw.githubusercontent.com/eb613819/portfolio-site-data/main/images/walk_pad4.jpg"]
+    "images": [
+      "https://raw.githubusercontent.com/eb613819/portfolio-site-data/main/images/walk_pad1.jpg",
+      "https://raw.githubusercontent.com/eb613819/portfolio-site-data/main/images/walk_pad2.jpg",
+      "https://raw.githubusercontent.com/eb613819/portfolio-site-data/main/images/walk_pad3.jpg",
+      "https://raw.githubusercontent.com/eb613819/portfolio-site-data/main/images/walk_pad4.jpg"
+    ]
   }
-
 ]
