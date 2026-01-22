@@ -2,7 +2,8 @@
   {
     "title": "Personal Portfolio Website",
     "types": ["Software / Web"],
-    "status": "In Progress",
+    "status": "Completed",
+    "completionDate": "1-12-2026",
     "description": [
       "Built with Angular standalone components using TypeScript.",
       "Project and experience data is statically defined and rendered at build time, with client-side filtering and expansion logic.",
@@ -122,5 +123,21 @@
     "tags": ["Docker", "HTTP/3", "HTTP/2", "Networking", "Containerization"],
     "images": [],
     "dockerhub": "https://hub.docker.com/repository/docker/eb613819/h2load-http3"
+  },
+  {
+    "title": "Walking Pad Accessory Set",
+    "types": ["3D Print / Maker"],
+    "status": "Completed",
+    "completionDate": "1-22-2026",
+    "description": [
+      "Designed and modeled a set of 3D-printable accessories for a walking pad, including a laptop stand (x2), mouse pad, and cupholder.",
+      "Created a universal back piece to attach all accessories securely to a walking pad bar (~1.6 in × 0.8 in).",
+      "Optimized each part for FDM printing in PLA, selecting print orientation, support type, and infill to balance strength and material usage.",
+      "Iterated on infill and print settings to improve stiffness and usability of the laptop stands."
+    ],
+    "tags": ["3D Printing", "CAD", "PLA", "Maker", "STL"],
+    "printables": "https://www.printables.com/model/1566219-walking-pad-accessories-laptop-stand-mouse-pad-cup",
+    "images": ["https://raw.githubusercontent.com/eb613819/portfolio-site-data/main/images/walking_pad1.jpg","https://raw.githubusercontent.com/eb613819/portfolio-site-data/main/images/walking_pad2.jpg","https://raw.githubusercontent.com/eb613819/portfolio-site-data/main/images/walking_pad3.jpg","https://raw.githubusercontent.com/eb613819/portfolio-site-data/main/images/walking_pad4.jpg"]
   }
+
 ]
