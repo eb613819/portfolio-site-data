@@ -4,9 +4,7 @@
     "organization": "Ohio University",
     "startDate": "August 2024",
     "endDate": "Present",
-    "description": [
-      "GPA: 4.0/4.0"
-    ],
+    "description":"GPA: 4.0/4.0",
     "type": "education"
   },
   {
@@ -14,13 +12,7 @@
     "organization": "Ohio University - Dr. Shawn Ostermann & Ilya Kogan",
     "startDate": "May 2024",
     "endDate": "Present",
-    "description": [
-      "Leading integration of Backstage (internal developer portal) into the university’s cloud-native Kubernetes platform, focusing on scalability, reliability, and developer workflow improvements.",
-      "Implemented Azure AD SSO, Microsoft Graph API user provisioning, and secure authentication flows.",
-      "Integrated multiple platform tools: Jira, Kubernetes metrics/monitoring, TechDocs, GitHub org imports, and catalog templates.",
-      "Working in a Linux-based cloud environment using containers, cloud APIs, and infrastructure automation.",
-      "Upcoming work includes enabling GitHub-based student login and expanding platform access."
-    ],
+    "description": "Leading integration of Backstage (internal developer portal) into the university’s cloud-native Kubernetes platform, focusing on scalability, reliability, and developer workflow improvements.",,
     "tags": ["Kubernetes", "Backstage", "Azure", "Cloud", "IDP"],
     "type": "research"
   },
