@@ -1,22 +1,71 @@
 [
   {
-    "title": "Personal Portfolio Website",
-    "types": [
-      "Software / Web"
-    ],
-    "status": "Completed",
-    "completionDate": "1-12-2026",
-    "description": "## Overview\nDesigned and developed a personal portfolio website using Angular standalone components and TypeScript, deployed as a static site on GitHub Pages.\n\n## Architecture\nArchitected a decoupled data layer by storing all project and experience content in a dedicated GitHub repository, fetched at runtime via HTTP. This separates content from presentation — the site never needs to be rebuilt or redeployed when data changes.\n\n## Features\n- Filterable project gallery by type, tag, and status\n- Filterable experience gallery by type and tag\n- Expandable responsive cards with image carousels\n- Markdown-rendered project and experience descriptions\n- Resume download\n\n## Workflow\nDeveloped using a structured Git workflow with feature branches, issue tracking, and pull requests into a always-deployable `main` branch. Branch names follow a `type/issue-number-description` convention for full traceability.",
-    "tags": [
-      "Angular",
-      "TypeScript",
-      "GitHub Pages",
-      "Responsive Design",
-      "SPA"
-    ],
-    "github": "https://github.com/eb613819/portfolio-site",
-    "images": [
-      "https://raw.githubusercontent.com/eb613819/portfolio-site-data/main/images/site_logo.png"
-    ]
+    "role": "M.S. in Computer Science",
+    "organization": "Ohio University",
+    "startDate": "August 2024",
+    "endDate": "Present",
+    "description": "**GPA:** 4.0 / 4.0",
+    "type": "education"
+  },
+  {
+    "role": "Graduate Research Assistant",
+    "organization": "Ohio University - Dr. Shawn Ostermann & Ilya Kogan",
+    "startDate": "May 2024",
+    "endDate": "Present",
+    "description": "Leading the integration of **Backstage** (an internal developer portal) into the university's cloud-native **Kubernetes** platform, with a focus on scalability, reliability, and developer workflow improvements.\n\n- Implemented **Azure AD SSO**, Microsoft Graph API user provisioning, and secure authentication flows\n- Integrated platform tooling including **Jira**, Kubernetes metrics & monitoring, TechDocs, GitHub org imports, and catalog templates\n- Working in a Linux-based cloud environment using containers, cloud APIs, and infrastructure automation\n- Upcoming work includes enabling GitHub-based student login and expanding platform access",
+    "tags": ["Kubernetes", "Backstage", "Azure", "Cloud", "IDP"],
+    "type": "research"
+  },
+  {
+    "role": "Instructor of Record — CS1400: Fundamentals of Computing",
+    "organization": "Ohio University",
+    "startDate": "August 2025",
+    "endDate": "December 2025",
+    "description": "Sole instructor for an introductory computing course of ~25 students, responsible for the full instructional lifecycle from curriculum design to final grading.\n\n- Designed and delivered lectures, quizzes, programming assignments, exams, and supplemental materials\n- Taught foundational concepts including computational thinking, problem solving, algorithms, **Python** programming, and contemporary issues in computer science\n- Provided timely, constructive feedback to support student growth and learning outcomes",
+    "tags": ["Teaching", "Python", "CS Education"],
+    "type": "teaching"
+  },
+  {
+    "role": "B.S. in Computer Science",
+    "organization": "Ohio University",
+    "startDate": "August 2020",
+    "endDate": "May 2024",
+    "description": "**GPA:** 3.775 / 4.0 · **Magna Cum Laude**",
+    "type": "education"
+  },
+  {
+    "role": "Undergraduate Research Assistant",
+    "organization": "Ohio University — Dr. Shawn Ostermann",
+    "startDate": "April 2023",
+    "endDate": "May 2024",
+    "description": "Conducted systems and networking research focused on evaluating and optimizing the performance of **ION** (a delay-tolerant networking implementation) across diverse system conditions.\n\n- Built and managed **QEMU** virtual machine environments to conduct controlled, reproducible systems tests\n- Began developing a cloud-based automated testing framework using cloud platforms and configuration management tooling (**Ansible**, **Proxmox**)\n- Deepened expertise in Linux internals, networking, virtualization, and high-availability system behavior",
+    "tags": ["Linux", "Networking", "Virtualization", "Cloud", "Research", "QEMU", "ProxMox", "Ansible"],
+    "type": "research"
+  },
+  {
+    "role": "Student Software Engineer",
+    "organization": "Ohio University IT",
+    "startDate": "May 2021",
+    "endDate": "June 2024",
+    "description": "Worked within cross-functional teams to design, build, and maintain full-stack applications supporting university operations.\n\n- Modernized and refactored legacy applications into current languages and platforms, improving maintainability and longevity\n- Collaborated through **GitHub**, code reviews, and iterative development workflows using **React**, **Angular**, **Node.js**, and **TypeScript**",
+    "tags": ["Software", "Full-stack", "Node.js", "React", "TypeScript", "Angular"],
+    "type": "job"
+  },
+  {
+    "role": "Valedictorian",
+    "organization": "Western Brown High School",
+    "startDate": "August 2016",
+    "endDate": "May 2020",
+    "description": "**GPA:** 4.0 / 4.0 · **STEM Honors Diploma**",
+    "type": "education"
+  },
+  {
+    "role": "Technology Department Intern",
+    "organization": "Western Brown Local Schools",
+    "startDate": "June 2019",
+    "endDate": "January 2021",
+    "description": "Supported districtwide technology infrastructure across multiple school buildings, contributing to day-to-day operational uptime and long-term hardware reliability.\n\n- Handled device deployment, diagnostics, repairs, and classroom hardware installations\n- Maintained networking equipment including switches and UPS systems\n- Built hands-on experience in hardware troubleshooting, IT support workflows, and cross-team communication",
+    "tags": ["Hardware", "Networking", "Support", "IT"],
+    "type": "job"
   }
 ]
