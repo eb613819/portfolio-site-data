@@ -9,11 +9,11 @@
   },
   {
     "role": "Graduate Research Assistant",
-    "organization": "Ohio University - Dr. Shawn Ostermann & Ilya Kogan",
+    "organization": "Ohio University — Dr. Shawn Ostermann & Ilya Kogan",
     "startDate": "May 2024",
     "endDate": "Present",
-    "description": "Leading the integration of **Backstage** (an internal developer portal) into the university's cloud-native **Kubernetes** platform, with a focus on scalability, reliability, and developer workflow improvements.\n\n- Implemented **Azure AD SSO**, Microsoft Graph API user provisioning, and secure authentication flows\n- Integrated platform tooling including **Jira**, Kubernetes metrics & monitoring, TechDocs, GitHub org imports, and catalog templates\n- Working in a Linux-based cloud environment using containers, cloud APIs, and infrastructure automation\n- Upcoming work includes enabling GitHub-based student login and expanding platform access",
-    "tags": ["Kubernetes", "Backstage", "Azure", "Cloud", "IDP"],
+    "description": "## Overview\nLeading the integration of Backstage — an open-source internal developer portal — into the university's cloud-native Kubernetes platform, with a focus on scalability, reliability, and developer workflow improvements.\n\n## Infrastructure & Authentication\n- Implemented **Azure AD SSO** for single sign-on across the platform, including Microsoft Graph API integration for automated user provisioning and secure authentication flows\n- Upcoming work includes enabling **GitHub-based student login** to expand platform access beyond university SSO\n\n## Platform Integrations\n- Integrated **Jira** for issue tracking and project visibility within the developer portal\n- Connected **GitHub** organization imports and catalog templates for automated service discovery and onboarding\n- Built and configured **TechDocs** for in-portal technical documentation rendering\n\n## Kubernetes Monitoring\n- Set up **Prometheus** for cluster metrics collection and **Grafana** dashboards for real-time Kubernetes monitoring and observability within the portal\n\n## Environment\nWorking in a Linux-based cloud environment using containers, Kubernetes, cloud APIs, and infrastructure automation tooling.",
+    "tags": ["Kubernetes", "Backstage", "Azure AD", "Prometheus", "Grafana", "SSO", "Cloud", "IDP", "GitHub", "Jira"],
     "type": "research"
   },
   {
@@ -38,8 +38,8 @@
     "organization": "Ohio University — Dr. Shawn Ostermann",
     "startDate": "April 2023",
     "endDate": "May 2024",
-    "description": "Conducted systems and networking research focused on evaluating and optimizing the performance of **ION** (a delay-tolerant networking implementation) across diverse system conditions.\n\n- Built and managed **QEMU** virtual machine environments to conduct controlled, reproducible systems tests\n- Began developing a cloud-based automated testing framework using cloud platforms and configuration management tooling (**Ansible**, **Proxmox**)\n- Deepened expertise in Linux internals, networking, virtualization, and high-availability system behavior",
-    "tags": ["Linux", "Networking", "Virtualization", "Cloud", "Research", "QEMU", "ProxMox", "Ansible"],
+    "description": "## Overview\nConducted NASA-funded systems and networking research focused on evaluating and optimizing the performance of **ION** (Interplanetary Overlay Network) — a delay-tolerant networking implementation developed for NASA deep space communication.\n\n## Research Focus\nION is designed to handle the extreme latency, disruption, and packet loss inherent in deep space communication links. The research investigated how ION behaves under diverse system conditions to identify performance bottlenecks and reliability characteristics relevant to space mission scenarios.\n\n## Technical Work\n- Built and managed **QEMU** virtual machine environments to conduct controlled, reproducible systems and networking tests\n- Began developing a cloud-based automated testing framework using cloud platforms and configuration management tooling (**Ansible**, **Proxmox**) to scale testing across environments\n- Deepened expertise in Linux internals, networking stack behavior, virtualization, and high-availability system design",
+    "tags": ["Linux", "Networking", "Virtualization", "Cloud", "Research", "QEMU", "Proxmox", "Ansible", "NASA", "DTN"],
     "type": "research"
   },
   {
@@ -47,8 +47,8 @@
     "organization": "Ohio University IT",
     "startDate": "May 2021",
     "endDate": "June 2024",
-    "description": "Worked within cross-functional teams to design, build, and maintain full-stack applications supporting university operations.\n\n- Modernized and refactored legacy applications into current languages and platforms, improving maintainability and longevity\n- Collaborated through **GitHub**, code reviews, and iterative development workflows using **React**, **Angular**, **Node.js**, and **TypeScript**",
-    "tags": ["Software", "Full-stack", "Node.js", "React", "TypeScript", "Angular"],
+    "description": "## Overview\nWorked within cross-functional teams to design, build, and maintain full-stack web applications supporting university operations over three years.\n\n## Capstone Project — Go Ohio Mobile App\nLed a small team to extend the university's official mobile app (iOS and Android) as a senior capstone project in partnership with Ohio University IT. Designed and built a feature that automatically imports a student's class schedule and generates optimized Google Maps walking routes to the next class based on time of day — surfacing the right route at the right time without manual input.\n\nBuilt using the **Modo Labs** mobile platform, **Google Maps API** for routing, and integrated with university scheduling systems to pull live course data.\n\n## General Development Work\n- Modernized and refactored legacy applications into current languages and platforms, improving maintainability and longevity\n- Collaborated through **GitHub**, code reviews, and iterative development workflows\n- Worked across the stack using **React**, **Angular**, **Node.js**, and **TypeScript**",
+    "tags": ["Software", "Full-stack", "Node.js", "React", "TypeScript", "Angular", "Google Maps API", "Mobile", "Modo Labs"],
     "type": "job"
   },
   {
