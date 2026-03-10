@@ -137,11 +137,10 @@
       "Software / Web"
     ],
     "status": "In Progress",
-    "description": "## Overview\nBuilding a portfolio website for a local artist to display their work, share contact information, and establish an online presence.\n\n## Stack\nBuilt with Angular, following the same component-driven architecture used for this portfolio site. Deployed as a static site on GitHub Pages.\n\n## Features\n- Gallery for displaying artwork\n- Contact information and inquiry section\n- Clean, visually focused layout suited to showcasing creative work\n\n## Shop Integration\nExploring options for integrating an e-commerce shop to allow the artist to sell work directly from the site. Implementation approach is still being evaluated.",
+    "description": "## Overview\nBuilding a portfolio website for a local artist to display their work, share contact information, and establish an online presence.\n\n## Stack\nBuilt with Angular, following the same component-driven architecture used for this portfolio site.\n\n## Features\n- Gallery for displaying artwork\n- Contact information and inquiry section\n- Clean, visually focused layout suited to showcasing creative work\n\n## Shop Integration\nExploring options for integrating an e-commerce shop to allow the artist to sell work directly from the site. If a shop is added, the site will require traditional hosting rather than GitHub Pages to support server-side payment processing. Implementation approach is still being evaluated.",
     "tags": [
       "Angular",
       "TypeScript",
-      "GitHub Pages",
       "E-Commerce",
       "SPA"
     ],
@@ -170,13 +169,14 @@
       "Software / Web"
     ],
     "status": "In Progress",
-    "description": "## Overview\nCustomizing and extending an existing WordPress site for a local author, focused on theme customization and adding e-commerce functionality for selling books directly.\n\n## Scope\n- Custom WordPress theme modifications to match the author's brand and style\n- Shop integration to allow direct book sales from the site\n- Shop implementation approach is currently being evaluated\n\n## Platform\nBuilding on the client's existing WordPress installation rather than migrating, preserving existing content and SEO while extending functionality.",
+    "description": "## Overview\nCustomizing and extending an existing WordPress site for a local author, focused on theme customization and adding e-commerce functionality for selling books directly.\n\n## Scope\n- Custom WordPress theme modifications to match the author's brand and style\n- Shop integration to allow direct book sales from the site\n- Shop implementation approach is currently being evaluated\n\n## Platform\nBuilding on the client's existing WordPress installation hosted on Bluehost rather than migrating. The client has an established subscriber base managed through a WordPress plugin, making a platform migration impractical without risking subscriber loss. The approach preserves existing content, SEO, and subscriber continuity while extending functionality.",
     "tags": [
       "WordPress",
       "PHP",
       "Theme Development",
       "E-Commerce",
-      "CMS"
+      "CMS",
+      "Bluehost"
     ],
     "images": []
   }
