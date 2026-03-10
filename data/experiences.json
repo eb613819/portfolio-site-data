@@ -9,20 +9,36 @@
   },
   {
     "role": "Graduate Research Assistant",
-    "organization": "Ohio University — Dr. Shawn Ostermann & Ilya Kogan",
+    "organization": "Ohio University \u2014 Dr. Shawn Ostermann & Ilya Kogan",
     "startDate": "May 2024",
     "endDate": "Present",
-    "description": "## Overview\nLeading the integration of Backstage — an open-source internal developer portal — into the university's cloud-native Kubernetes platform, with a focus on scalability, reliability, and developer workflow improvements.\n\n## Infrastructure & Authentication\n- Implemented **Azure AD SSO** for single sign-on across the platform, including Microsoft Graph API integration for automated user provisioning and secure authentication flows\n- Upcoming work includes enabling **GitHub-based student login** to expand platform access beyond university SSO\n\n## Platform Integrations\n- Integrated **Jira** for issue tracking and project visibility within the developer portal\n- Connected **GitHub** organization imports and catalog templates for automated service discovery and onboarding\n- Built and configured **TechDocs** for in-portal technical documentation rendering\n\n## Kubernetes Monitoring\n- Set up **Prometheus** for cluster metrics collection and **Grafana** dashboards for real-time Kubernetes monitoring and observability within the portal\n\n## Environment\nWorking in a Linux-based cloud environment using containers, Kubernetes, cloud APIs, and infrastructure automation tooling.",
-    "tags": ["Kubernetes", "Backstage", "Azure AD", "Prometheus", "Grafana", "SSO", "Cloud", "IDP", "GitHub", "Jira"],
+    "description": "## Overview\nLeading the integration and configuration of Backstage \u2014 an open-source internal developer portal \u2014 into the university's on-premises Kubernetes platform, with a focus on scalability, reliability, and developer workflow improvements.\n\n## Authentication & User Provisioning\n- Implemented **Azure AD SSO** using the Backstage auth plugin, including Microsoft Graph API integration for automated user provisioning and secure authentication flows\n- Upcoming work includes enabling **GitHub-based student login** to expand platform access beyond university SSO\n\n## Plugin Integration & Configuration\nConfigured and integrated a range of standard and community Backstage plugins, each requiring significant setup work including service account creation, secret management, and application wiring:\n- **Catalog** \u2014 configured GitHub org imports for automated service discovery across university repositories\n- **Scaffolder** \u2014 authored custom templates for standardized project and service onboarding\n- **TechDocs** \u2014 enabled in-portal technical documentation rendering\n- **Jira** (community plugin) \u2014 integrated for issue tracking and project visibility within the portal\n- **Prometheus & Grafana** (community plugins) \u2014 surfaced real-time Kubernetes metrics and dashboards within the portal\n\n## Infrastructure & Secrets Management\n- Managed Kubernetes secrets using **Sealed Secrets**, encrypting secrets at rest and safely storing them in version control\n- Configured service accounts and wired credentials into the Backstage pod through Kubernetes secret injection\n- Worked across the full integration lifecycle: configuring external service accounts, sealing and deploying secrets, and connecting APIs to the running application\n\n## Environment\nWorking in a Linux-based environment with on-premises Kubernetes clusters, cloud APIs, and infrastructure automation tooling.",
+    "tags": [
+      "Kubernetes",
+      "Backstage",
+      "Azure AD",
+      "Prometheus",
+      "Grafana",
+      "SSO",
+      "Sealed Secrets",
+      "Cloud",
+      "IDP",
+      "GitHub",
+      "Jira"
+    ],
     "type": "research"
   },
   {
-    "role": "Instructor of Record — CS1400: Fundamentals of Computing",
+    "role": "Instructor of Record \u2014 CS1400: Fundamentals of Computing",
     "organization": "Ohio University",
     "startDate": "August 2025",
     "endDate": "December 2025",
     "description": "Sole instructor for an introductory computing course of ~25 students, responsible for the full instructional lifecycle from curriculum design to final grading.\n\n- Designed and delivered lectures, quizzes, programming assignments, exams, and supplemental materials\n- Taught foundational concepts including computational thinking, problem solving, algorithms, **Python** programming, and contemporary issues in computer science\n- Provided timely, constructive feedback to support student growth and learning outcomes",
-    "tags": ["Teaching", "Python", "CS Education"],
+    "tags": [
+      "Teaching",
+      "Python",
+      "CS Education"
+    ],
     "type": "teaching"
   },
   {
@@ -30,16 +46,27 @@
     "organization": "Ohio University",
     "startDate": "August 2020",
     "endDate": "May 2024",
-    "description": "**GPA:** 3.775 / 4.0 · **Magna Cum Laude**",
+    "description": "**GPA:** 3.775 / 4.0 \u00b7 **Magna Cum Laude**",
     "type": "education"
   },
   {
     "role": "Undergraduate Research Assistant",
-    "organization": "Ohio University — Dr. Shawn Ostermann",
+    "organization": "Ohio University \u2014 Dr. Shawn Ostermann",
     "startDate": "April 2023",
     "endDate": "May 2024",
-    "description": "## Overview\nConducted NASA-funded systems and networking research focused on evaluating and optimizing the performance of **ION** (Interplanetary Overlay Network) — a delay-tolerant networking implementation developed for NASA deep space communication.\n\n## Research Focus\nION is designed to handle the extreme latency, disruption, and packet loss inherent in deep space communication links. The research investigated how ION behaves under diverse system conditions to identify performance bottlenecks and reliability characteristics relevant to space mission scenarios.\n\n## Technical Work\n- Built and managed **QEMU** virtual machine environments to conduct controlled, reproducible systems and networking tests\n- Began developing a cloud-based automated testing framework using cloud platforms and configuration management tooling (**Ansible**, **Proxmox**) to scale testing across environments\n- Deepened expertise in Linux internals, networking stack behavior, virtualization, and high-availability system design",
-    "tags": ["Linux", "Networking", "Virtualization", "Cloud", "Research", "QEMU", "Proxmox", "Ansible", "NASA", "DTN"],
+    "description": "## Overview\nConducted NASA-funded systems and networking research focused on evaluating and optimizing the performance of **ION** (Interplanetary Overlay Network) \u2014 a delay-tolerant networking implementation developed for NASA deep space communication.\n\n## Research Focus\nION is designed to handle the extreme latency, disruption, and packet loss inherent in deep space communication links. The research investigated how ION behaves under diverse system conditions to identify performance bottlenecks and reliability characteristics relevant to space mission scenarios.\n\n## Technical Work\n- Built and managed **QEMU** virtual machine environments to conduct controlled, reproducible systems and networking tests\n- Began developing an automated testing framework using virtualized infrastructure and configuration management tooling (**Ansible**, **Proxmox**) to scale testing across environments\n- Deepened expertise in Linux internals, networking stack behavior, virtualization, and high-availability system design",
+    "tags": [
+      "Linux",
+      "Networking",
+      "Virtualization",
+      "Cloud",
+      "Research",
+      "QEMU",
+      "Proxmox",
+      "Ansible",
+      "NASA",
+      "DTN"
+    ],
     "type": "research"
   },
   {
@@ -47,8 +74,18 @@
     "organization": "Ohio University IT",
     "startDate": "May 2021",
     "endDate": "June 2024",
-    "description": "## Overview\nWorked within cross-functional teams to design, build, and maintain full-stack web applications supporting university operations over three years.\n\n## Capstone Project — Go Ohio Mobile App\nLed a small team to extend the university's official mobile app (iOS and Android) as a senior capstone project in partnership with Ohio University IT. Designed and built a feature that automatically imports a student's class schedule and generates optimized Google Maps walking routes to the next class based on time of day — surfacing the right route at the right time without manual input.\n\nBuilt using the **Modo Labs** mobile platform, **Google Maps API** for routing, and integrated with university scheduling systems to pull live course data.\n\n## General Development Work\n- Modernized and refactored legacy applications into current languages and platforms, improving maintainability and longevity\n- Collaborated through **GitHub**, code reviews, and iterative development workflows\n- Worked across the stack using **React**, **Angular**, **Node.js**, and **TypeScript**",
-    "tags": ["Software", "Full-stack", "Node.js", "React", "TypeScript", "Angular", "Google Maps API", "Mobile", "Modo Labs"],
+    "description": "## Overview\nWorked within cross-functional teams to design, build, and maintain full-stack web applications supporting university operations over three years.\n\n## Capstone Project \u2014 Go Ohio Mobile App\nCollaborated with a team of four student software engineers to extend the university's official mobile app (iOS and Android) as a senior capstone project in partnership with Ohio University IT. Designed and built a feature that automatically imports a student's class schedule and generates optimized Google Maps walking routes to the next class based on time of day \u2014 surfacing the right route at the right time without manual input.\n\nBuilt using the **Modo Labs** mobile platform, **Google Maps API** for routing, and integrated with university scheduling systems to pull live course data.\n\n## General Development Work\n- Modernized and refactored legacy applications into current languages and platforms, improving maintainability and longevity\n- Collaborated through **GitHub**, code reviews, and iterative development workflows\n- Worked across the stack using **React**, **Angular**, **Node.js**, and **TypeScript**",
+    "tags": [
+      "Software",
+      "Full-stack",
+      "Node.js",
+      "React",
+      "TypeScript",
+      "Angular",
+      "Google Maps API",
+      "Mobile",
+      "Modo Labs"
+    ],
     "type": "job"
   },
   {
@@ -56,7 +93,7 @@
     "organization": "Western Brown High School",
     "startDate": "August 2016",
     "endDate": "May 2020",
-    "description": "**GPA:** 4.0 / 4.0 · **STEM Honors Diploma**",
+    "description": "**GPA:** 4.0 / 4.0 \u00b7 **STEM Honors Diploma**",
     "type": "education"
   },
   {
@@ -65,7 +102,12 @@
     "startDate": "June 2019",
     "endDate": "January 2021",
     "description": "Supported districtwide technology infrastructure across multiple school buildings, contributing to day-to-day operational uptime and long-term hardware reliability.\n\n- Handled device deployment, diagnostics, repairs, and classroom hardware installations\n- Maintained networking equipment including switches and UPS systems\n- Built hands-on experience in hardware troubleshooting, IT support workflows, and cross-team communication",
-    "tags": ["Hardware", "Networking", "Support", "IT"],
+    "tags": [
+      "Hardware",
+      "Networking",
+      "Support",
+      "IT"
+    ],
     "type": "job"
   }
 ]
