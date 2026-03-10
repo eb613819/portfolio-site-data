@@ -225,5 +225,31 @@
       "Data Science"
     ],
     "github": "https://github.com/eb613819/ml_book_shelf_organizer"
+  },
+  {
+    "title": "ION DTN Multi-Node Test Environment",
+    "types": [
+      "Networking / Infrastructure",
+      "DevOps / Cloud"
+    ],
+    "status": "Completed",
+    "completionDate": "05-01-2024",
+    "description": "## Overview\nA NASA-funded research project to build a reproducible, scalable test environment for evaluating **ION** (Interplanetary Overlay Network) — a delay-tolerant networking (DTN) implementation designed for challenged network links with extreme latency, disruption, and packet loss.\n\nThe core challenge was testing ION across diverse operating systems and hardware architectures without access to physical legacy machines. The solution was a QEMU-based virtualization environment capable of emulating non-x86 architectures, wired into a CI-style test orchestration pipeline.\n\n## QEMU Multi-Architecture Virtualization\nBuilt and configured QEMU virtual machine environments emulating two non-x86 architectures:\n\n- **SPARC-32** — running Solaris 9, emulating legacy Sun Microsystems hardware\n- **ARM** — running Raspbian Jessie and Stretch as a practical ARM environment; the goal was ARM architecture coverage, not Raspberry Pi specifically\n\nConfigured SSH access two ways depending on the use case: a **jump host** setup for port-forwarded access through the Ubuntu host, and a **bridged network** setup giving VMs a real IP on the local network for direct SSH. Wrote a systemd service to persist the bridge configuration across host reboots.\n\n## Buildbot Integration\nOnce stable, the QEMU VMs were registered as worker nodes in **Buildbot** — a CI-style test orchestration framework — to run automated ION tests across the virtualized environments as part of the broader research pipeline.\n\n## Ansible Automation Framework\nBegan developing an **Ansible**-based framework to replace manual VM provisioning — designed to spin up an arbitrary number of ION test nodes automatically and orchestrate multi-node DTN tests between them without manual configuration. The framework was well underway when the project was discontinued following a lab pivot to a different DTN implementation.",
+    "tags": [
+      "QEMU",
+      "Ansible",
+      "Buildbot",
+      "Linux",
+      "Networking",
+      "Virtualization",
+      "Proxmox",
+      "DTN",
+      "SPARC",
+      "ARM",
+      "Solaris",
+      "Raspbian",
+      "Research"
+    ],
+    "github": "https://github.com/eb613819/ion-dtn-qemu-test-environment"
   }
 ]
