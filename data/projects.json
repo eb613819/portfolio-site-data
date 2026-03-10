@@ -13,7 +13,7 @@
     "title": "NAS Build",
     "types": ["Home Lab", "Networking / Infrastructure"],
     "status": "Completed",
-    "completionDate": "03-01-2026",
+    "completionDate": "05-01-2025",
     "description": "## Overview\nDesigned and built a compact home NAS for centralized file storage, backups, and media serving — purpose-built around TrueNAS in a small form factor case.\n\n## Hardware\n- **Case:** JONSBO N1 Mini-ITX NAS enclosure\n- **Motherboard:** ASRock B550 Phantom Gaming-ITX\n- **CPU:** AMD Ryzen 5 4600G\n- **RAM:** 32GB DDR4\n- **OS Drive:** Kingston NV2 250GB M.2 NVMe SSD\n- **Storage:** 4× Western Digital 4TB Red Plus NAS HDDs\n- **Cache:** 500GB Western Digital Blue SATA SSD\n- **PSU:** Cooler Master V850 SFX Gold ATX 3.0 Modular\n\n## Software & Configuration\nRan TrueNAS as the OS, configured a RAID pool across the four NAS drives, and set up network shares for ebook and 3D print file access across the home network. Used the SATA SSD as a read/write cache to improve performance on frequently accessed files.\n\n## Status\nThe four WD Red Plus drives were found to be faulty and are pending warranty replacement. The NAS is currently being evaluated for decommission — the plan is to migrate storage to a VM on the Proxmox home lab server using PCIe passthrough, and repurpose this hardware.",
     "tags": ["TrueNAS", "NAS", "RAID", "Linux", "Networking", "Storage", "Mini-ITX", "ZFS"],
     "images": ["https://raw.githubusercontent.com/eb613819/portfolio-site-data/main/images/hdd.jpg"]
@@ -92,7 +92,7 @@
     "title": "Walking Pad Accessory Set",
     "types": ["3D Printing / CAD"],
     "status": "Completed",
-    "completionDate": "01-22-2026",
+    "completionDate": "01-22-2025",
     "description": "## Overview\nDesigned and printed a modular set of accessories for a walking pad treadmill, all mounting to the handlebar via a universal attachment piece.\n\n## Parts\n- **Dual laptop stands** — angled risers sized for a laptop\n- **Mouse pad mount** — flat platform that clamps alongside the laptop stand\n- **Cupholder** — fits standard cups and bottles\n- **Universal back piece** — a single attachment designed to fit the walking pad bar (~1.6 in × 0.8 in) that all accessories screw to\n\n## Design & Print Process\nModeled all parts from scratch in CAD. Designed the universal back piece first to establish the attachment interface, then built each accessory around it. Optimized each part for FDM printing in PLA — selecting print orientation to maximize layer strength, minimizing supports, and tuning infill percentage and wall count to balance stiffness and material use. Iterated on the laptop stands specifically to improve rigidity under load.",
     "tags": ["3D Printing", "CAD", "PLA", "FDM", "Product Design", "STL"],
     "printables": "https://www.printables.com/model/1566219-walking-pad-accessories-laptop-stand-mouse-pad-cup",
