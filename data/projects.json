@@ -1,71 +1,133 @@
 [
   {
-    "role": "M.S. in Computer Science",
-    "organization": "Ohio University",
-    "startDate": "August 2024",
-    "endDate": "Present",
-    "description": "**GPA:** 4.0 / 4.0",
-    "type": "education"
+    "title": "Personal Portfolio Website",
+    "types": ["Software / Web"],
+    "status": "Completed",
+    "completionDate": "01-12-2026",
+    "description": "## Overview\nDesigned and developed a personal portfolio website using Angular standalone components and TypeScript, deployed as a static site on GitHub Pages.\n\n## Architecture\nArchitected a decoupled data layer by storing all project and experience content in a dedicated GitHub repository, fetched at runtime via HTTP. This separates content from presentation — the site never needs to be rebuilt or redeployed when data changes.\n\n## Features\n- Filterable project gallery by type, tag, and status\n- Filterable experience gallery by type and tag\n- Expandable responsive cards with image carousels\n- Markdown-rendered project and experience descriptions\n- Resume download\n\n## Workflow\nDeveloped using a structured Git workflow with feature branches, issue tracking, and pull requests into an always-deployable `main` branch. Branch names follow a `type/issue-number-description` convention for full traceability.",
+    "tags": ["Angular", "TypeScript", "GitHub Pages", "Responsive Design", "SPA"],
+    "github": "https://github.com/eb613819/portfolio-site",
+    "images": ["https://raw.githubusercontent.com/eb613819/portfolio-site-data/main/images/site_logo.png"]
   },
   {
-    "role": "Graduate Research Assistant",
-    "organization": "Ohio University - Dr. Shawn Ostermann & Ilya Kogan",
-    "startDate": "May 2024",
-    "endDate": "Present",
-    "description": "Leading the integration of **Backstage** (an internal developer portal) into the university's cloud-native **Kubernetes** platform, with a focus on scalability, reliability, and developer workflow improvements.\n\n- Implemented **Azure AD SSO**, Microsoft Graph API user provisioning, and secure authentication flows\n- Integrated platform tooling including **Jira**, Kubernetes metrics & monitoring, TechDocs, GitHub org imports, and catalog templates\n- Working in a Linux-based cloud environment using containers, cloud APIs, and infrastructure automation\n- Upcoming work includes enabling GitHub-based student login and expanding platform access",
-    "tags": ["Kubernetes", "Backstage", "Azure", "Cloud", "IDP"],
-    "type": "research"
+    "title": "NAS Build",
+    "types": ["Home Lab", "Networking / Infrastructure"],
+    "status": "Completed",
+    "completionDate": "03-01-2026",
+    "description": "## Overview\nDesigned and built a compact home NAS for centralized file storage, backups, and media serving — purpose-built around TrueNAS in a small form factor case.\n\n## Hardware\n- **Case:** JONSBO N1 Mini-ITX NAS enclosure\n- **Motherboard:** ASRock B550 Phantom Gaming-ITX\n- **CPU:** AMD Ryzen 5 4600G\n- **RAM:** 32GB DDR4\n- **OS Drive:** Kingston NV2 250GB M.2 NVMe SSD\n- **Storage:** 4× Western Digital 4TB Red Plus NAS HDDs\n- **Cache:** 500GB Western Digital Blue SATA SSD\n- **PSU:** Cooler Master V850 SFX Gold ATX 3.0 Modular\n\n## Software & Configuration\nRan TrueNAS as the OS, configured a RAID pool across the four NAS drives, and set up network shares for ebook and 3D print file access across the home network. Used the SATA SSD as a read/write cache to improve performance on frequently accessed files.\n\n## Status\nThe four WD Red Plus drives were found to be faulty and are pending warranty replacement. The NAS is currently being evaluated for decommission — the plan is to migrate storage to a VM on the Proxmox home lab server using PCIe passthrough, and repurpose this hardware.",
+    "tags": ["TrueNAS", "NAS", "RAID", "Linux", "Networking", "Storage", "Mini-ITX", "ZFS"],
+    "images": ["https://raw.githubusercontent.com/eb613819/portfolio-site-data/main/images/hdd.jpg"]
   },
   {
-    "role": "Instructor of Record — CS1400: Fundamentals of Computing",
-    "organization": "Ohio University",
-    "startDate": "August 2025",
-    "endDate": "December 2025",
-    "description": "Sole instructor for an introductory computing course of ~25 students, responsible for the full instructional lifecycle from curriculum design to final grading.\n\n- Designed and delivered lectures, quizzes, programming assignments, exams, and supplemental materials\n- Taught foundational concepts including computational thinking, problem solving, algorithms, **Python** programming, and contemporary issues in computer science\n- Provided timely, constructive feedback to support student growth and learning outcomes",
-    "tags": ["Teaching", "Python", "CS Education"],
-    "type": "teaching"
+    "title": "Magic Mirror",
+    "types": ["Electronics / Embedded", "Home Lab"],
+    "status": "Completed",
+    "completionDate": "03-15-2025",
+    "description": "## Overview\nBuilt a smart mirror display using a Raspberry Pi 5, an old TV, a glass sheet, and a reflective window film overlay to create a two-way mirror effect.\n\n## Hardware\n- Raspberry Pi 5 as the compute unit\n- Repurposed flat-panel TV as the display\n- Poster frame as the outer enclosure\n- Glass sheet with reflective window film applied for the two-way mirror effect\n\n## Software & Configuration\nInstalled and configured the MagicMirror² open-source platform with modules for live calendar, weather, and news feeds. Configured the software to launch automatically on boot. Modules and configuration are managed remotely over SSH — no physical access needed to update the display.\n\n## Assembly\nHandled all physical construction including cutting and fitting the reflective film, mounting the display behind the glass, routing wiring inside the frame, and securing all components inside the enclosure.",
+    "tags": ["Raspberry Pi 5", "MagicMirror²", "IoT", "Linux", "SSH", "Smart Home"],
+    "github": "https://github.com/MichMich/MagicMirror",
+    "images": ["https://raw.githubusercontent.com/eb613819/portfolio-site-data/main/images/magic-mirror.jpg"]
   },
   {
-    "role": "B.S. in Computer Science",
-    "organization": "Ohio University",
-    "startDate": "August 2020",
-    "endDate": "May 2024",
-    "description": "**GPA:** 3.775 / 4.0 · **Magna Cum Laude**",
-    "type": "education"
+    "title": "Insulin Temperature Monitor",
+    "types": ["Electronics / Embedded", "3D Printing / CAD"],
+    "status": "Not Started",
+    "description": "## Overview\nWill design and build a safety-focused temperature monitor for insulin fridge storage, providing real-time awareness and alerts when storage conditions fall outside safe ranges.\n\n## Planned Design\n- ESP32 microcontroller mounted on the outside of the fridge\n- Wired temperature probe routed inside the fridge, submerged in liquid inside an insulin vial for accurate thermal mass measurement rather than measuring air temperature\n- Local display showing current temperature at a glance\n- Email and SMS alerts triggered when temperature approaches freezing or exceeds safe upper limits\n\n## Resilience\n- Pass-through power bank to maintain monitoring during power outages\n- Passive dumb thermometer inside the holder as a redundant analog backup\n\n## Enclosure\nWill design and 3D print a custom enclosure and fridge-mounted holder in CAD to house the probe, keep insulin organized, and mount the external display and microcontroller cleanly.",
+    "tags": ["ESP32", "Temperature Sensing", "3D Printing", "CAD", "Alerts", "Medical", "Power Resilience", "IoT"],
+    "images": ["https://raw.githubusercontent.com/eb613819/portfolio-site-data/main/images/insulin.jpg"]
   },
   {
-    "role": "Undergraduate Research Assistant",
-    "organization": "Ohio University — Dr. Shawn Ostermann",
-    "startDate": "April 2023",
-    "endDate": "May 2024",
-    "description": "Conducted systems and networking research focused on evaluating and optimizing the performance of **ION** (a delay-tolerant networking implementation) across diverse system conditions.\n\n- Built and managed **QEMU** virtual machine environments to conduct controlled, reproducible systems tests\n- Began developing a cloud-based automated testing framework using cloud platforms and configuration management tooling (**Ansible**, **Proxmox**)\n- Deepened expertise in Linux internals, networking, virtualization, and high-availability system behavior",
-    "tags": ["Linux", "Networking", "Virtualization", "Cloud", "Research", "QEMU", "ProxMox", "Ansible"],
-    "type": "research"
+    "title": "Apache Case Pen Testing Rig",
+    "types": ["Electronics / Embedded", "3D Printing / CAD"],
+    "status": "Completed",
+    "completionDate": "02-01-2025",
+    "description": "## Overview\nDesigned and built a self-contained portable penetration testing platform housed inside a hard-shell Apache case, built around a fully custom 3D printed internal chassis.\n\n## Hardware\n- **Compute:** Raspberry Pi 5 running Kali Linux\n- **Storage:** 512GB NVMe M.2 SSD via a Pi NVMe HAT\n- **Display:** 10.1\" touchscreen\n- **Input:** Bluetooth mouse and keyboard\n- **Networking:** ALFA Network AWUS036ACS Dual Band AC600 USB WiFi adapter with external antenna\n- **Connectivity:** Ethernet extension port, 8-port USB hub, built-in cooling fans\n\n## Chassis Design\nFully designed the internal insert from scratch in CAD — modeled to fit the exact interior dimensions of the Apache case with precise cutouts and mounts for every component. 3D printed the entire chassis including fan mounts, port extensions, and component brackets.\n\n## Capabilities\nProvides a portable platform for wireless network analysis, lightweight offensive security tasks, and Kali Linux tooling in the field — all in a ruggedized, organized enclosure.\n\n> This project was later succeeded by the [Briefcase Pen Testing Rig](#) — a refined version built into a leather briefcase with a modular, magnetically paneled chassis.",
+    "tags": ["Raspberry Pi 5", "Kali Linux", "Penetration Testing", "Cybersecurity", "CAD", "3D Printing", "NVMe", "WiFi Adapter", "Embedded Linux"],
+    "images": [
+      "https://raw.githubusercontent.com/eb613819/portfolio-site-data/main/images/pentest.jpg",
+      "https://raw.githubusercontent.com/eb613819/portfolio-site-data/main/images/pentest2.jpg",
+      "https://raw.githubusercontent.com/eb613819/portfolio-site-data/main/images/pentest3.jpg"
+    ]
   },
   {
-    "role": "Student Software Engineer",
-    "organization": "Ohio University IT",
-    "startDate": "May 2021",
-    "endDate": "June 2024",
-    "description": "Worked within cross-functional teams to design, build, and maintain full-stack applications supporting university operations.\n\n- Modernized and refactored legacy applications into current languages and platforms, improving maintainability and longevity\n- Collaborated through **GitHub**, code reviews, and iterative development workflows using **React**, **Angular**, **Node.js**, and **TypeScript**",
-    "tags": ["Software", "Full-stack", "Node.js", "React", "TypeScript", "Angular"],
-    "type": "job"
+    "title": "Briefcase Pen Testing Rig",
+    "types": ["Electronics / Embedded", "3D Printing / CAD"],
+    "status": "Completed",
+    "completionDate": "02-18-2026",
+    "description": "## Overview\nDesigned and built a refined successor to the Apache Case Pen Testing Rig — same electronics platform, completely redesigned chassis housed inside a leather briefcase for a more professional and portable form factor.\n\n## Hardware\nCarries over the full electronics stack from the original rig:\n- Raspberry Pi 5 running Kali Linux\n- 512GB NVMe M.2 SSD via Pi NVMe HAT\n- 10.1\" touchscreen\n- Bluetooth mouse and keyboard\n- ALFA Network AWUS036ACS Dual Band AC600 USB WiFi adapter with external antenna\n- Ethernet extension port, 8-port USB hub, built-in cooling fans\n\n## Chassis Design\nDesigned a fully modular chassis from scratch in CAD — individual pieces that screw together using heat-set inserts and connector pieces, allowing for disassembly, reconfiguration, and reprinting of individual sections without replacing the entire chassis.\n\nA smooth magnetic panel system snaps onto the outside of the chassis to create a clean, unified interior appearance while remaining removable for access to components.\n\n## Enclosure\nHoused in a leather briefcase for a professional look that doesn't draw attention in the field. All components mount securely inside the custom chassis with no rattling or shifting.\n\n> Successor to the [Apache Case Pen Testing Rig](#).",
+    "tags": ["Raspberry Pi 5", "Kali Linux", "Penetration Testing", "Cybersecurity", "CAD", "3D Printing", "Heat-Set Inserts", "Modular Design", "NVMe", "WiFi Adapter", "Embedded Linux"],
+    "printables": "https://www.printables.com/model/1597507-raspberry-pi-briefcase-pentesting-rig",
+    "images": []
   },
   {
-    "role": "Valedictorian",
-    "organization": "Western Brown High School",
-    "startDate": "August 2016",
-    "endDate": "May 2020",
-    "description": "**GPA:** 4.0 / 4.0 · **STEM Honors Diploma**",
-    "type": "education"
+    "title": "Home Lab Server",
+    "types": ["Home Lab", "Networking / Infrastructure"],
+    "status": "Completed",
+    "completionDate": "03-25-2025",
+    "description": "## Overview\nRebuilt a server around a salvaged enterprise-grade dual-processor motherboard and configured it as a Proxmox hypervisor running multiple production-like virtual machines for self-hosted services.\n\n## Hardware\n- **Motherboard:** Supermicro X8DTN+ (dual socket)\n- **CPUs:** 2× Intel Xeon X5680\n- **RAM:** 192GB DDR3 ECC\n- **Case:** Fractal Design Define 7\n- **Storage:** 500GB SSD (Proxmox OS), 2× 1TB SATA SSD (VM storage + backup)\n\n## Virtual Machines\n- **Ebook Server:** Calibre Content Server serving the ebook library stored on the NAS\n- **Reverse Proxy:** Routes a subdomain to the ebook server and enforces HTTPS\n- **3D Print File Server:** Planned VM to serve print files from the NAS *(in progress)*\n- **Media Server:** Plex or Jellyfin for local movie streaming *(planned)*\n\n## Status\nAll running VMs were fully operational and serving content from the NAS until the NAS drives failed. Services are temporarily down pending WD warranty drive replacements. Once drives are back online, planning to migrate the NAS itself to a VM on this machine using PCIe passthrough to consolidate hardware.",
+    "tags": ["Proxmox", "Virtualization", "Linux", "Xeon", "Supermicro", "Reverse Proxy", "Self-Hosting", "Calibre", "Home Lab", "Containerization"],
+    "images": ["https://raw.githubusercontent.com/eb613819/portfolio-site-data/main/images/server.jpg"]
   },
   {
-    "role": "Technology Department Intern",
-    "organization": "Western Brown Local Schools",
-    "startDate": "June 2019",
-    "endDate": "January 2021",
-    "description": "Supported districtwide technology infrastructure across multiple school buildings, contributing to day-to-day operational uptime and long-term hardware reliability.\n\n- Handled device deployment, diagnostics, repairs, and classroom hardware installations\n- Maintained networking equipment including switches and UPS systems\n- Built hands-on experience in hardware troubleshooting, IT support workflows, and cross-team communication",
-    "tags": ["Hardware", "Networking", "Support", "IT"],
-    "type": "job"
+    "title": "LED Drum Kit Lights",
+    "types": ["Electronics / Embedded"],
+    "status": "Completed",
+    "completionDate": "12-07-2019",
+    "description": "## Overview\nBuilt an interactive LED lighting system for a marching drum kit that responds in real time to playing.\n\n## How It Works\nMounted piezo sensors on each drum to detect the vibration of a strike. Each sensor feeds into an Arduino, which maps sensor triggers to individual LED strips on the corresponding drum. Programmed the Arduino to handle debouncing, sensitivity thresholds, and LED timing for clean, responsive visual feedback synchronized to playing.\n\n## Hardware\n- Arduino microcontroller\n- Piezo vibration sensors (one per drum)\n- Individually addressable LED strips\n- Custom wiring harness routed through the drum kit",
+    "tags": ["Arduino", "LED Strips", "Piezo Sensors", "Embedded C", "Prototyping"],
+    "images": ["https://raw.githubusercontent.com/eb613819/portfolio-site-data/main/images/drum_lights.jpg"]
+  },
+  {
+    "title": "H2Load HTTP/3 Docker Container",
+    "types": ["DevOps / Cloud", "Software / Web"],
+    "status": "Completed",
+    "completionDate": "10-31-2024",
+    "description": "## Overview\nPackaged the H2Load load-testing tool with full HTTP/3 support into a portable, ready-to-run Docker container.\n\n## Problem\nBuilding H2Load with HTTP/3 support from source requires resolving a complex chain of dependencies and compilation steps that vary by environment. No existing Docker image handled this cleanly.\n\n## Solution\nWrote a Dockerfile that handles the full build process — dependency installation, source compilation, and configuration — producing a lightweight image that runs H2Load with HTTP/3 support on any machine with Docker installed, with no manual setup required.\n\n## Usage\nUsed the container to benchmark and stress test HTTP/3 and HTTP/2 endpoints, measuring throughput, latency, and behavior under concurrent load across different server configurations.",
+    "tags": ["Docker", "HTTP/3", "HTTP/2", "Load Testing", "Containerization", "Networking", "Performance Testing"],
+    "dockerhub": "https://hub.docker.com/repository/docker/eb613819/h2load-http3",
+    "images": ["https://raw.githubusercontent.com/eb613819/portfolio-site-data/main/images/network.jpg"]
+  },
+  {
+    "title": "Walking Pad Accessory Set",
+    "types": ["3D Printing / CAD"],
+    "status": "Completed",
+    "completionDate": "01-22-2026",
+    "description": "## Overview\nDesigned and printed a modular set of accessories for a walking pad treadmill, all mounting to the handlebar without tools via a universal attachment piece.\n\n## Parts\n- **Dual laptop stands** — angled risers sized for a laptop, printed in two heights\n- **Mouse pad mount** — flat platform that clamps alongside the laptop stand\n- **Cupholder** — fits standard cups and bottles\n- **Universal back piece** — a single attachment designed to fit the walking pad bar (~1.6 in × 0.8 in) that all accessories slot into\n\n## Design & Print Process\nModeled all parts from scratch in CAD. Designed the universal back piece first to establish the attachment interface, then built each accessory around it. Optimized each part for FDM printing in PLA — selecting print orientation to maximize layer strength, minimizing supports, and tuning infill percentage and wall count to balance stiffness and material use. Iterated on the laptop stands specifically to improve rigidity under load.",
+    "tags": ["3D Printing", "CAD", "PLA", "FDM", "Product Design", "STL"],
+    "printables": "https://www.printables.com/model/1566219-walking-pad-accessories-laptop-stand-mouse-pad-cup",
+    "images": [
+      "https://raw.githubusercontent.com/eb613819/portfolio-site-data/main/images/walk_pad1.jpg",
+      "https://raw.githubusercontent.com/eb613819/portfolio-site-data/main/images/walk_pad2.jpg",
+      "https://raw.githubusercontent.com/eb613819/portfolio-site-data/main/images/walk_pad3.jpg",
+      "https://raw.githubusercontent.com/eb613819/portfolio-site-data/main/images/walk_pad4.jpg"
+    ]
+  },
+  {
+    "title": "Cloud Portability Experiment",
+    "types": ["DevOps / Cloud", "Software / Web"],
+    "status": "Completed",
+    "completionDate": "03-05-2026",
+    "description": "## Overview\nExplored cloud portability and vendor lock-in by deploying identical 3-tier application stacks across AWS, GCP, and Azure using reusable Infrastructure as Code and configuration management tooling.\n\n## Problem\nMost cloud deployments are tightly coupled to a single provider's APIs, services, and tooling. This project investigates how far a provider-agnostic IaC approach can go in making infrastructure truly portable.\n\n## Architecture\nEach deployment provisions a 3-tier stack:\n- **Web VM** — Nginx reverse proxy with TLS enforced via Certbot and Let's Encrypt\n- **App VM** — WordPress installation\n- **DB VM** — MariaDB database\n\n## Tooling\n- **OpenTofu** handles provider selection and VM provisioning across AWS, GCP, and Azure. It outputs the public IP of the web VM and the private IPs of the app and DB VMs, and creates a DNS record via the Namecheap API for the domain.\n- **Ansible** consumes those outputs and configures each VM — installing and wiring together WordPress, MariaDB, and Nginx, setting up the reverse proxy, and running Certbot to issue and enforce HTTPS.\n\n## Progression\nThe project was built in stages — first deploying a single VM to each provider independently, then building a provider interface layer to select the target at deploy time, then extending to the full 3-VM stack.\n\n## Extra\nAs a finishing touch, the deployment automatically sets the repository README as the default WordPress post on every fresh deploy.",
+    "tags": ["OpenTofu", "Ansible", "AWS", "GCP", "Azure", "IaC", "Terraform", "WordPress", "Nginx", "MariaDB", "DNS", "TLS", "Let's Encrypt", "DevOps"],
+    "github": "https://github.com/eb613819/cloud-portability-experiment",
+    "images": []
+  },
+  {
+    "title": "3D Printer Closet Environment Monitor",
+    "types": ["Electronics / Embedded", "Home Lab"],
+    "status": "Not Started",
+    "description": "## Overview\nWill build a dedicated environment monitor for a 3D printer closet, providing continuous safety monitoring and remote alerting for thermal, humidity, and air quality conditions.\n\n## Planned Monitoring\n- **Temperature** — detect thermal runaway or abnormal heat buildup from printers or enclosure failure\n- **Humidity** — track levels that affect filament quality and storage life\n- **Air Quality** — detect particle or fume levels from printing activity\n- **Smoke / Fire** — catch sudden temperature spikes or smoke as early warning of fire\n\n## Planned Features\n- Local status display showing current readings at a glance\n- Remote alerts via email or SMS for any out-of-range conditions\n- Environmental data logging over time to inform airflow tuning and filament storage decisions\n\n## Hardware\nPlanning to use a Raspberry Pi with an Enviro-style multi-sensor HAT covering temperature, humidity, and air quality in a single board.",
+    "tags": ["Raspberry Pi", "Temperature Sensing", "Humidity", "Air Quality", "Fire Safety", "IoT", "Alerts", "Home Lab"],
+    "images": ["https://raw.githubusercontent.com/eb613819/portfolio-site-data/main/images/thermometer.jpg"]
+  },
+  {
+    "title": "3D Printer Closet Build",
+    "types": ["Home Lab", "3D Printing / CAD"],
+    "status": "Completed",
+    "completionDate": "02-15-2026",
+    "description": "## Overview\nPlanned and built a dedicated closet workspace for a three-printer FDM setup, a multi-color filament system, and a filament dryer — with a focus on electrical safety, organization, and long-term reliability.\n\n## Electrical Planning\nCalculated total amperage draw across all equipment against the circuit's 20A breaker limit before purchasing anything. Selected a properly rated extension cable and power strip to handle the load safely without risk of overheating or tripping the breaker.\n\n## Equipment\n- Creality Ender 3 V3\n- Creality Ender 3 V3 KE\n- Creality Sparx i7\n- Creality AMS-style multi-color filament system\n- Sunlu 4-roll filament dryer\n- LED lighting\n- Smoke detector\n\n## Organization\nDesigned and 3D printed a set of pegboard hooks and holders from scratch in CAD, mounted to the back of the closet door for storing extra filament rolls, tools, and printer accessories.\n\n[View pegboard hooks on Printables →](https://www.printables.com/model/1605799-over-the-door-pegboard-hanger)",
+    "tags": ["Electrical", "Circuit Planning", "3D Printing", "CAD", "Home Lab", "Safety", "Infrastructure", "FDM"],
+    "printables": "https://www.printables.com/model/1605799-over-the-door-pegboard-hanger",
+    "images": []
   }
 ]
