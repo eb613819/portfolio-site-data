@@ -130,5 +130,54 @@
     "tags": ["Electrical", "Circuit Planning", "3D Printing", "CAD", "Home Lab", "Safety", "Infrastructure", "FDM"],
     "printables": "https://www.printables.com/model/1605799-over-the-door-pegboard-hanger",
     "images": []
+  },
+  {
+    "title": "Artist Portfolio Website",
+    "types": [
+      "Software / Web"
+    ],
+    "status": "In Progress",
+    "description": "## Overview\nBuilding a portfolio website for a local artist to display their work, share contact information, and establish an online presence.\n\n## Stack\nBuilt with Angular, following the same component-driven architecture used for this portfolio site. Deployed as a static site on GitHub Pages.\n\n## Features\n- Gallery for displaying artwork\n- Contact information and inquiry section\n- Clean, visually focused layout suited to showcasing creative work\n\n## Shop Integration\nExploring options for integrating an e-commerce shop to allow the artist to sell work directly from the site. Implementation approach is still being evaluated.",
+    "tags": [
+      "Angular",
+      "TypeScript",
+      "GitHub Pages",
+      "E-Commerce",
+      "SPA"
+    ],
+    "github": "https://github.com/eb613819/art-site",
+    "images": []
+  },
+  {
+    "title": "Biomedical Engineer Portfolio Website",
+    "types": [
+      "Software / Web"
+    ],
+    "status": "In Progress",
+    "description": "## Overview\nBuilding a professional portfolio website for a biomedical engineer to showcase projects, publications, awards, education, and experience.\n\n## Stack\nBuilt with Angular standalone components and TypeScript, mirroring the architecture of this portfolio site. Will be hosted on GitHub Pages under the client's own GitHub account, with contributions from me, so the client retains full ownership of the site and its deployment.\n\n## Content Sections\n- Projects gallery\n- Publications\n- Awards and recognition\n- Education and experience\n\n## CMS Integration\nUnlike a personal portfolio where the owner is comfortable editing JSON directly, this site will integrate a headless CMS so the client can add and update content through a friendly UI without touching code. CMS selection is currently being evaluated.",
+    "tags": [
+      "Angular",
+      "TypeScript",
+      "GitHub Pages",
+      "Headless CMS",
+      "SPA"
+    ],
+    "images": []
+  },
+  {
+    "title": "Author WordPress Site",
+    "types": [
+      "Software / Web"
+    ],
+    "status": "In Progress",
+    "description": "## Overview\nCustomizing and extending an existing WordPress site for a local author, focused on theme customization and adding e-commerce functionality for selling books directly.\n\n## Scope\n- Custom WordPress theme modifications to match the author's brand and style\n- Shop integration to allow direct book sales from the site\n- Shop implementation approach is currently being evaluated\n\n## Platform\nBuilding on the client's existing WordPress installation rather than migrating, preserving existing content and SEO while extending functionality.",
+    "tags": [
+      "WordPress",
+      "PHP",
+      "Theme Development",
+      "E-Commerce",
+      "CMS"
+    ],
+    "images": []
   }
 ]
