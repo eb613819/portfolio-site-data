@@ -132,6 +132,29 @@
     "images": []
   },
   {
+    "title": "Ohio University Internal Developer Portal (Backstage)",
+    "types": [
+      "Software / Web",
+      "DevOps / Cloud"
+    ],
+    "status": "In Progress",
+    "description": "## Overview\nAn ongoing research project to integrate and maintain **Backstage** — an open-source internal developer portal — into Ohio University's on-premises Kubernetes platform. The portal centralizes developer tooling, service discovery, documentation, and infrastructure visibility across the university's engineering teams.\n\n## Authentication & User Provisioning\nConfigured **Azure AD SSO** using the Backstage auth plugin, including **Microsoft Graph API** integration for automated user provisioning. Users authenticate through the university's existing identity infrastructure with no manual account management required.\n\n## Plugin Integrations\nEach integration required significant setup beyond installing a package — including creating and configuring external service accounts, managing credentials, and wiring secrets into the running pod:\n\n- **Catalog** — GitHub organization imports for automated service and repository discovery across university GitHub orgs\n- **Scaffolder** — custom templates for standardized project and service onboarding workflows\n- **TechDocs** — in-portal technical documentation rendering from markdown stored in version-controlled repositories\n- **Jira** (community plugin) — issue tracking and project visibility surfaced directly within the portal\n- **Prometheus & Grafana** (community plugins) — real-time Kubernetes cluster metrics and dashboards embedded in the portal\n\n## Secrets Management & Infrastructure\nAll credentials are managed using **Sealed Secrets** — encrypted at rest and safely stored in version control. Service account credentials are sealed, committed to the repo, and injected into the Backstage pod through Kubernetes secret references at runtime. This approach keeps the deployment fully GitOps-compatible without exposing sensitive values.\n\n## Environment\nRunning as a pod on on-premises Kubernetes clusters, integrated with university Azure AD, GitHub, and Jira infrastructure.",
+    "tags": [
+      "Backstage",
+      "Kubernetes",
+      "Azure AD",
+      "SSO",
+      "Prometheus",
+      "Grafana",
+      "Sealed Secrets",
+      "Jira",
+      "IDP",
+      "GitHub",
+      "DevOps",
+      "On-Prem"
+    ]
+  },
+  {
     "title": "Artist Portfolio Website",
     "types": [
       "Software / Web"
