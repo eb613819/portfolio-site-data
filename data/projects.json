@@ -26,7 +26,7 @@
     "description": "## Overview\nBuilt a smart mirror display using a Raspberry Pi 5, an old TV, a glass sheet, and a reflective window film overlay to create a two-way mirror effect.\n\n## Hardware\n- Raspberry Pi 5 as the compute unit\n- Repurposed flat-panel TV as the display\n- Poster frame as the outer enclosure\n- Glass sheet with reflective window film applied for the two-way mirror effect\n\n## Software & Configuration\nInstalled and configured the MagicMirror² open-source platform with modules for live calendar, weather, and news feeds. Configured the software to launch automatically on boot. Modules and configuration are managed remotely over SSH — no physical access needed to update the display.\n\n## Assembly\nHandled all physical construction including cutting and fitting the reflective film, mounting the display behind the glass, routing wiring inside the frame, and securing all components inside the enclosure.",
     "tags": ["Raspberry Pi 5", "MagicMirror²", "IoT", "Linux", "SSH", "Smart Home"],
     "github": "https://github.com/MichMich/MagicMirror",
-    "images": ["https://raw.githubusercontent.com/eb613819/portfolio-site-data/main/images/magic-mirror.jpg"]
+    "images": []
   },
   {
     "title": "Insulin Temperature Monitor",
