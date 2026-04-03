@@ -4,7 +4,17 @@
     "types": ["Software / Web"],
     "status": "Completed",
     "completionDate": "01-12-2026",
-    "description": "## Overview\nDesigned and developed a personal portfolio website using Angular standalone components and TypeScript, deployed as a static site on GitHub Pages.\n\n## Architecture\nArchitected a decoupled data layer by storing all project and experience content in a dedicated GitHub repository, fetched at runtime via HTTP. This separates content from presentation — the site never needs to be rebuilt or redeployed when data changes.\n\n## Features\n- Filterable project gallery by type, tag, and status\n- Filterable experience gallery by type and tag\n- Expandable responsive cards with image carousels\n- Markdown-rendered project and experience descriptions\n- Resume download\n\n## Workflow\nDeveloped using a structured Git workflow with feature branches, issue tracking, and pull requests into an always-deployable `main` branch. Branch names follow a `type/issue-number-description` convention for full traceability.",
+    "overview": "Designed and developed a personal portfolio website using Angular standalone components and TypeScript, deployed as a static site on GitHub Pages.",
+    "architecture": "Architected a decoupled data layer by storing all project and experience content in a dedicated GitHub repository, fetched at runtime via HTTP. This separates content from presentation — the site never needs to be rebuilt or redeployed when data changes. Developed using a structured Git workflow with feature branches, issue tracking, and pull requests into an always-deployable main branch. Branch names follow a type/issue-number-description convention for full traceability.",
+    "features": [
+      "Filterable project gallery by type, tag, and status",
+      "Filterable experience gallery by type and tag",
+      "Expandable responsive cards with image carousels",
+      "Markdown-rendered project and experience descriptions",
+      "Resume download"
+    ],
+    "challenges": [],
+    "learned": "",
     "tags": ["Angular", "TypeScript", "GitHub Pages", "Responsive Design", "SPA"],
     "github": "https://github.com/eb613819/portfolio-site",
     "images": ["https://raw.githubusercontent.com/eb613819/portfolio-site-data/main/images/site_logo.png"]
@@ -14,7 +24,15 @@
     "types": ["Home Lab", "Networking / Infrastructure"],
     "status": "Completed",
     "completionDate": "05-01-2025",
-    "description": "## Overview\nDesigned and built a compact home NAS for centralized file storage, backups, and media serving — purpose-built around TrueNAS in a small form factor case.\n\n## Hardware\n- **Case:** JONSBO N1 Mini-ITX NAS enclosure\n- **Motherboard:** ASRock B550 Phantom Gaming-ITX\n- **CPU:** AMD Ryzen 5 4600G\n- **RAM:** 32GB DDR4\n- **OS Drive:** Kingston NV2 250GB M.2 NVMe SSD\n- **Storage:** 4× Western Digital 4TB Red Plus NAS HDDs\n- **Cache:** 500GB Western Digital Blue SATA SSD\n- **PSU:** Cooler Master V850 SFX Gold ATX 3.0 Modular\n\n## Software & Configuration\nRan TrueNAS as the OS, configured a RAID pool across the four NAS drives, and set up network shares for ebook and 3D print file access across the home network. Used the SATA SSD as a read/write cache to improve performance on frequently accessed files.\n\n## Status\nThe four WD Red Plus drives were found to be faulty and are pending warranty replacement. The NAS is currently being evaluated for decommission — the plan is to migrate storage to a VM on the Proxmox home lab server using PCIe passthrough, and repurpose this hardware.",
+    "overview": "Designed and built a compact home NAS for centralized file storage, backups, and media serving — purpose-built around TrueNAS in a small form factor case.",
+    "hardware": "Motherboard: ASRock B550 Phantom Gaming-ITX. CPU: AMD Ryzen 5 4600G. RAM: 32GB DDR4. OS Drive: Kingston NV2 250GB M.2 NVMe SSD. Storage: 4× Western Digital 4TB Red Plus NAS HDDs. Cache: 500GB Western Digital Blue SATA SSD. PSU: Cooler Master V850 SFX Gold ATX 3.0 Modular. Case: JONSBO N1 Mini-ITX NAS enclosure. Ran TrueNAS as the OS, configured a RAID pool across the four NAS drives, and set up network shares for ebook and 3D print file access across the home network. Used the SATA SSD as a read/write cache to improve performance on frequently accessed files.",
+    "challenges": [
+      {
+        "problem": "The four WD Red Plus drives were found to be faulty after the build was complete.",
+        "solution": "Drives are pending warranty replacement. Evaluating migrating storage to a VM on the Proxmox server using PCIe passthrough to consolidate hardware."
+      }
+    ],
+    "learned": "Modular PSU cables are NOT interchangeable, even within the same brand.",
     "tags": ["TrueNAS", "NAS", "RAID", "Linux", "Networking", "Storage", "Mini-ITX", "ZFS"],
     "images": ["https://raw.githubusercontent.com/eb613819/portfolio-site-data/main/images/hdd.jpg"]
   },
@@ -23,7 +41,9 @@
     "types": ["Electronics / Embedded", "Home Lab"],
     "status": "Completed",
     "completionDate": "03-15-2025",
-    "description": "## Overview\nBuilt a smart mirror display using a Raspberry Pi 5, an old TV, a glass sheet, and a reflective window film overlay to create a two-way mirror effect.\n\n## Hardware\n- Raspberry Pi 5 as the compute unit\n- Repurposed flat-panel TV as the display\n- Poster frame as the outer enclosure\n- Glass sheet with reflective window film applied for the two-way mirror effect\n\n## Software & Configuration\nInstalled and configured the MagicMirror² open-source platform with modules for live calendar, weather, and news feeds. Configured the software to launch automatically on boot. Modules and configuration are managed remotely over SSH — no physical access needed to update the display.\n\n## Assembly\nHandled all physical construction including cutting and fitting the reflective film, mounting the display behind the glass, routing wiring inside the frame, and securing all components inside the enclosure.",
+    "overview": "Built a smart mirror display using a Raspberry Pi 5, an old TV, a glass sheet, and a reflective window film overlay to create a two-way mirror effect.",
+    "hardware": "Raspberry Pi 5 as the compute unit. Repurposed flat-panel TV as the display. Poster frame as the outer enclosure. Glass sheet with reflective window film applied for the two-way mirror effect. Installed and configured the MagicMirror² open-source platform with modules for live calendar, weather, and news feeds. Configured to launch automatically on boot. Modules and configuration are managed remotely over SSH — no physical access needed to update the display.",
+    "design": "Handled all physical construction including cutting and fitting the reflective film, mounting the display behind the glass, routing wiring inside the frame, and securing all components inside the enclosure.",
     "tags": ["Raspberry Pi 5", "MagicMirror²", "IoT", "Linux", "SSH", "Smart Home"],
     "github": "https://github.com/MichMich/MagicMirror",
     "images": []
@@ -32,7 +52,8 @@
     "title": "Insulin Temperature Monitor",
     "types": ["Electronics / Embedded", "3D Printing / CAD"],
     "status": "Not Started",
-    "description": "## Overview\nWill design and build a safety-focused temperature monitor for insulin fridge storage, providing real-time awareness and alerts when storage conditions fall outside safe ranges.\n\n## Planned Design\n- ESP32 microcontroller mounted on the outside of the fridge\n- Wired temperature probe routed inside the fridge, submerged in liquid inside an insulin vial for accurate thermal mass measurement rather than measuring air temperature\n- Local display showing current temperature at a glance\n- Email and SMS alerts triggered when temperature approaches freezing or exceeds safe upper limits\n\n## Resilience\n- Pass-through power bank to maintain monitoring during power outages\n- Passive dumb thermometer inside the holder as a redundant analog backup\n\n## Enclosure\nWill design and 3D print a custom enclosure and fridge-mounted holder in CAD to house the probe, keep insulin organized, and mount the external display and microcontroller cleanly.",
+    "overview": "Will design and build a safety-focused temperature monitor for insulin fridge storage, providing real-time awareness and alerts when storage conditions fall outside safe ranges.",
+    "plan": "ESP32 microcontroller mounted on the outside of the fridge with a wired temperature probe routed inside, submerged in liquid inside an insulin vial for accurate thermal mass measurement rather than measuring air temperature. Local display showing current temperature at a glance. Email and SMS alerts triggered when temperature approaches freezing or exceeds safe upper limits. Pass-through power bank to maintain monitoring during power outages, with a passive dumb thermometer as a redundant analog backup. Will design and 3D print a custom enclosure and fridge-mounted holder in CAD to house the probe, keep insulin organized, and mount the external display and microcontroller cleanly.",
     "tags": ["ESP32", "Temperature Sensing", "3D Printing", "CAD", "Alerts", "Medical", "Power Resilience", "IoT"],
     "images": ["https://raw.githubusercontent.com/eb613819/portfolio-site-data/main/images/insulin.jpg"]
   },
@@ -41,7 +62,9 @@
     "types": ["Electronics / Embedded", "3D Printing / CAD"],
     "status": "Completed",
     "completionDate": "02-01-2025",
-    "description": "## Overview\nDesigned and built a self-contained portable penetration testing platform housed inside a hard-shell Apache case, built around a fully custom 3D printed internal chassis.\n\n## Hardware\n- **Compute:** Raspberry Pi 5 running Kali Linux\n- **Storage:** 512GB NVMe M.2 SSD via a Pi NVMe HAT\n- **Display:** 10.1\" touchscreen\n- **Input:** Bluetooth mouse and keyboard\n- **Networking:** ALFA Network AWUS036ACS Dual Band AC600 USB WiFi adapter with external antenna\n- **Connectivity:** Ethernet extension port, 8-port USB hub, built-in cooling fans\n\n## Chassis Design\nFully designed the internal insert from scratch in CAD — modeled to fit the exact interior dimensions of the Apache case with precise cutouts and mounts for every component. 3D printed the entire chassis including fan mounts, port extensions, and component brackets.\n\n## Capabilities\nProvides a portable platform for wireless network analysis, lightweight offensive security tasks, and Kali Linux tooling in the field — all in a ruggedized, organized enclosure.\n\n> This project was later succeeded by the Briefcase Pen Testing Rig — a refined version built into a leather briefcase with a modular, magnetically paneled chassis.",
+    "overview": "Designed and built a self-contained portable penetration testing platform housed inside a hard-shell Apache case, built around a fully custom 3D printed internal chassis.",
+    "hardware": "Compute: Raspberry Pi 5 running Kali Linux. Storage: 512GB NVMe M.2 SSD via a Pi NVMe HAT. Display: 10.1\" touchscreen. Input: Bluetooth mouse and keyboard. Networking: ALFA Network AWUS036ACS Dual Band AC600 USB WiFi adapter with external antenna. Connectivity: Ethernet extension port, 8-port USB hub, built-in cooling fans.",
+    "design": "Fully designed the internal insert from scratch in CAD — modeled to fit the exact interior dimensions of the Apache case with precise cutouts and mounts for every component. 3D printed the entire chassis including fan mounts, port extensions, and component brackets.",
     "tags": ["Raspberry Pi 5", "Kali Linux", "Penetration Testing", "Cybersecurity", "CAD", "3D Printing", "NVMe", "WiFi Adapter", "Embedded Linux"],
     "printables": "https://www.printables.com/model/1606964-raspberry-pi-apache-2800-pentesting-rig",
     "images": [
@@ -55,7 +78,9 @@
     "types": ["Electronics / Embedded", "3D Printing / CAD"],
     "status": "Completed",
     "completionDate": "02-18-2026",
-    "description": "## Overview\nDesigned and built a refined successor to the Apache Case Pen Testing Rig — same electronics platform, completely redesigned chassis housed inside a leather briefcase for a more professional and portable form factor.\n\n## Hardware\nCarries over the full electronics stack from the original rig:\n- Raspberry Pi 5 running Kali Linux\n- 512GB NVMe M.2 SSD via Pi NVMe HAT\n- 10.1\" touchscreen\n- Bluetooth mouse and keyboard\n- ALFA Network AWUS036ACS Dual Band AC600 USB WiFi adapter with external antenna\n- Ethernet extension port, 8-port USB hub, built-in cooling fans\n\n## Chassis Design\nDesigned a fully modular chassis from scratch in CAD — individual pieces that screw together using heat-set inserts and connector pieces, allowing for disassembly, reconfiguration, and reprinting of individual sections without replacing the entire chassis.\n\nA smooth magnetic panel system snaps onto the outside of the chassis to create a clean, unified interior appearance while remaining removable for access to components.\n\n## Enclosure\nHoused in a leather briefcase for a professional look. All components mount securely inside the custom chassis with no rattling or shifting.\n\n> Successor to the Apache Case Pen Testing Rig.",
+    "overview": "Designed and built a refined successor to the Apache Case Pen Testing Rig — same electronics platform, completely redesigned chassis housed inside a leather briefcase for a more professional and portable form factor.",
+    "hardware": "Raspberry Pi 5 running Kali Linux. 512GB NVMe M.2 SSD via Pi NVMe HAT. 10.1\" touchscreen. Bluetooth mouse and keyboard. ALFA Network AWUS036ACS Dual Band AC600 USB WiFi adapter with external antenna. Ethernet extension port, 8-port USB hub, built-in cooling fans.",
+    "design": "Designed a fully modular chassis from scratch in CAD — individual pieces that screw together using heat-set inserts and connector pieces, allowing for disassembly, reconfiguration, and reprinting of individual sections without replacing the entire chassis. A smooth magnetic panel system snaps onto the outside of the chassis to create a clean, unified interior appearance while remaining removable for access to components. Housed in a leather briefcase for a professional look.",
     "tags": ["Raspberry Pi 5", "Kali Linux", "Penetration Testing", "Cybersecurity", "CAD", "3D Printing", "Heat-Set Inserts", "Modular Design", "NVMe", "WiFi Adapter", "Embedded Linux"],
     "printables": "https://www.printables.com/model/1597507-raspberry-pi-briefcase-pentesting-rig",
     "images": []
@@ -65,7 +90,15 @@
     "types": ["Home Lab", "Networking / Infrastructure"],
     "status": "Completed",
     "completionDate": "03-25-2025",
-    "description": "## Overview\nRebuilt a server around a salvaged enterprise-grade dual-processor motherboard and configured it as a Proxmox hypervisor running multiple production-like virtual machines for self-hosted services.\n\n## Hardware\n- **Motherboard:** Supermicro X8DTN+ (dual socket)\n- **CPUs:** 2× Intel Xeon X5680\n- **RAM:** 192GB DDR3 ECC\n- **Case:** Fractal Design Define 7\n- **Storage:** 500GB SSD (Proxmox OS), 2× 1TB SATA SSD (VM storage + backup)\n\n## Virtual Machines\n- **Ebook Server:** Calibre Content Server serving the ebook library stored on the NAS\n- **Reverse Proxy:** Routes a subdomain to the ebook server and enforces HTTPS\n- **3D Print File Server:** Planned VM to serve print files from the NAS *(in progress)*\n- **Media Server:** Plex or Jellyfin for local movie streaming *(planned)*\n\n## Status\nAll running VMs were fully operational and serving content from the NAS until the NAS drives failed. Services are temporarily down pending WD warranty drive replacements. Once drives are back online, planning to migrate the NAS itself to a VM on this machine using PCIe passthrough to consolidate hardware.",
+    "overview": "Rebuilt a server around a salvaged enterprise-grade dual-processor motherboard and configured it as a Proxmox hypervisor running multiple production-like virtual machines for self-hosted services.",
+    "hardware": "Motherboard: Supermicro X8DTN+ (dual socket). CPUs: 2× Intel Xeon X5680. RAM: 192GB DDR3 ECC. Case: Fractal Design Define 7. Storage: 500GB SSD (Proxmox OS), 2× 1TB SATA SSD (VM storage + backup). Running VMs include a Calibre Content Server for ebook library access, a reverse proxy enforcing HTTPS on a subdomain, with a media server planned.",
+    "challenges": [
+      {
+        "problem": "All running VMs lost access to their data when the NAS drives failed.",
+        "solution": "Services are temporarily down pending WD warranty drive replacements. Planning to migrate the NAS itself to a VM on this machine using PCIe passthrough to consolidate hardware and avoid a single point of failure."
+      }
+    ],
+    "learned": "",
     "tags": ["Proxmox", "Virtualization", "Linux", "Xeon", "Supermicro", "Reverse Proxy", "Self-Hosting", "Calibre", "Home Lab", "Containerization"],
     "images": ["https://raw.githubusercontent.com/eb613819/portfolio-site-data/main/images/server.jpg"]
   },
@@ -74,7 +107,9 @@
     "types": ["Electronics / Embedded"],
     "status": "Completed",
     "completionDate": "12-07-2019",
-    "description": "## Overview\nBuilt an interactive LED lighting system for a marching drum kit that responds in real time to playing.\n\n## How It Works\nMounted piezo sensors on each drum to detect the vibration of a strike. Each sensor feeds into an Arduino, which maps sensor triggers to individual LED strips on the corresponding drum. Programmed the Arduino to handle debouncing, sensitivity thresholds, and LED timing for clean, responsive visual feedback synchronized to playing.\n\n## Hardware\n- Arduino microcontroller\n- Piezo vibration sensors (one per drum)\n- Individually addressable LED strips\n- Custom wiring harness routed through the drum kit",
+    "overview": "Built an interactive LED lighting system for a marching drum kit that responds in real time to playing.",
+    "hardware": "Arduino microcontroller. Piezo vibration sensors mounted on each drum to detect strike vibration. Individually addressable LED strips. Custom wiring harness routed through the drum kit. Each sensor feeds into the Arduino, which maps triggers to individual LED strips on the corresponding drum. Programmed to handle debouncing, sensitivity thresholds, and LED timing for clean, responsive visual feedback synchronized to playing.",
+    "challenges": [],
     "tags": ["Arduino", "LED Strips", "Piezo Sensors", "Embedded C", "Prototyping"],
     "images": ["https://raw.githubusercontent.com/eb613819/portfolio-site-data/main/images/drum_lights.jpg"]
   },
@@ -83,7 +118,15 @@
     "types": ["DevOps / Cloud", "Software / Web"],
     "status": "Completed",
     "completionDate": "10-31-2024",
-    "description": "## Overview\nPackaged the H2Load load-testing tool with full HTTP/3 support into a portable, ready-to-run Docker container.\n\n## Problem\nBuilding H2Load with HTTP/3 support from source requires resolving a complex chain of dependencies and compilation steps that vary by environment. No existing Docker image handled this cleanly.\n\n## Solution\nWrote a Dockerfile that handles the full build process — dependency installation, source compilation, and configuration — producing a lightweight image that runs H2Load with HTTP/3 support on any machine with Docker installed, with no manual setup required.\n\n## Usage\nUsed the container to benchmark and stress test HTTP/3 and HTTP/2 endpoints, measuring throughput, latency, and behavior under concurrent load across different server configurations.",
+    "overview": "Packaged the H2Load load-testing tool with full HTTP/3 support into a portable, ready-to-run Docker container.",
+    "architecture": "Wrote a Dockerfile that handles the full build process — dependency installation, source compilation, and configuration — producing a lightweight image that runs H2Load with HTTP/3 support on any machine with Docker installed. Used the container to benchmark and stress test HTTP/3 and HTTP/2 endpoints, measuring throughput, latency, and behavior under concurrent load across different server configurations.",
+    "challenges": [
+      {
+        "problem": "Building H2Load with HTTP/3 support from source requires resolving a complex chain of dependencies and compilation steps that vary by environment. No existing Docker image handled this cleanly.",
+        "solution": "Wrote a Dockerfile that encapsulates the entire build process, making the tool portable and reproducible with no manual setup required on any machine with Docker installed."
+      }
+    ],
+    "learned": "",
     "tags": ["Docker", "HTTP/3", "HTTP/2", "Load Testing", "Containerization", "Networking", "Performance Testing"],
     "dockerhub": "https://hub.docker.com/repository/docker/eb613819/h2load-http3",
     "images": ["https://raw.githubusercontent.com/eb613819/portfolio-site-data/main/images/network.jpg"]
@@ -93,7 +136,8 @@
     "types": ["3D Printing / CAD"],
     "status": "Completed",
     "completionDate": "01-22-2025",
-    "description": "## Overview\nDesigned and printed a modular set of accessories for a walking pad treadmill, all mounting to the handlebar via a universal attachment piece.\n\n## Parts\n- **Dual laptop stands** — angled risers sized for a laptop\n- **Mouse pad mount** — flat platform that clamps alongside the laptop stand\n- **Cupholder** — fits standard cups and bottles\n- **Universal back piece** — a single attachment designed to fit the walking pad bar (~1.6 in × 0.8 in) that all accessories screw to\n\n## Design & Print Process\nModeled all parts from scratch in CAD. Designed the universal back piece first to establish the attachment interface, then built each accessory around it. Optimized each part for FDM printing in PLA — selecting print orientation to maximize layer strength, minimizing supports, and tuning infill percentage and wall count to balance stiffness and material use. Iterated on the laptop stands specifically to improve rigidity under load.",
+    "overview": "Designed and printed a modular set of accessories for a walking pad treadmill, all mounting to the handlebar via a universal attachment piece.",
+    "design": "Modeled all parts from scratch in CAD: dual laptop stands, a mouse pad mount, a cupholder, and a universal back piece sized to fit the walking pad bar (~1.6 in × 0.8 in) that all accessories screw to. Designed the universal back piece first to establish the attachment interface, then built each accessory around it. Optimized each part for FDM printing in PLA — selecting print orientation to maximize layer strength, minimizing supports, and tuning infill and wall count to balance stiffness and material use. Iterated on the laptop stands specifically to improve rigidity under load.",
     "tags": ["3D Printing", "CAD", "PLA", "FDM", "Product Design", "STL"],
     "printables": "https://www.printables.com/model/1566219-walking-pad-accessories-laptop-stand-mouse-pad-cup",
     "images": [
@@ -108,7 +152,14 @@
     "types": ["DevOps / Cloud", "Software / Web"],
     "status": "Completed",
     "completionDate": "03-05-2026",
-    "description": "## Overview\nExplored cloud portability and vendor lock-in by deploying identical 3-tier application stacks across AWS, GCP, and Azure using reusable Infrastructure as Code and configuration management tooling.\n\n## Problem\nMost cloud deployments are tightly coupled to a single provider's APIs, services, and tooling. This project investigates how far a provider-agnostic IaC approach can go in making infrastructure truly portable.\n\n## Architecture\nEach deployment provisions a 3-tier stack:\n- **Web VM** — Nginx reverse proxy with TLS enforced via Certbot and Let's Encrypt\n- **App VM** — WordPress installation\n- **DB VM** — MariaDB database\n\n## Tooling\n- **OpenTofu** handles provider selection and VM provisioning across AWS, GCP, and Azure. It outputs the public IP of the web VM and the private IPs of the app and DB VMs, and creates a DNS record via the Namecheap API for the domain.\n- **Ansible** consumes those outputs and configures each VM — installing and wiring together WordPress, MariaDB, and Nginx, setting up the reverse proxy, and running Certbot to issue and enforce HTTPS.\n\n## Progression\nThe project was built in stages — first deploying a single VM to each provider independently, then building a provider interface layer to select the target at deploy time, then extending to the full 3-VM stack.\n\n## Extra\nAs a finishing touch, the deployment automatically sets the repository README as the default WordPress post on every fresh deploy.",
+    "overview": "Explored cloud portability and vendor lock-in by deploying identical 3-tier application stacks across AWS, GCP, and Azure using reusable Infrastructure as Code and configuration management tooling.",
+    "architecture": "Each deployment provisions a 3-tier stack: a web VM running Nginx as a reverse proxy with TLS via Certbot and Let's Encrypt, an app VM running WordPress, and a DB VM running MariaDB. OpenTofu handles provider selection and VM provisioning across all three clouds, outputting IPs and creating a DNS record via the Namecheap API. Ansible consumes those outputs and configures each VM — installing and wiring together WordPress, MariaDB, and Nginx, setting up the reverse proxy, and running Certbot. Built in stages: single VM per provider first, then a provider interface layer, then the full 3-VM stack. As a finishing touch, the deployment automatically sets the repository README as the default WordPress post on every fresh deploy.",
+    "challenges": [
+      {
+        "problem": "Most cloud deployments are tightly coupled to a single provider's APIs and tooling, making portability difficult.",
+        "solution": "Built a provider interface layer in OpenTofu that selects the target cloud at deploy time, with Ansible handling all post-provisioning configuration in a provider-agnostic way."
+      }
+    ],
     "tags": ["OpenTofu", "Ansible", "AWS", "GCP", "Azure", "IaC", "Terraform", "WordPress", "Nginx", "MariaDB", "DNS", "TLS", "Let's Encrypt", "DevOps"],
     "github": "https://github.com/eb613819/cloud-portability-experiment",
     "images": []
@@ -117,7 +168,8 @@
     "title": "3D Printer Closet Environment Monitor",
     "types": ["Electronics / Embedded", "Home Lab"],
     "status": "Not Started",
-    "description": "## Overview\nWill build a dedicated environment monitor for a 3D printer closet, providing continuous safety monitoring and remote alerting for thermal, humidity, and air quality conditions.\n\n## Planned Monitoring\n- **Temperature** — detect thermal runaway or abnormal heat buildup from printers or enclosure failure\n- **Humidity** — track levels that affect filament quality and storage life\n- **Air Quality** — detect particle or fume levels from printing activity\n- **Smoke / Fire** — catch sudden temperature spikes or smoke as early warning of fire\n\n## Planned Features\n- Local status display showing current readings at a glance\n- Remote alerts via email or SMS for any out-of-range conditions\n- Environmental data logging over time to inform airflow tuning and filament storage decisions\n\n## Hardware\nPlanning to use a Raspberry Pi with an Enviro-style multi-sensor HAT covering temperature, humidity, and air quality in a single board.",
+    "overview": "Will build a dedicated environment monitor for a 3D printer closet, providing continuous safety monitoring and remote alerting for thermal, humidity, and air quality conditions.",
+    "plan": "Raspberry Pi with an Enviro-style multi-sensor HAT covering temperature, humidity, and air quality in a single board. Monitor temperature for thermal runaway or abnormal heat buildup, humidity for filament quality, air quality for fumes from printing activity, and smoke or sudden temperature spikes as early fire warning. Local status display showing current readings. Remote alerts via email or SMS for any out-of-range conditions. Environmental data logging over time to inform airflow tuning and filament storage decisions.",
     "tags": ["Raspberry Pi", "Temperature Sensing", "Humidity", "Air Quality", "Fire Safety", "IoT", "Alerts", "Home Lab"],
     "images": ["https://raw.githubusercontent.com/eb613819/portfolio-site-data/main/images/thermometer.jpg"]
   },
@@ -126,130 +178,112 @@
     "types": ["Home Lab", "3D Printing / CAD"],
     "status": "Completed",
     "completionDate": "02-15-2026",
-    "description": "## Overview\nPlanned and built a dedicated closet workspace for a three-printer FDM setup, a multi-color filament system, and a filament dryer — with a focus on electrical safety, organization, and long-term reliability.\n\n## Electrical Planning\nCalculated total amperage draw across all equipment against the circuit's 20A breaker limit before purchasing anything. Selected a properly rated extension cable and power strip to handle the load safely without risk of overheating or tripping the breaker.\n\n## Equipment\n- Creality Ender 3 V3\n- Creality Ender 3 V3 KE\n- Creality Sparx i7\n- Creality AMS-style multi-color filament system\n- Sunlu 4-roll filament dryer\n- LED lighting\n- Smoke detector\n\n## Organization\nDesigned and 3D printed a set of pegboard hooks and holders from scratch in CAD, mounted to the back of the closet door for storing extra filament rolls, tools, and printer accessories.",
+    "overview": "Planned and built a dedicated closet workspace for a three-printer FDM setup, a multi-color filament system, and a filament dryer — with a focus on electrical safety, organization, and long-term reliability.",
+    "hardware": "Creality Ender 3 V3, Creality Ender 3 V3 KE, Creality Sparx i7, Creality AMS-style multi-color filament system, Sunlu 4-roll filament dryer, LED lighting, and a smoke detector. Calculated total amperage draw across all equipment against the circuit's 20A breaker limit before purchasing anything. Selected a properly rated extension cable and power strip to handle the load safely.",
+    "design": "Designed and 3D printed a set of pegboard hooks and holders from scratch in CAD, mounted to the back of the closet door for storing extra filament rolls, tools, and printer accessories.",
     "tags": ["Electrical", "Circuit Planning", "3D Printing", "CAD", "Home Lab", "Safety", "Infrastructure", "FDM"],
     "printables": "https://www.printables.com/model/1605799-over-the-door-pegboard-hanger",
     "images": []
   },
   {
     "title": "Ohio University Internal Developer Portal (Backstage)",
-    "types": [
-      "Software / Web",
-      "DevOps / Cloud"
-    ],
+    "types": ["Software / Web", "DevOps / Cloud"],
     "status": "In Progress",
-    "description": "## Overview\nAn ongoing research project to integrate and maintain **Backstage** — an open-source internal developer portal — into Ohio University's on-premises Kubernetes platform. The portal centralizes developer tooling, service discovery, documentation, and infrastructure visibility across the university's engineering teams.\n\n## Authentication & User Provisioning\nConfigured **Azure AD SSO** using the Backstage auth plugin, including **Microsoft Graph API** integration for automated user provisioning. Users authenticate through the university's existing identity infrastructure with no manual account management required.\n\n## Plugin Integrations\nEach integration required significant setup beyond installing a package — including creating and configuring external service accounts, managing credentials, and wiring secrets into the running pod:\n\n- **Catalog** — GitHub organization imports for automated service and repository discovery across university GitHub orgs\n- **Scaffolder** — custom templates for standardized project and service onboarding workflows\n- **TechDocs** — in-portal technical documentation rendering from markdown stored in version-controlled repositories\n- **Homepage** (community plugin) — custom centralized landing page, currently in development with theme customization\n- **Jira** (community plugin) — issue tracking and project visibility surfaced directly within the portal\n- **Prometheus & Grafana** (community plugins) — real-time Kubernetes cluster metrics and dashboards embedded in the portal\n\n## Secrets Management & Infrastructure\nAll credentials are managed using **Sealed Secrets** — encrypted at rest and safely stored in version control. Service account credentials are sealed, committed to the repo, and injected into the Backstage pod through Kubernetes secret references at runtime. This approach keeps the deployment fully GitOps-compatible without exposing sensitive values.\n\n## Dockerfile & Build Optimization\nIteratively improved the **Dockerfile** to leverage multi-stage builds and layer caching, separating dependency installation from application code to significantly reduce rebuild times during development. Changes to application code no longer invalidate cached dependency layers.\n\n## Deployment\nDeployed to on-premises Kubernetes clusters using **Helm** charts, with **Rancher** for cluster management and visibility. Infrastructure is version-controlled and reproducible across environments.",
-    "tags": [
-      "Backstage",
-      "Kubernetes",
-      "Helm",
-      "Rancher",
-      "Azure AD",
-      "SSO",
-      "Prometheus",
-      "Grafana",
-      "Sealed Secrets",
-      "Jira",
-      "Docker",
-      "IDP",
-      "GitHub",
-      "DevOps",
-      "On-Prem"
-    ]
+    "overview": "An ongoing research project to integrate and maintain Backstage — an open-source internal developer portal — into Ohio University's on-premises Kubernetes platform. The portal centralizes developer tooling, service discovery, documentation, and infrastructure visibility across the university's engineering teams.",
+    "plan": "Continuing to develop the Homepage plugin with custom theme and layout. Evaluating additional community plugins for expanded visibility into university infrastructure.",
+    "architecture": "Deployed to on-premises Kubernetes clusters using Helm charts, with Rancher for cluster management. Azure AD SSO configured via the Backstage auth plugin, with Microsoft Graph API integration for automated user provisioning. All credentials managed using Sealed Secrets — encrypted at rest, stored in version control, and injected into the Backstage pod via Kubernetes secret references at runtime, keeping the deployment fully GitOps-compatible. Dockerfile iteratively improved with multi-stage builds and layer caching to separate dependency installation from application code and significantly reduce rebuild times.",
+    "features": [
+      "Catalog — GitHub organization imports for automated service and repository discovery",
+      "Scaffolder — custom templates for standardized project and service onboarding",
+      "TechDocs — in-portal documentation rendering from markdown in version-controlled repositories",
+      "Homepage (community plugin) — custom centralized landing page with theme customization",
+      "Jira (community plugin) — issue tracking and project visibility surfaced within the portal",
+      "Prometheus & Grafana (community plugins) — real-time Kubernetes cluster metrics and dashboards"
+    ],
+    "tags": ["Backstage", "Kubernetes", "Helm", "Rancher", "Azure AD", "SSO", "Prometheus", "Grafana", "Sealed Secrets", "Jira", "Docker", "IDP", "GitHub", "DevOps", "On-Prem"]
   },
   {
     "title": "Artist Portfolio Website",
-    "types": [
-      "Software / Web"
-    ],
+    "types": ["Software / Web"],
     "status": "In Progress",
-    "description": "## Overview\nBuilding a portfolio website for a local artist to display their work, share contact information, and establish an online presence.\n\n## Stack\nBuilt with Angular, following the same component-driven architecture used for this portfolio site.\n\n## Features\n- Gallery for displaying artwork\n- Contact information and inquiry section\n- Clean, visually focused layout suited to showcasing creative work\n\n## Shop Integration\nExploring options for integrating an e-commerce shop to allow the artist to sell work directly from the site. If a shop is added, the site will require traditional hosting rather than GitHub Pages to support server-side payment processing. Implementation approach is still being evaluated.",
-    "tags": [
-      "Angular",
-      "TypeScript",
-      "E-Commerce",
-      "SPA"
+    "overview": "Building a portfolio website for a local artist to display their work, share contact information, and establish an online presence.",
+    "plan": "Exploring options for integrating an e-commerce shop to allow the artist to sell work directly from the site. If a shop is added, the site will require traditional hosting rather than GitHub Pages to support server-side payment processing. Implementation approach is still being evaluated.",
+    "architecture": "Built with Angular standalone components, following the same component-driven architecture used for this portfolio site.",
+    "features": [
+      "Gallery for displaying artwork",
+      "Contact information and inquiry section",
+      "Clean, visually focused layout suited to showcasing creative work"
     ],
+    "tags": ["Angular", "TypeScript", "E-Commerce", "SPA"],
     "github": "https://github.com/eb613819/art-site",
     "images": []
   },
   {
     "title": "Biomedical Engineer Portfolio Website",
-    "types": [
-      "Software / Web"
-    ],
+    "types": ["Software / Web"],
     "status": "In Progress",
-    "description": "## Overview\nBuilding a professional portfolio website for a biomedical engineer to showcase projects, publications, awards, education, and experience.\n\n## Stack\nBuilt with Angular standalone components and TypeScript, mirroring the architecture of this portfolio site. Will be hosted on GitHub Pages under the client's own GitHub account, with contributions from me, so the client retains full ownership of the site and its deployment.\n\n## Content Sections\n- Projects gallery\n- Publications\n- Awards and recognition\n- Education and experience\n\n## CMS Integration\nUnlike a personal portfolio where the owner is comfortable editing JSON directly, this site will integrate a headless CMS so the client can add and update content through a friendly UI without touching code. CMS selection is currently being evaluated.",
-    "tags": [
-      "Angular",
-      "TypeScript",
-      "GitHub Pages",
-      "Headless CMS",
-      "SPA"
+    "overview": "Building a professional portfolio website for a biomedical engineer to showcase projects, publications, awards, education, and experience.",
+    "plan": "Integrating a headless CMS so the client can add and update content through a friendly UI without touching code. CMS selection is currently being evaluated.",
+    "architecture": "Built with Angular standalone components and TypeScript, mirroring the architecture of this portfolio site. Hosted on GitHub Pages under the client's own GitHub account so the client retains full ownership of the site and its deployment.",
+    "features": [
+      "Projects gallery",
+      "Publications",
+      "Awards and recognition",
+      "Education and experience"
     ],
+    "tags": ["Angular", "TypeScript", "GitHub Pages", "Headless CMS", "SPA"],
     "images": []
   },
   {
     "title": "Author WordPress Site",
-    "types": [
-      "Software / Web"
-    ],
+    "types": ["Software / Web"],
     "status": "In Progress",
-    "description": "## Overview\nCustomizing and extending an existing WordPress site for a local author, focused on theme customization and adding e-commerce functionality for selling books directly.\n\n## Scope\n- Custom WordPress theme modifications to match the author's brand and style\n- Shop integration to allow direct book sales from the site\n- Shop implementation approach is currently being evaluated\n\n## Platform\nBuilding on the client's existing WordPress installation hosted on Bluehost rather than migrating. The client has an established subscriber base managed through a WordPress plugin, making a platform migration impractical without risking subscriber loss. The approach preserves existing content, SEO, and subscriber continuity while extending functionality.",
-    "tags": [
-      "WordPress",
-      "PHP",
-      "Theme Development",
-      "E-Commerce",
-      "CMS",
-      "Bluehost"
+    "overview": "Customizing and extending an existing WordPress site for a local author, focused on theme customization and adding e-commerce functionality for selling books directly.",
+    "plan": "Custom WordPress theme modifications to match the author's brand and style, plus shop integration for direct book sales. Shop implementation approach is currently being evaluated.",
+    "challenges": [
+      {
+        "problem": "The client has an established subscriber base managed through a WordPress plugin, making a full platform migration impractical without risking subscriber loss.",
+        "solution": "Building on the client's existing WordPress installation hosted on Bluehost rather than migrating. This preserves existing content, SEO, and subscriber continuity while extending functionality."
+      }
     ],
+    "tags": ["WordPress", "PHP", "Theme Development", "E-Commerce", "CMS", "Bluehost"],
     "images": []
   },
   {
     "title": "ML Book Shelf Organizer",
-    "types": [
-      "Software / Web"
-    ],
+    "types": ["Software / Web"],
     "status": "Completed",
     "completionDate": "04-21-2025",
-    "description": "## Overview\nA self-directed ML final project applying **agglomerative hierarchical clustering** to automatically organize a personal library of ~150 books onto physical bookshelves, using metadata exported from **Calibre** (author, genre tags, and language) as features.\n\n## Approach\n- One-hot encoded multi-label genre tags using `MultiLabelBinarizer`, and authors and languages using `get_dummies`\n- Applied feature selection to remove tags appearing on too few or too many books, reducing noise in the high-dimensional feature space\n- Weighted features by domain importance — author affinity 3×, language 2×, and high-signal genres (Classics, Science Fiction, Philosophy, etc.) up to 2×\n- Ran **AgglomerativeClustering** with cosine similarity and average linkage, using a distance threshold rather than a fixed cluster count to let the data determine the number of shelves\n- Tuned the threshold and feature weights iteratively, evaluating results both by cluster metrics and manual inspection of the shelf splits\n- Visualized results with a **dendrogram**, **2D UMAP**, and **3D UMAP** projection\n- Evaluated cluster quality using Silhouette Score, Calinski-Harabasz Index, and Davies-Bouldin Index\n\n## Results & Reflection\nThe model produced 13 clusters. Some shelves were coherent — tattoo reference books clustered cleanly, YA/children's fantasy (Harry Potter, Narnia, Percy Jackson, Eragon) grouped together correctly, and philosophy texts aligned well. However, the approach struggled with books sharing broad tags like \"Classics\" or \"Fiction,\" grouping H.P. Lovecraft gothic horror alongside Don Quixote and classical literature. The sparse, high-dimensional metadata space made it difficult for cosine similarity to capture meaningful semantic relationships. A more robust approach would use text embeddings from book descriptions rather than one-hot encoded metadata tags.",
-    "tags": [
-      "Python",
-      "scikit-learn",
-      "UMAP",
-      "pandas",
-      "matplotlib",
-      "Machine Learning",
-      "Clustering",
-      "Data Science"
+    "overview": "A self-directed ML final project applying agglomerative hierarchical clustering to automatically organize a personal library of ~150 books onto physical bookshelves, using metadata exported from Calibre (author, genre tags, and language) as features.",
+    "architecture": "One-hot encoded multi-label genre tags using MultiLabelBinarizer, and authors and languages using get_dummies. Applied feature selection to remove tags appearing on too few or too many books. Weighted features by domain importance — author affinity 3×, language 2×, and high-signal genres up to 2×. Ran AgglomerativeClustering with cosine similarity and average linkage, using a distance threshold rather than a fixed cluster count to let the data determine the number of shelves. Tuned threshold and feature weights iteratively, evaluating by cluster metrics and manual inspection. Visualized results with a dendrogram, 2D UMAP, and 3D UMAP projection. Evaluated cluster quality using Silhouette Score, Calinski-Harabasz Index, and Davies-Bouldin Index.",
+    "challenges": [
+      {
+        "problem": "Books sharing broad tags like 'Classics' or 'Fiction' were grouped poorly — H.P. Lovecraft gothic horror ended up alongside Don Quixote and classical literature.",
+        "solution": "Tuned feature weights to downweight overly broad tags and boost high-signal genres. The fundamental limitation is that sparse, high-dimensional one-hot metadata can't capture semantic relationships — a more robust approach would use text embeddings from book descriptions."
+      }
     ],
+    "learned": "One-hot encoded metadata is too sparse and semantically shallow for meaningful clustering of creative works. Text embeddings from descriptions or summaries would significantly improve cluster coherence by capturing actual content similarity rather than tag overlap.",
+    "tags": ["Python", "scikit-learn", "UMAP", "pandas", "matplotlib", "Machine Learning", "Clustering", "Data Science"],
     "github": "https://github.com/eb613819/ml_book_shelf_organizer"
   },
   {
     "title": "ION DTN Multi-Node Test Environment",
-    "types": [
-      "Networking / Infrastructure",
-      "DevOps / Cloud"
-    ],
+    "types": ["Networking / Infrastructure", "DevOps / Cloud"],
     "status": "Completed",
     "completionDate": "05-01-2024",
-    "description": "## Overview\nA NASA-funded research project to build a reproducible, scalable test environment for evaluating **ION** (Interplanetary Overlay Network) — a delay-tolerant networking (DTN) implementation designed for challenged network links with extreme latency, disruption, and packet loss.\n\nThe core challenge was testing ION across diverse operating systems and hardware architectures without access to physical legacy machines. The solution was a QEMU-based virtualization environment capable of emulating non-x86 architectures, wired into a CI-style test orchestration pipeline.\n\n## QEMU Multi-Architecture Virtualization\nBuilt and configured QEMU virtual machine environments emulating two non-x86 architectures:\n\n- **SPARC-32** — running Solaris 9, emulating legacy Sun Microsystems hardware\n- **ARM** — running Raspbian Jessie and Stretch as a practical ARM environment; the goal was ARM architecture coverage, not Raspberry Pi specifically\n\nConfigured SSH access two ways depending on the use case: a **jump host** setup for port-forwarded access through the Ubuntu host, and a **bridged network** setup giving VMs a real IP on the local network for direct SSH. Wrote a systemd service to persist the bridge configuration across host reboots.\n\n## Buildbot Integration\nOnce stable, the QEMU VMs were registered as worker nodes in **Buildbot** — a CI-style test orchestration framework — to run automated ION tests across the virtualized environments as part of the broader research pipeline.\n\n## Ansible Automation Framework\nBegan developing an **Ansible**-based framework to replace manual VM provisioning — designed to spin up an arbitrary number of ION test nodes automatically and orchestrate multi-node DTN tests between them without manual configuration. The framework was well underway when the project was discontinued following a lab pivot to a different DTN implementation.",
-    "tags": [
-      "QEMU",
-      "Ansible",
-      "Buildbot",
-      "Linux",
-      "Networking",
-      "Virtualization",
-      "Proxmox",
-      "DTN",
-      "SPARC",
-      "ARM",
-      "Solaris",
-      "Raspbian",
-      "Research"
+    "overview": "A NASA-funded research project to build a reproducible, scalable test environment for evaluating ION (Interplanetary Overlay Network) — a delay-tolerant networking implementation designed for challenged network links with extreme latency, disruption, and packet loss.",
+    "architecture": "QEMU virtual machine environments emulating two non-x86 architectures: SPARC-32 running Solaris 9, and ARM running Raspbian Jessie and Stretch. Configured SSH access two ways — a jump host setup for port-forwarded access through the Ubuntu host, and a bridged network setup giving VMs a real IP on the local network for direct SSH. Wrote a systemd service to persist bridge configuration across host reboots. QEMU VMs registered as worker nodes in Buildbot for automated ION tests across the virtualized environments. Began developing an Ansible framework to replace manual VM provisioning and orchestrate multi-node DTN tests automatically.",
+    "challenges": [
+      {
+        "problem": "Needed to test ION across diverse operating systems and hardware architectures without access to physical legacy machines like SPARC hardware.",
+        "solution": "Built a QEMU-based virtualization environment capable of emulating non-x86 architectures, wired into a Buildbot CI pipeline for automated test orchestration."
+      },
+      {
+        "problem": "The Ansible automation framework was well underway when the project was discontinued following a lab pivot to a different DTN implementation.",
+        "solution": "Documented the framework's design and current state for continuity. The QEMU environments and Buildbot integration remained functional for the duration of the project."
+      }
     ],
+    "tags": ["QEMU", "Ansible", "Buildbot", "Linux", "Networking", "Virtualization", "Proxmox", "DTN", "SPARC", "ARM", "Solaris", "Raspbian", "Research"],
     "github": "https://github.com/eb613819/ion-dtn-qemu-test-environment"
   },
   {
@@ -257,7 +291,16 @@
     "types": ["Home Lab", "Software / Web"],
     "status": "Completed",
     "completionDate": "03-23-2026",
-    "description": "## Overview\nBuilt a Discord bot that manages to-do lists by group and prints them on demand to a thermal receipt printer over the network. Tasks are sent from Discord on any device and saved persistently, then printed as a formatted receipt whenever needed.\n\n## Motivation\nI'd think of tasks throughout the day and either forget them or write them down on paper I'd lose. This bot lets me send a message from my phone and have it saved instantly. When I'm ready to get things done I print the list and work through it without needing my phone.\n\n## How It Works\nTasks are sent to a dedicated Discord channel from any device. The bot parses messages into named groups with support for multiple tasks per message. Tasks persist between restarts via a JSON file. On demand the bot sends a formatted ESC/POS print job to the printer over the local network. The printer auto-cuts and outputs a receipt with a decorative border, large header, date and time, group name, and numbered tasks with checkboxes.\n\n## Features\nNamed groups with spaces are supported (`clean apartment: wash dishes, do laundry`). Multiple tasks can be added in one message via comma separation. Print a specific group, all groups, or just group names and counts. List tasks and groups directly in Discord without printing. Finish individual tasks or entire groups, including multiple at once. A full help command documents all syntax.\n\n## Infrastructure\nRuns as a Debian 12 LXC container on Proxmox, managed as a systemd service that starts automatically on boot. The printer connects via Ethernet, no USB passthrough or drivers needed.\n",
+    "overview": "Built a Discord bot that manages to-do lists by group and prints them on demand to a thermal receipt printer over the network. Tasks are sent from Discord on any device and saved persistently, then printed as a formatted receipt whenever needed.",
+    "architecture": "Tasks are sent to a dedicated Discord channel from any device. The bot parses messages into named groups with support for multiple tasks per message. Tasks persist between restarts via a JSON file. On demand the bot sends a formatted ESC/POS print job to the printer over the local network. The printer auto-cuts and outputs a receipt with a decorative border, large header, date and time, group name, and numbered tasks with checkboxes. Runs as a Debian 12 LXC container on Proxmox, managed as a systemd service that starts automatically on boot. The printer connects via Ethernet — no USB passthrough or drivers needed.",
+    "features": [
+      "Named groups with spaces supported (e.g. 'clean apartment: wash dishes, do laundry')",
+      "Multiple tasks added in one message via comma separation",
+      "Print a specific group, all groups, or just group names and counts",
+      "List tasks and groups directly in Discord without printing",
+      "Finish individual tasks or entire groups, including multiple at once",
+      "Full help command documenting all syntax"
+    ],
     "tags": ["Python", "discord.py", "ESC/POS", "Proxmox", "LXC", "Debian", "systemd", "Home Lab", "Thermal Printer"],
     "github": "https://github.com/eb613819/todo-printer",
     "images": []
