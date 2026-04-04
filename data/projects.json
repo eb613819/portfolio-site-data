@@ -7,7 +7,7 @@
     "status": "In Progress",
     "completionDate": "01-12-2026",
     "overview": "Designed and developed a personal portfolio website using Angular standalone components and TypeScript, deployed as a static site on GitHub Pages.",
-    "architecture": "Architected a decoupled data layer by storing all project and experience content in a dedicated GitHub repository, fetched at runtime via HTTP. This separates content from presentation â the site never needs to be rebuilt or redeployed when data changes. Developed using a structured Git workflow with feature branches, issue tracking, and pull requests into an always-deployable main branch. Branch names follow a type/issue-number-description convention for full traceability.",
+    "architecture": "Architected a decoupled data layer by storing all project and experience content in a dedicated GitHub repository, fetched at runtime via HTTP. This separates content from presentation Ã¢ÂÂ the site never needs to be rebuilt or redeployed when data changes. Developed using a structured Git workflow with feature branches, issue tracking, and pull requests into an always-deployable main branch. Branch names follow a type/issue-number-description convention for full traceability.",
     "features": [
       "Filterable project gallery by type, tag, and status",
       "Filterable experience gallery by type and tag",
@@ -36,14 +36,14 @@
     ],
     "status": "Completed",
     "completionDate": "05-01-2025",
-    "overview": "Designed and built a compact home NAS for centralized file storage, backups, and media serving â purpose-built around TrueNAS in a small form factor case.",
+    "overview": "Designed and built a compact home NAS for centralized file storage, backups, and media serving — purpose-built around TrueNAS in a small form factor case.",
     "hardware": [
       "Case: JONSBO N1 Mini-ITX NAS enclosure",
       "Motherboard: ASRock B550 Phantom Gaming-ITX",
       "CPU: AMD Ryzen 5 4600G",
       "RAM: 32GB DDR4",
       "OS Drive: Kingston NV2 250GB M.2 NVMe SSD",
-      "Storage: 4Ã Western Digital 4TB Red Plus NAS HDDs",
+      "Storage: 4ÃÂ Western Digital 4TB Red Plus NAS HDDs",
       "Cache: 500GB Western Digital Blue SATA SSD",
       "PSU: Cooler Master V850 SFX Gold ATX 3.0 Modular"
     ],
@@ -83,11 +83,11 @@
       "Poster frame as the outer enclosure",
       "Glass sheet with reflective window film for the two-way mirror effect"
     ],
-    "design": "Installed and configured the MagicMirrorÂ² open-source platform with modules for live calendar, weather, and news feeds. Configured to launch automatically on boot. Modules and configuration are managed remotely over SSH â no physical access needed to update the display. Handled all physical construction including cutting and fitting the reflective film, mounting the display behind the glass, routing wiring inside the frame, and securing all components inside the enclosure.",
+    "design": "Installed and configured the MagicMirrorÃÂ² open-source platform with modules for live calendar, weather, and news feeds. Configured to launch automatically on boot. Modules and configuration are managed remotely over SSH Ã¢ÂÂ no physical access needed to update the display. Handled all physical construction including cutting and fitting the reflective film, mounting the display behind the glass, routing wiring inside the frame, and securing all components inside the enclosure.",
     "challenges": [],
     "tags": [
       "Raspberry Pi 5",
-      "MagicMirrorÂ²",
+      "MagicMirrorÃÂ²",
       "IoT",
       "Linux",
       "SSH",
@@ -104,7 +104,7 @@
     ],
     "status": "Not Started",
     "overview": "A safety-focused temperature monitor for insulin fridge storage, providing real-time awareness and alerts when storage conditions fall outside safe ranges.",
-    "motivation": "Insulin must be kept within a specific temperature range â too cold and it freezes, too warm and it degrades. A standard fridge thermometer gives no alerts and measures air temperature rather than the thermal mass of the insulin itself.",
+    "motivation": "Insulin must be kept within a specific temperature range Ã¢ÂÂ too cold and it freezes, too warm and it degrades. A standard fridge thermometer gives no alerts and measures air temperature rather than the thermal mass of the insulin itself.",
     "plan": "ESP32 microcontroller mounted on the outside of the fridge with a wired temperature probe routed inside, submerged in liquid inside an insulin vial for accurate thermal mass measurement. Local display showing current temperature at a glance. Email and SMS alerts triggered when temperature approaches freezing or exceeds safe upper limits. Pass-through power bank to maintain monitoring during power outages, with a passive dumb thermometer as a redundant analog backup. Will design and 3D print a custom enclosure and fridge-mounted holder in CAD to house the probe, keep insulin organized, and mount the external display and microcontroller cleanly.",
     "tags": [
       "ESP32",
@@ -138,7 +138,7 @@
       "Connectivity: Ethernet extension port, 8-port USB hub, built-in cooling fans",
       "Enclosure: Apache hard-shell case"
     ],
-    "design": "Fully designed the internal chassis from scratch in CAD â modeled to fit the exact interior dimensions of the Apache case with precise cutouts and mounts for every component. 3D printed the entire chassis including fan mounts, port extensions, and component brackets.",
+    "design": "Fully designed the internal chassis from scratch in CAD Ã¢ÂÂ modeled to fit the exact interior dimensions of the Apache case with precise cutouts and mounts for every component. 3D printed the entire chassis including fan mounts, port extensions, and component brackets.",
     "challenges": [],
     "tags": [
       "Raspberry Pi 5",
@@ -166,7 +166,7 @@
     ],
     "status": "Completed",
     "completionDate": "02-18-2026",
-    "overview": "A refined successor to the Apache Case Pen Testing Rig â same electronics platform, completely redesigned chassis housed inside a leather briefcase for a more professional and portable form factor.",
+    "overview": "A refined successor to the Apache Case Pen Testing Rig Ã¢ÂÂ same electronics platform, completely redesigned chassis housed inside a leather briefcase for a more professional and portable form factor.",
     "hardware": [
       "Compute: Raspberry Pi 5 running Kali Linux",
       "Storage: 512GB NVMe M.2 SSD via Pi NVMe HAT",
@@ -176,7 +176,7 @@
       "Connectivity: Ethernet extension port, 8-port USB hub, built-in cooling fans",
       "Enclosure: Leather briefcase"
     ],
-    "design": "Designed a fully modular chassis from scratch in CAD â individual pieces that screw together using heat-set inserts and connector pieces, allowing for disassembly, reconfiguration, and reprinting of individual sections without replacing the entire chassis. A smooth magnetic panel system snaps onto the outside of the chassis to create a clean, unified interior appearance while remaining removable for access to components.",
+    "design": "Designed a fully modular chassis from scratch in CAD Ã¢ÂÂ individual pieces that screw together using heat-set inserts and connector pieces, allowing for disassembly, reconfiguration, and reprinting of individual sections without replacing the entire chassis. A smooth magnetic panel system snaps onto the outside of the chassis to create a clean, unified interior appearance while remaining removable for access to components.",
     "challenges": [],
     "tags": [
       "Raspberry Pi 5",
@@ -205,10 +205,10 @@
     "overview": "Rebuilt a server around a salvaged enterprise-grade dual-processor motherboard and configured it as a Proxmox hypervisor running multiple production-like virtual machines for self-hosted services.",
     "hardware": [
       "Motherboard: Supermicro X8DTN+ (dual socket)",
-      "CPUs: 2Ã Intel Xeon X5680",
+      "CPUs: 2ÃÂ Intel Xeon X5680",
       "RAM: 192GB DDR3 ECC",
       "Case: Fractal Design Define 7",
-      "Storage: 500GB SSD (Proxmox OS), 2Ã 1TB SATA SSD (VM storage + backup)"
+      "Storage: 500GB SSD (Proxmox OS), 2ÃÂ 1TB SATA SSD (VM storage + backup)"
     ],
     "design": "Configured Proxmox as the hypervisor and provisioned VMs for self-hosted services: a Calibre Content Server for ebook library access, and a reverse proxy enforcing HTTPS on a subdomain. A media server (Plex or Jellyfin) and a 3D print file server are planned.",
     "challenges": [
@@ -241,7 +241,7 @@
     "status": "Completed",
     "completionDate": "12-07-2019",
     "overview": "Built an interactive LED lighting system for a marching drum kit that responds in real time to playing.",
-    "motivation": "Wanted a visual element to accompany live drumming performances â LEDs that fire in sync with each hit rather than running a static pattern.",
+    "motivation": "Wanted a visual element to accompany live drumming performances Ã¢ÂÂ LEDs that fire in sync with each hit rather than running a static pattern.",
     "hardware": [
       "Arduino microcontroller",
       "Piezo vibration sensors (one per drum)",
@@ -271,7 +271,7 @@
     "completionDate": "10-31-2024",
     "overview": "Packaged the H2Load load-testing tool with full HTTP/3 support into a portable, ready-to-run Docker container.",
     "motivation": "Needed to benchmark HTTP/3 endpoints but building H2Load with HTTP/3 support from source requires resolving a complex chain of dependencies and compilation steps that vary by environment. No existing Docker image handled this cleanly.",
-    "architecture": "Wrote a Dockerfile that handles the full build process â dependency installation, source compilation, and configuration â producing a lightweight image that runs H2Load with HTTP/3 support on any machine with Docker installed, with no manual setup required. Used the container to benchmark and stress test HTTP/3 and HTTP/2 endpoints, measuring throughput, latency, and behavior under concurrent load across different server configurations.",
+    "architecture": "Wrote a Dockerfile that handles the full build process Ã¢ÂÂ dependency installation, source compilation, and configuration Ã¢ÂÂ producing a lightweight image that runs H2Load with HTTP/3 support on any machine with Docker installed, with no manual setup required. Used the container to benchmark and stress test HTTP/3 and HTTP/2 endpoints, measuring throughput, latency, and behavior under concurrent load across different server configurations.",
     "challenges": [],
     "tags": [
       "Docker",
@@ -296,7 +296,7 @@
     "completionDate": "01-22-2025",
     "overview": "Designed and printed a modular set of accessories for a walking pad treadmill, all mounting to the handlebar via a universal attachment piece.",
     "motivation": "Wanted to use a walking pad while working but had nowhere to put a laptop, mouse, or drink without a purpose-built solution.",
-    "design": "Modeled all parts from scratch in CAD: dual laptop stands, a mouse pad mount, a cupholder, and a universal back piece sized to fit the walking pad bar (~1.6 in Ã 0.8 in) that all accessories screw to. Designed the universal back piece first to establish the attachment interface, then built each accessory around it. Optimized each part for FDM printing in PLA â selecting print orientation to maximize layer strength, minimizing supports, and tuning infill and wall count to balance stiffness and material use. Iterated on the laptop stands specifically to improve rigidity under load.",
+    "design": "Modeled all parts from scratch in CAD: dual laptop stands, a mouse pad mount, a cupholder, and a universal back piece sized to fit the walking pad bar (~1.6 in ÃÂ 0.8 in) that all accessories screw to. Designed the universal back piece first to establish the attachment interface, then built each accessory around it. Optimized each part for FDM printing in PLA Ã¢ÂÂ selecting print orientation to maximize layer strength, minimizing supports, and tuning infill and wall count to balance stiffness and material use. Iterated on the laptop stands specifically to improve rigidity under load.",
     "challenges": [],
     "tags": [
       "3D Printing",
@@ -324,7 +324,7 @@
     "completionDate": "03-05-2026",
     "overview": "Explored cloud portability and vendor lock-in by deploying identical 3-tier application stacks across AWS, GCP, and Azure using reusable Infrastructure as Code and configuration management tooling.",
     "motivation": "Most cloud deployments are tightly coupled to a single provider's APIs, services, and tooling. Wanted to investigate how far a provider-agnostic IaC approach can go in making infrastructure truly portable.",
-    "architecture": "Each deployment provisions a 3-tier stack: a web VM running Nginx as a reverse proxy with TLS via Certbot and Let's Encrypt, an app VM running WordPress, and a DB VM running MariaDB. OpenTofu handles provider selection and VM provisioning across all three clouds, outputting IPs and creating a DNS record via the Namecheap API. Ansible consumes those outputs and configures each VM â installing and wiring together WordPress, MariaDB, and Nginx, setting up the reverse proxy, and running Certbot. Built in stages: single VM per provider first, then a provider interface layer, then the full 3-VM stack. As a finishing touch, the deployment automatically sets the repository README as the default WordPress post on every fresh deploy.",
+    "architecture": "Each deployment provisions a 3-tier stack: a web VM running Nginx as a reverse proxy with TLS via Certbot and Let's Encrypt, an app VM running WordPress, and a DB VM running MariaDB. OpenTofu handles provider selection and VM provisioning across all three clouds, outputting IPs and creating a DNS record via the Namecheap API. Ansible consumes those outputs and configures each VM Ã¢ÂÂ installing and wiring together WordPress, MariaDB, and Nginx, setting up the reverse proxy, and running Certbot. Built in stages: single VM per provider first, then a provider interface layer, then the full 3-VM stack. As a finishing touch, the deployment automatically sets the repository README as the default WordPress post on every fresh deploy.",
     "challenges": [],
     "tags": [
       "OpenTofu",
@@ -377,7 +377,7 @@
     ],
     "status": "Completed",
     "completionDate": "02-15-2026",
-    "overview": "Planned and built a dedicated closet workspace for a three-printer FDM setup, a multi-color filament system, and a filament dryer â with a focus on electrical safety, organization, and long-term reliability.",
+    "overview": "Planned and built a dedicated closet workspace for a three-printer FDM setup, a multi-color filament system, and a filament dryer Ã¢ÂÂ with a focus on electrical safety, organization, and long-term reliability.",
     "hardware": [
       "Creality Ender 3 V3",
       "Creality Ender 3 V3 KE",
@@ -409,16 +409,16 @@
       "DevOps / Cloud"
     ],
     "status": "In Progress",
-    "overview": "An ongoing research project to integrate and maintain Backstage â an open-source internal developer portal â into Ohio University's on-premises Kubernetes platform. The portal centralizes developer tooling, service discovery, documentation, and infrastructure visibility across the university's engineering teams.",
+    "overview": "An ongoing research project to integrate and maintain Backstage Ã¢ÂÂ an open-source internal developer portal Ã¢ÂÂ into Ohio University's on-premises Kubernetes platform. The portal centralizes developer tooling, service discovery, documentation, and infrastructure visibility across the university's engineering teams.",
     "plan": "Continuing to develop the Homepage plugin with custom theme and layout. Evaluating additional community plugins for expanded visibility into university infrastructure.",
-    "architecture": "Deployed to on-premises Kubernetes clusters using Helm charts, with Rancher for cluster management. Azure AD SSO configured via the Backstage auth plugin, with Microsoft Graph API integration for automated user provisioning. All credentials managed using Sealed Secrets â encrypted at rest, stored in version control, and injected into the Backstage pod via Kubernetes secret references at runtime, keeping the deployment fully GitOps-compatible. Dockerfile iteratively improved with multi-stage builds and layer caching to separate dependency installation from application code and significantly reduce rebuild times.",
+    "architecture": "Deployed to on-premises Kubernetes clusters using Helm charts, with Rancher for cluster management. Azure AD SSO configured via the Backstage auth plugin, with Microsoft Graph API integration for automated user provisioning. All credentials managed using Sealed Secrets Ã¢ÂÂ encrypted at rest, stored in version control, and injected into the Backstage pod via Kubernetes secret references at runtime, keeping the deployment fully GitOps-compatible. Dockerfile iteratively improved with multi-stage builds and layer caching to separate dependency installation from application code and significantly reduce rebuild times.",
     "features": [
-      "Catalog â GitHub organization imports for automated service and repository discovery",
-      "Scaffolder â custom templates for standardized project and service onboarding",
-      "TechDocs â in-portal documentation rendering from markdown in version-controlled repositories",
-      "Homepage (community plugin) â custom centralized landing page with theme customization",
-      "Jira (community plugin) â issue tracking and project visibility surfaced within the portal",
-      "Prometheus & Grafana (community plugins) â real-time Kubernetes cluster metrics and dashboards"
+      "Catalog Ã¢ÂÂ GitHub organization imports for automated service and repository discovery",
+      "Scaffolder Ã¢ÂÂ custom templates for standardized project and service onboarding",
+      "TechDocs Ã¢ÂÂ in-portal documentation rendering from markdown in version-controlled repositories",
+      "Homepage (community plugin) Ã¢ÂÂ custom centralized landing page with theme customization",
+      "Jira (community plugin) Ã¢ÂÂ issue tracking and project visibility surfaced within the portal",
+      "Prometheus & Grafana (community plugins) Ã¢ÂÂ real-time Kubernetes cluster metrics and dashboards"
     ],
     "challenges": [],
     "tags": [
@@ -521,11 +521,11 @@
     "completionDate": "04-21-2025",
     "overview": "A self-directed ML final project applying agglomerative hierarchical clustering to automatically organize a personal library of ~150 books onto physical bookshelves, using metadata exported from Calibre (author, genre tags, and language) as features.",
     "motivation": "Wanted a data-driven way to arrange a large personal library so that books naturally grouped by similarity end up on the same shelf, rather than organizing by arbitrary criteria like author name or acquisition order.",
-    "architecture": "One-hot encoded multi-label genre tags using MultiLabelBinarizer, and authors and languages using get_dummies. Applied feature selection to remove tags appearing on too few or too many books to reduce noise in the high-dimensional feature space. Weighted features by domain importance â author affinity 3Ã, language 2Ã, and high-signal genres up to 2Ã. Ran AgglomerativeClustering with cosine similarity and average linkage, using a distance threshold rather than a fixed cluster count to let the data determine the number of shelves. Tuned threshold and feature weights iteratively, evaluating by cluster metrics and manual inspection. Visualized results with a dendrogram, 2D UMAP, and 3D UMAP projection. Evaluated cluster quality using Silhouette Score, Calinski-Harabasz Index, and Davies-Bouldin Index.",
+    "architecture": "One-hot encoded multi-label genre tags using MultiLabelBinarizer, and authors and languages using get_dummies. Applied feature selection to remove tags appearing on too few or too many books to reduce noise in the high-dimensional feature space. Weighted features by domain importance Ã¢ÂÂ author affinity 3ÃÂ, language 2ÃÂ, and high-signal genres up to 2ÃÂ. Ran AgglomerativeClustering with cosine similarity and average linkage, using a distance threshold rather than a fixed cluster count to let the data determine the number of shelves. Tuned threshold and feature weights iteratively, evaluating by cluster metrics and manual inspection. Visualized results with a dendrogram, 2D UMAP, and 3D UMAP projection. Evaluated cluster quality using Silhouette Score, Calinski-Harabasz Index, and Davies-Bouldin Index.",
     "challenges": [
       {
-        "problem": "Books sharing broad tags like 'Classics' or 'Fiction' clustered poorly â H.P. Lovecraft gothic horror ended up grouped alongside Don Quixote and classical literature.",
-        "solution": "Tuned feature weights to downweight overly broad tags and boost high-signal genres. The fundamental limitation is that sparse one-hot metadata can't capture semantic relationships â text embeddings from book descriptions would be a more robust approach."
+        "problem": "Books sharing broad tags like 'Classics' or 'Fiction' clustered poorly Ã¢ÂÂ H.P. Lovecraft gothic horror ended up grouped alongside Don Quixote and classical literature.",
+        "solution": "Tuned feature weights to downweight overly broad tags and boost high-signal genres. The fundamental limitation is that sparse one-hot metadata can't capture semantic relationships Ã¢ÂÂ text embeddings from book descriptions would be a more robust approach."
       }
     ],
     "learned": "One-hot encoded metadata is too sparse and semantically shallow for meaningful clustering of creative works. Text embeddings from descriptions or summaries would significantly improve cluster coherence by capturing actual content similarity rather than tag overlap.",
@@ -549,9 +549,9 @@
     ],
     "status": "Completed",
     "completionDate": "05-01-2024",
-    "overview": "A NASA-funded research project to build a reproducible, scalable test environment for evaluating ION (Interplanetary Overlay Network) â a delay-tolerant networking implementation designed for challenged network links with extreme latency, disruption, and packet loss.",
+    "overview": "A NASA-funded research project to build a reproducible, scalable test environment for evaluating ION (Interplanetary Overlay Network) Ã¢ÂÂ a delay-tolerant networking implementation designed for challenged network links with extreme latency, disruption, and packet loss.",
     "motivation": "Needed to test ION across diverse operating systems and hardware architectures without access to physical legacy machines like SPARC hardware running Solaris.",
-    "architecture": "QEMU virtual machine environments emulating two non-x86 architectures: SPARC-32 running Solaris 9, and ARM running Raspbian Jessie and Stretch. Configured SSH access two ways â a jump host setup for port-forwarded access through the Ubuntu host, and a bridged network setup giving VMs a real IP on the local network for direct SSH. Wrote a systemd service to persist bridge configuration across host reboots. QEMU VMs registered as worker nodes in Buildbot for automated ION tests across the virtualized environments. Began developing an Ansible framework to replace manual VM provisioning and orchestrate multi-node DTN tests automatically.",
+    "architecture": "QEMU virtual machine environments emulating two non-x86 architectures: SPARC-32 running Solaris 9, and ARM running Raspbian Jessie and Stretch. Configured SSH access two ways Ã¢ÂÂ a jump host setup for port-forwarded access through the Ubuntu host, and a bridged network setup giving VMs a real IP on the local network for direct SSH. Wrote a systemd service to persist bridge configuration across host reboots. QEMU VMs registered as worker nodes in Buildbot for automated ION tests across the virtualized environments. Began developing an Ansible framework to replace manual VM provisioning and orchestrate multi-node DTN tests automatically.",
     "challenges": [
       {
         "problem": "Getting QEMU to reliably emulate SPARC-32 and boot Solaris 9 required navigating sparse documentation and significant trial and error around disk image formats and boot parameters.",
@@ -589,7 +589,7 @@
     "completionDate": "03-23-2026",
     "overview": "A Discord bot that manages to-do lists by group and prints them on demand to a thermal receipt printer over the network. Tasks are sent from Discord on any device and saved persistently, then printed as a formatted receipt whenever needed.",
     "motivation": "Tasks would come to mind throughout the day and either get forgotten or written on paper that would get lost. Wanted a way to capture tasks instantly from a phone and produce a physical printed list when it was time to actually work through them.",
-    "architecture": "Tasks are sent to a dedicated Discord channel from any device. The bot parses messages into named groups with support for multiple tasks per message. Tasks persist between restarts via a JSON file. On demand the bot sends a formatted ESC/POS print job to the printer over the local network â no USB passthrough or drivers needed. The printer auto-cuts and outputs a receipt with a decorative border, large header, date and time, group name, and numbered tasks with checkboxes. Runs as a Debian 12 LXC container on Proxmox, managed as a systemd service that starts automatically on boot.",
+    "architecture": "Tasks are sent to a dedicated Discord channel from any device. The bot parses messages into named groups with support for multiple tasks per message. Tasks persist between restarts via a JSON file. On demand the bot sends a formatted ESC/POS print job to the printer over the local network Ã¢ÂÂ no USB passthrough or drivers needed. The printer auto-cuts and outputs a receipt with a decorative border, large header, date and time, group name, and numbered tasks with checkboxes. Runs as a Debian 12 LXC container on Proxmox, managed as a systemd service that starts automatically on boot.",
     "features": [
       "Named task groups with spaces supported (e.g. 'clean apartment: wash dishes, do laundry')",
       "Multiple tasks added in one message via comma separation",
