@@ -4,10 +4,10 @@
     "types": [
       "Software / Web"
     ],
-    "status": "In Progress",
+    "status": "Completed",
     "completionDate": "01-12-2026",
     "overview": "Designed and developed a personal portfolio website using Angular standalone components and TypeScript, deployed as a static site on GitHub Pages.",
-    "architecture": "Architected a decoupled data layer by storing all project and experience content in a dedicated GitHub repository, fetched at runtime via HTTP. This separates content from presentation Ã¢ÂÂ the site never needs to be rebuilt or redeployed when data changes. Developed using a structured Git workflow with feature branches, issue tracking, and pull requests into an always-deployable main branch. Branch names follow a type/issue-number-description convention for full traceability.",
+    "architecture": "Architected a decoupled data layer by storing all project and experience content in a dedicated GitHub repository, fetched at runtime via HTTP. This separates content from presentation and the site never needs to be rebuilt or redeployed when data changes. Developed using a structured Git workflow with feature branches, issue tracking, and pull requests into an always-deployable main branch. Branch names follow a type/issue-number-description convention for full traceability.",
     "features": [
       "Filterable project gallery by type, tag, and status",
       "Filterable experience gallery by type and tag",
