@@ -104,7 +104,7 @@
     ],
     "status": "Not Started",
     "overview": "A safety-focused temperature monitor for insulin fridge storage, providing real-time awareness and alerts when storage conditions fall outside safe ranges.",
-    "motivation": "Insulin must be kept within a specific temperature range Ã¢ÂÂ too cold and it freezes, too warm and it degrades. A standard fridge thermometer gives no alerts and measures air temperature rather than the thermal mass of the insulin itself.",
+    "motivation": "Insulin must be kept within a specific temperature range. Too cold and it freezes, too warm and it degrades. A standard fridge thermometer gives no alerts and measures air temperature rather than the thermal mass of the insulin itself.",
     "plan": "ESP32 microcontroller mounted on the outside of the fridge with a wired temperature probe routed inside, submerged in liquid inside an insulin vial for accurate thermal mass measurement. Local display showing current temperature at a glance. Email and SMS alerts triggered when temperature approaches freezing or exceeds safe upper limits. Pass-through power bank to maintain monitoring during power outages, with a passive dumb thermometer as a redundant analog backup. Will design and 3D print a custom enclosure and fridge-mounted holder in CAD to house the probe, keep insulin organized, and mount the external display and microcontroller cleanly.",
     "tags": [
       "ESP32",
