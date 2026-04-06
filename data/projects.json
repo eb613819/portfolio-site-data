@@ -43,15 +43,15 @@
       "CPU: AMD Ryzen 5 4600G",
       "RAM: 32GB DDR4",
       "OS Drive: Kingston NV2 250GB M.2 NVMe SSD",
-      "Storage: 4ÃÂ Western Digital 4TB Red Plus NAS HDDs",
       "Cache: 500GB Western Digital Blue SATA SSD",
-      "PSU: Cooler Master V850 SFX Gold ATX 3.0 Modular"
+      "PSU: Cooler Master V850 SFX Gold ATX 3.0 Modular",
+      "Storage: 4x Western Digital 4TB Red Plus NAS HDDs"
     ],
     "design": "Ran TrueNAS as the OS, configured a RAID pool across the four NAS drives, and set up network shares for ebook and 3D print file access across the home network. Used the SATA SSD as a read/write cache to improve performance on frequently accessed files.",
     "challenges": [
       {
         "problem": "The four WD Red Plus drives were found to be faulty after the build was complete.",
-        "solution": "Drives are pending warranty replacement. Evaluating migrating storage to a VM on the Proxmox server using PCIe passthrough to consolidate hardware and avoid relying on the faulty drives."
+        "solution": "Drives are pending warranty replacement."
       }
     ],
     "tags": [
