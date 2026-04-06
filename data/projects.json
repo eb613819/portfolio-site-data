@@ -525,7 +525,9 @@
       "CMS",
       "Bluehost"
     ],
-    "images": []
+    "images": [
+      "https://raw.githubusercontent.com/eb613819/portfolio-site-data/main/images/wordpresslogo.png"
+    ]
   },
   {
     "title": "ML Book Shelf Organizer",
