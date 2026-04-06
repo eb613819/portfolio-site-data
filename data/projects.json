@@ -166,7 +166,7 @@
     ],
     "status": "Completed",
     "completionDate": "02-18-2026",
-    "overview": "A refined successor to the Apache Case Pen Testing Rig Ã¢ÂÂ same electronics platform, completely redesigned chassis housed inside a leather briefcase for a more professional and portable form factor.",
+    "overview": "A refined successor to the Apache Case Pen Testing Rig:  same electronics platform, completely redesigned chassis housed inside a leather briefcase for a more professional and portable form factor.",
     "hardware": [
       "Compute: Raspberry Pi 5 running Kali Linux",
       "Storage: 512GB NVMe M.2 SSD via Pi NVMe HAT",
@@ -176,7 +176,7 @@
       "Connectivity: Ethernet extension port, 8-port USB hub, built-in cooling fans",
       "Enclosure: Leather briefcase"
     ],
-    "design": "Designed a fully modular chassis from scratch in CAD Ã¢ÂÂ individual pieces that screw together using heat-set inserts and connector pieces, allowing for disassembly, reconfiguration, and reprinting of individual sections without replacing the entire chassis. A smooth magnetic panel system snaps onto the outside of the chassis to create a clean, unified interior appearance while remaining removable for access to components.",
+    "design": "Designed a fully modular chassis from scratch in CAD. Individual pieces screw together using heat-set inserts and connector pieces, allowing for disassembly, reconfiguration, and reprinting of individual sections without replacing the entire chassis. A smooth magnetic panel system snaps onto the outside of the chassis to create a clean, unified interior appearance while remaining removable for access to components.",
     "challenges": [],
     "tags": [
       "Raspberry Pi 5",
