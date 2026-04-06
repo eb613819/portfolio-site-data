@@ -350,7 +350,9 @@
       "DevOps"
     ],
     "github": "https://github.com/eb613819/cloud-portability-experiment",
-    "images": []
+    "images": [
+      "https://raw.githubusercontent.com/eb613819/portfolio-site-data/main/images/cloudportability.png"
+    ]
   },
   {
     "title": "3D Printer Closet Environment Monitor",
