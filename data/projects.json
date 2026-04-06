@@ -242,12 +242,12 @@
     "status": "Completed",
     "completionDate": "12-07-2019",
     "overview": "Built an interactive LED lighting system for a marching drum kit that responds in real time to playing.",
-    "motivation": "Wanted a visual element to accompany live drumming performances Ã¢ÂÂ LEDs that fire in sync with each hit rather than running a static pattern.",
+    "motivation": "Wanted a visual element to accompany live drumming performances - LEDs that fire in sync with each hit rather than running a static pattern.",
     "hardware": [
       "Arduino microcontroller",
       "Piezo vibration sensors (one per drum)",
-      "Individually addressable LED strips",
-      "Custom wiring harness routed through the drum kit"
+      "Custom wiring harness routed through the drum kit",
+      "LED strips"
     ],
     "design": "Mounted piezo sensors on each drum to detect strike vibration. Each sensor feeds into the Arduino, which maps triggers to individual LED strips on the corresponding drum. Programmed to handle debouncing, sensitivity thresholds, and LED timing for clean, responsive visual feedback synchronized to playing.",
     "challenges": [],
