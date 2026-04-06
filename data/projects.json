@@ -625,6 +625,8 @@
       "Thermal Printer"
     ],
     "github": "https://github.com/eb613819/todo-printer",
-    "images": []
+    "images": [
+      "https://raw.githubusercontent.com/eb613819/portfolio-site-data/main/images/printerbot.jpg"
+    ]
   }
 ]
