@@ -205,16 +205,16 @@
     "overview": "Rebuilt a server around a salvaged enterprise-grade dual-processor motherboard and configured it as a Proxmox hypervisor running multiple production-like virtual machines for self-hosted services.",
     "hardware": [
       "Motherboard: Supermicro X8DTN+ (dual socket)",
-      "CPUs: 2ÃÂ Intel Xeon X5680",
       "RAM: 192GB DDR3 ECC",
       "Case: Fractal Design Define 7",
-      "Storage: 500GB SSD (Proxmox OS), 2ÃÂ 1TB SATA SSD (VM storage + backup)"
+      "CPUs: 2x Intel Xeon X5680",
+      "Storage: 500GB SSD (Proxmox OS), 2x 1TB SATA SSD (VM storage + backup)"
     ],
     "design": "Configured Proxmox as the hypervisor and provisioned VMs for self-hosted services: a Calibre Content Server for ebook library access, and a reverse proxy enforcing HTTPS on a subdomain. A media server (Plex or Jellyfin) and a 3D print file server are planned.",
     "challenges": [
       {
-        "problem": "All running VMs lost access to their data when the NAS drives failed, taking down all self-hosted services.",
-        "solution": "Services temporarily taken down pending WD warranty drive replacements. Planning to migrate the NAS to a VM on this machine using PCIe passthrough to consolidate hardware and eliminate the dependency on a separate NAS device."
+        "problem": "All running VMs lost access to media data when the NAS drives failed, taking down all self-hosted media services.",
+        "solution": "Services temporarily taken down pending WD warranty drive replacements."
       }
     ],
     "tags": [
