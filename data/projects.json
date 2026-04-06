@@ -297,7 +297,7 @@
     "completionDate": "01-22-2025",
     "overview": "Designed and printed a modular set of accessories for a walking pad treadmill, all mounting to the handlebar via a universal attachment piece.",
     "motivation": "Wanted to use a walking pad while working but had nowhere to put a laptop, mouse, or drink without a purpose-built solution.",
-    "design": "Modeled all parts from scratch in CAD: dual laptop stands, a mouse pad mount, a cupholder, and a universal back piece sized to fit the walking pad bar (~1.6 in ÃÂ 0.8 in) that all accessories screw to. Designed the universal back piece first to establish the attachment interface, then built each accessory around it. Optimized each part for FDM printing in PLA Ã¢ÂÂ selecting print orientation to maximize layer strength, minimizing supports, and tuning infill and wall count to balance stiffness and material use. Iterated on the laptop stands specifically to improve rigidity under load.",
+    "design": "Modeled all parts from scratch in CAD: dual laptop stands, a mouse pad mount, a cupholder, and a universal back piece sized to fit the walking pad bar (~1.6 in x 0.8 in) that all accessories screw to. Designed the universal back piece first to establish the attachment interface, then built each accessory around it. Optimized each part for FDM printing in PLA. Selected print orientation to maximize layer strength, minimizing supports, and tuning infill and wall count to balance stiffness and material use. Iterated on the laptop stands specifically to improve rigidity under load.",
     "challenges": [],
     "tags": [
       "3D Printing",
