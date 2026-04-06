@@ -549,7 +549,11 @@
       "Clustering",
       "Data Science"
     ],
-    "github": "https://github.com/eb613819/ml_book_shelf_organizer"
+    "github": "https://github.com/eb613819/ml_book_shelf_organizer",
+    "images": [
+      "https://raw.githubusercontent.com/eb613819/portfolio-site-data/main/images/mlbookshelf1.png",
+      "https://raw.githubusercontent.com/eb613819/portfolio-site-data/main/images/mlbookshelf2.png"
+    ]
   },
   {
     "title": "ION DTN Multi-Node Test Environment",
