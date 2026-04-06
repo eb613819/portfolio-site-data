@@ -196,7 +196,10 @@
       "Embedded Linux"
     ],
     "printables": "https://www.printables.com/model/1597507-raspberry-pi-briefcase-pentesting-rig",
-    "images": []
+    "images": [
+      "https://raw.githubusercontent.com/eb613819/portfolio-site-data/main/images/briefcasepentest2.jpg",
+      "https://raw.githubusercontent.com/eb613819/portfolio-site-data/main/images/breifcasepentest1.jpg"
+    ]
   },
   {
     "title": "Home Lab Server",
