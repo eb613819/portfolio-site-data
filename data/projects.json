@@ -407,7 +407,10 @@
       "FDM"
     ],
     "printables": "https://www.printables.com/model/1605799-over-the-door-pegboard-hanger",
-    "images": []
+    "images": [
+      "https://raw.githubusercontent.com/eb613819/portfolio-site-data/main/images/printercloset2.jpg",
+      "https://raw.githubusercontent.com/eb613819/portfolio-site-data/main/images/printercloset1.jpg"
+    ]
   },
   {
     "title": "Ohio University Internal Developer Portal (Backstage)",
