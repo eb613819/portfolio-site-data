@@ -96,7 +96,9 @@
       "MagicMirror"
     ],
     "github": "https://github.com/MichMich/MagicMirror",
-    "images": []
+    "images": [
+      "https://raw.githubusercontent.com/eb613819/portfolio-site-data/main/images/magicmirror.jpg"
+    ]
   },
   {
     "title": "Insulin Temperature Monitor",
