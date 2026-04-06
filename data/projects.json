@@ -272,7 +272,7 @@
     "completionDate": "10-31-2024",
     "overview": "Packaged the H2Load load-testing tool with full HTTP/3 support into a portable, ready-to-run Docker container.",
     "motivation": "Needed to benchmark HTTP/3 endpoints but building H2Load with HTTP/3 support from source requires resolving a complex chain of dependencies and compilation steps that vary by environment. No existing Docker image handled this cleanly.",
-    "architecture": "Wrote a Dockerfile that handles the full build process Ã¢ÂÂ dependency installation, source compilation, and configuration Ã¢ÂÂ producing a lightweight image that runs H2Load with HTTP/3 support on any machine with Docker installed, with no manual setup required. Used the container to benchmark and stress test HTTP/3 and HTTP/2 endpoints, measuring throughput, latency, and behavior under concurrent load across different server configurations.",
+    "architecture": "Wrote a Dockerfile that handles the full build process: dependency installation, source compilation, and configuration. Produced a lightweight image that runs H2Load with HTTP/3 support on any machine with Docker installed, with no manual setup required. Used the container to benchmark and stress test HTTP/3 and HTTP/2 endpoints, measuring throughput, latency, and behavior under concurrent load across different server configurations.",
     "challenges": [],
     "tags": [
       "Docker",
