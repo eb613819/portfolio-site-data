@@ -83,15 +83,15 @@
       "Poster frame as the outer enclosure",
       "Glass sheet with reflective window film for the two-way mirror effect"
     ],
-    "design": "Installed and configured the MagicMirrorÃÂ² open-source platform with modules for live calendar, weather, and news feeds. Configured to launch automatically on boot. Modules and configuration are managed remotely over SSH Ã¢ÂÂ no physical access needed to update the display. Handled all physical construction including cutting and fitting the reflective film, mounting the display behind the glass, routing wiring inside the frame, and securing all components inside the enclosure.",
+    "design": "Installed and configured the MagicMirror open-source platform with modules for live calendar, weather, and news feeds. Configured to launch automatically on boot. Modules and configuration are managed remotely over SSH - no physical access needed to update the display. Handled all physical construction including cutting and fitting the reflective film, mounting the display behind the glass, routing wiring inside the frame, and securing all components inside the enclosure.",
     "challenges": [],
     "tags": [
       "Raspberry Pi 5",
-      "MagicMirrorÃÂ²",
       "IoT",
       "Linux",
       "SSH",
-      "Smart Home"
+      "Smart Home",
+      "MagicMirror"
     ],
     "github": "https://github.com/MichMich/MagicMirror",
     "images": []
