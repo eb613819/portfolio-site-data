@@ -596,7 +596,10 @@
       "Raspbian",
       "Research"
     ],
-    "github": "https://github.com/eb613819/ion-dtn-qemu-test-environment"
+    "github": "https://github.com/eb613819/ion-dtn-qemu-test-environment",
+    "images": [
+      "https://raw.githubusercontent.com/eb613819/portfolio-site-data/main/images/nasalogo.png"
+    ]
   },
   {
     "title": "To-Do Thermal Receipt Printer Bot",
