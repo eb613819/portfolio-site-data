@@ -138,7 +138,7 @@
       "Connectivity: Ethernet extension port, 8-port USB hub, built-in cooling fans",
       "Enclosure: Apache hard-shell case"
     ],
-    "design": "Fully designed the internal chassis from scratch in CAD Ã¢ÂÂ modeled to fit the exact interior dimensions of the Apache case with precise cutouts and mounts for every component. 3D printed the entire chassis including fan mounts, port extensions, and component brackets.",
+    "design": "Fully designed the internal chassis from scratch in CAD, modeled to fit the exact interior dimensions of the Apache case with precise cutouts and mounts for every component. 3D printed the entire chassis including fan mounts, port extensions, and component brackets.",
     "challenges": [],
     "tags": [
       "Raspberry Pi 5",
