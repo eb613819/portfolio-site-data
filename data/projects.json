@@ -638,5 +638,32 @@
     "images": [
       "https://raw.githubusercontent.com/eb613819/portfolio-site-data/main/images/printerbot.jpg"
     ]
+  },
+  {
+    "title": "Multi-Region Kubernetes Cluster on Azure",
+    "types": [
+      "Networking / Infrastructure",
+      "DevOps / Cloud"
+    ],
+    "status": "Completed",
+    "overview": "A self-managed Kubernetes cluster spanning two Azure regions, built as a testbed for future RL-driven microservice scheduling research. Uses OpenTofu for infrastructure provisioning and Ansible for cluster setup and application deployment.",
+    "challenges": [],
+    "tags": [
+      "Kubernetes",
+      "k3s",
+      "Azure",
+      "OpenTofu",
+      "Ansible",
+      "Terraform",
+      "Networking",
+      "IaC"
+    ],
+    "images": [
+      "https://raw.githubusercontent.com/eb613819/portfolio-site-data/main/images/azure_k3s.png"
+    ],
+    "completionDate": "04-24-2026",
+    "motivation": "Managed Kubernetes services like AKS abstract away the control plane, making it impossible to experiment with custom schedulers. A self-managed k3s cluster on raw VMs provides full control over `kube-scheduler`, enabling future replacement with a custom RL-based implementation.",
+    "architecture": "5 Azure VMs across `northcentralus` and `mexicocentral`. One control plane node and four workers distributed across both regions. Regions connected via bidirectional VNet peering. k3s installed across all nodes forming a single cluster.",
+    "github": "https://github.com/eb613819/multiregion-k3s-azure"
   }
 ]
