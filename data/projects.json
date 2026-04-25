@@ -697,5 +697,54 @@
     ],
     "github": "https://github.com/eb613819/kube-latency-map",
     "dockerhub": "https://hub.docker.com/r/eb613819/kube-latency-map"
+  },
+  {
+    "title": "Portfolio Data Editor",
+    "types": [
+      "Software / Web",
+      "DevOps / Cloud"
+    ],
+    "status": "Completed",
+    "overview": "A built-in content editor for managing the portfolio site's project and experience data, accessible at `evanbrooks.me/editor`. Built into the Angular portfolio site and backed by a Cloudflare Worker for secure GitHub OAuth authentication.",
+    "challenges": [
+      {
+        "problem": "A static Angular site has no server, so the GitHub OAuth client secret cannot be stored anywhere in the frontend code without being publicly readable.",
+        "solution": "Deployed a Cloudflare Worker as a minimal serverless backend whose only job is to hold the client secret and perform the token exchange. The Worker is the only place the secret exists The frontend sends it the one-time code and receives back only the access token."
+      },
+      {
+        "problem": "When testing the editor locally for the first time, requests from `http://localhost:4200` were blocked by the Worker's CORS policy which only allowed `https://evanbrooks.me`. Additionally the `redirect_uri` hardcoded in the auth service pointed at the production domain, causing GitHub to reject the OAuth callback since the GitHub OAuth app was temporarily set to use localhost.",
+        "solution": "Updated the Worker to dynamically set `Access-Control-Allow-Origin` based on a whitelist of allowed origins so both production and localhost are accepted. The `redirect_uri` is passed dynamically from the Angular app to the Worker so it always forwards the correct URI to GitHub. On the Angular side `REDIRECT_URI` in the auth service needs to match whatever callback URL is registered in the GitHub OAuth app settings."
+      },
+      {
+        "problem": "Special characters were getting corrupted when the editor loaded and re-saved the JSON, because the base64 decode on load was not symmetric with the encode on save.",
+        "solution": "Used a matched encode/decode pair — `encodeURIComponent` and `unescape` before `btoa` on save, and `atob` then `escape` and `decodeURIComponent` on load — to correctly handle UTF-8 characters through the base64 round trip."
+      }
+    ],
+    "tags": [
+      "Angular",
+      "TypeScript",
+      "OAuth",
+      "Cloudflare Workers",
+      "GitHub API",
+      "Serverless",
+      "GitHub Pages"
+    ],
+    "images": [
+      "https://raw.githubusercontent.com/eb613819/portfolio-site-data/main/images/editor-screenshot.png"
+    ],
+    "completionDate": "04-06-2026",
+    "motivation": "Editing project data meant manually writing JSON in GitHub's web editor, which worked but was error-prone and slow. I wanted a structured form-based editor that validates the schema, handles image uploads, and commits changes directly to the data repository without leaving the browser.",
+    "architecture": "The editor is an Angular route at `/editor` in the portfolio site. It reads and writes `projects.json` in the data repository directly via the GitHub Contents API, base64-encoding the file content for each commit. A separate Cloudflare Worker handles the GitHub OAuth token exchange. The client secret lives in Cloudflare's encrypted environment variables and never touches the frontend. The resulting access token is stored in sessionStorage for the tab's lifetime and attached to every GitHub API request as a Bearer token.",
+    "features": [
+      "Form-based editing of all project fields with fields conditionally shown based on project status and type",
+      "Create new project entries from scratch",
+      "Image upload directly to the data repository's images/ directory via the GitHub Contents API",
+      "Changes committed to the data repository with descriptive commit messages",
+      "Unsaved changes warning when switching projects",
+      "GitHub OAuth login",
+      "Blocked on mobile with a desktop-only message"
+    ],
+    "learned": "The token exchange itself is a small amount of code but understanding why it has to live server-side is the important part. Cloudflare Workers make this essentially free and trivial to deploy for low-traffic personal tools.",
+    "github": "https://github.com/eb613819/portfolio-oauth-worker"
   }
 ]
