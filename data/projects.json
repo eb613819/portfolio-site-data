@@ -665,5 +665,38 @@
     "motivation": "Managed Kubernetes services like AKS abstract away the control plane, making it impossible to experiment with custom schedulers. A self-managed k3s cluster on raw VMs provides full control over `kube-scheduler`, enabling future replacement with a custom RL-based implementation.",
     "architecture": "5 Azure VMs across `northcentralus` and `mexicocentral`. One control plane node and four workers distributed across both regions. Regions connected via bidirectional VNet peering. k3s installed across all nodes forming a single cluster.",
     "github": "https://github.com/eb613819/multiregion-k3s-azure"
+  },
+  {
+    "title": "Kubernetes Node Latency Map",
+    "types": [
+      "DevOps / Cloud",
+      "Networking / Infrastructure",
+      "Software / Web"
+    ],
+    "status": "Completed",
+    "overview": "A lightweight Kubernetes latency visualization tool. Deploys one pod per node via a DaemonSet, measures HTTP round-trip latency between all pods, and displays a live updating matrix in a web UI.",
+    "challenges": [],
+    "tags": [
+      "Kubernetes",
+      "Node.js",
+      "Docker",
+      "Networking",
+      "Observability",
+      "Visualization"
+    ],
+    "images": [
+      "https://raw.githubusercontent.com/eb613819/portfolio-site-data/main/images/kube_latency_map.png"
+    ],
+    "completionDate": "04-24-2026",
+    "motivation": "Built to validate the multi-region k3s cluster by demonstrating measurable latency differences between intra-region and inter-region pod communication at the application layer.",
+    "architecture": "Single container image deployed as a DaemonSet. Each pod runs the same application. Peer discovery via Kubernetes API, probe loop measuring HTTP RTT, REST endpoints exposing measurements, and a frontend that aggregates all peers on demand.",
+    "features": [
+      "Live updating latency matrix",
+      "Configurable probe interval via UI slider",
+      "Loopback RTT diagonal as rough HTTP overhead baseline",
+      "Dynamic color scale based on observed latency range"
+    ],
+    "github": "https://github.com/eb613819/kube-latency-map",
+    "dockerhub": "https://hub.docker.com/r/eb613819/kube-latency-map"
   }
 ]
