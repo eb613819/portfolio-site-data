@@ -745,6 +745,6 @@
       "Blocked on mobile with a desktop-only message"
     ],
     "learned": "The token exchange itself is a small amount of code but understanding why it has to live server-side is the important part. Cloudflare Workers make this essentially free and trivial to deploy for low-traffic personal tools.",
-    "github": "https://github.com/eb613819/portfolio-oauth-worker"
+    "github": "https://github.com/eb613819/portfolio-site-oauth-worker"
   }
 ]
