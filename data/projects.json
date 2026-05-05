@@ -791,5 +791,41 @@
     ],
     "learned": "This was my first time using FastAPI. The auto-generated Swagger UI at /docs made it easy to visualize and test each endpoint as I built them. Being able to send real requests at a route immediately after writing it was a much tighter feedback loop than I expected. \n\nI also thought more carefully about where logic should live. There was a temptation to keep `api.py` thin, just load and save, and let the Angular services handle checks like whether a group exists before adding to it. But that logic belongs in the API because it is the only thing with direct access to the data and the only true source of truth. The frontend's view of the data could be stale. \n\nI also got a clearer picture of the browser sandbox. Angular runs on the user's machine, not the server, so it has no filesystem access at all. The API is not just a convenience layer, it is the only path to the data.",
     "github": "https://github.com/eb613819/todo-printer-web"
+  },
+  {
+    "title": "To-Do Thermal Receipt Bot",
+    "types": [
+      "Home Lab",
+      "Software / Web"
+    ],
+    "status": "Completed",
+    "completionDate": "03-23-2026",
+    "overview": "A Discord bot that manages to-do lists by group and prints them on demand to a thermal receipt printer over the network. Tasks are sent from Discord on any device and saved persistently, then printed as a formatted receipt whenever needed.",
+    "motivation": "Tasks would come to mind throughout the day and either get forgotten or written on paper that would get lost. Wanted a way to capture tasks instantly from a phone and produce a physical printed list when it was time to actually work through them.",
+    "architecture": "Tasks are sent to a dedicated Discord channel from any device. The bot parses messages into named groups with support for multiple tasks per message. Tasks persist between restarts via a JSON file. On demand the bot sends a formatted ESC/POS print job to the printer over the local network - no USB passthrough or drivers needed. The printer auto-cuts and outputs a receipt with a decorative border, large header, date and time, group name, and numbered tasks with checkboxes. Runs as a Debian 12 LXC container on Proxmox, managed as a systemd service that starts automatically on boot.",
+    "features": [
+      "Named task groups with spaces supported (e.g. 'clean apartment: wash dishes, do laundry')",
+      "Multiple tasks added in one message via comma separation",
+      "Print a specific group, all groups, or just group names and counts",
+      "List tasks and groups directly in Discord without printing",
+      "Finish individual tasks or entire groups including multiple at once",
+      "Full help command documenting all syntax"
+    ],
+    "challenges": [],
+    "tags": [
+      "Python",
+      "discord.py",
+      "ESC/POS",
+      "Proxmox",
+      "LXC",
+      "Debian",
+      "systemd",
+      "Home Lab",
+      "Thermal Printer"
+    ],
+    "github": "https://github.com/eb613819/todo-printer",
+    "images": [
+      "https://raw.githubusercontent.com/eb613819/portfolio-site-data/main/images/printerbot.jpg"
+    ]
   }
 ]
