@@ -767,5 +767,40 @@
     "images": [
       "https://raw.githubusercontent.com/eb613819/portfolio-site-data/main/images/printerbot.jpg"
     ]
+  },
+  {
+    "title": "Home Lab Server Build",
+    "types": [
+      "Home Lab",
+      "Networking / Infrastructure"
+    ],
+    "status": "Completed",
+    "completionDate": "03-25-2025",
+    "overview": "Rebuilt a server around a salvaged enterprise-grade dual-processor motherboard and configured it as a Proxmox hypervisor running multiple production-like virtual machines for self-hosted services.",
+    "hardware": [
+      "Motherboard: Supermicro X8DTN+ (dual socket)",
+      "RAM: 192GB DDR3 ECC",
+      "Case: Fractal Design Define 7",
+      "CPUs: 2x Intel Xeon X5680",
+      "Storage: 500GB SSD (Proxmox OS), 2x 1TB SATA SSD (VM storage + backup)"
+    ],
+    "design": "Configured Proxmox as the hypervisor and provisioned a mix of VMs and LXC containers for self-hosted services, each named after Avatar: The Last Airbender characters. Tenzin is an Ubuntu VM running Nginx as a reverse proxy, routing subdomains under evanbrooks.me to internal services. Wan-shi-tong is a VM running a Calibre Content Server for ebook library access over the local network and via reverse proxy. Piandao is a Debian LXC container running the Discord-based todo bot and its companion web dashboard, which share a common task file. Planned additions include a Jellyfin media server (Momo), a self-hosted 3D print file sharing server for family use, Vaultwarden for password management, Pi-hole for network-level ad blocking, Tailscale for remote access, Grafana for monitoring, Nextcloud for file sync and photos, and a small multi-node Kubernetes cluster for local experimentation.",
+    "challenges": [
+      {
+        "problem": "All running VMs lost access to media data when the NAS drives failed, taking down all self-hosted media services. Other services were unaffected.",
+        "solution": "Services temporarily taken down pending WD warranty drive replacements."
+      }
+    ],
+    "tags": [
+      "Proxmox",
+      "Linux",
+      "Reverse Proxy",
+      "Nginx",
+      "LXC"
+    ],
+    "images": [
+      "https://raw.githubusercontent.com/eb613819/portfolio-site-data/main/images/server.jpg"
+    ],
+    "learned": "Salvaged enterprise hardware is a cost-effective way to run a homelab — the dual Xeon X5680s and 192GB of ECC RAM would cost thousands new but are available cheaply secondhand as datacenters cycle out older gear. The tradeoff is higher idle power draw compared to a modern low-power board, which is worth factoring in for always-on workloads."
   }
 ]
