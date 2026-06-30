@@ -318,11 +318,7 @@
     "tags": [
       "Docker",
       "HTTP/3",
-      "HTTP/2",
-      "Load Testing",
-      "Containerization",
-      "Networking",
-      "Performance Testing"
+      "HTTP/2"
     ],
     "dockerhub": "https://hub.docker.com/repository/docker/eb613819/h2load-http3",
     "images": [
