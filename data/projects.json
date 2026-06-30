@@ -358,28 +358,43 @@
     "completionDate": "03-05-2026",
     "overview": "Explored cloud portability and vendor lock-in by deploying identical 3-tier application stacks across AWS, GCP, and Azure using reusable Infrastructure as Code and configuration management tooling.",
     "motivation": "Most cloud deployments are tightly coupled to a single provider's APIs, services, and tooling. Wanted to investigate how far a provider-agnostic IaC approach can go in making infrastructure truly portable.",
-    "architecture": "Each deployment provisions a 3-tier stack: a web VM running Nginx as a reverse proxy with TLS via Certbot and Let's Encrypt, an app VM running WordPress, and a DB VM running MariaDB. OpenTofu handles provider selection and VM provisioning across all three clouds, outputting IPs and creating a DNS record via the Namecheap API. Ansible consumes those outputs and configures each VM, installing and wiring together WordPress, MariaDB, and Nginx, setting up the reverse proxy, and running Certbot. Built in stages: single VM per provider first, then a provider interface layer, then the full 3-VM stack. As a finishing touch, the deployment automatically sets the repository README as the default WordPress post on every fresh deploy.",
-    "challenges": [],
+    "architecture": "Each deployment provisions a 3-tier stack: a web VM running Nginx as a reverse proxy with TLS via Certbot and Let's Encrypt, an app VM running WordPress, and a DB VM running MariaDB. OpenTofu handles provider selection and VM provisioning across all three clouds, outputting IPs and creating a DNS record via the Namecheap API. Ansible consumes those outputs and configures each VM, installing and wiring together WordPress, MariaDB, and Nginx, setting up the reverse proxy, and running Certbot. Built in stages: single VM per provider first, then a provider interface layer, then the full 3-VM stack. As a finishing touch, the deployment automatically sets the repository README as the default WordPress post on every fresh deploy.\n\nRather than writing a single shared set of resource blocks across providers, the infrastructure is split into a cloud-neutral interface layer and provider-specific modules. The interface layer defines inputs and outputs that express architectural intent (a web VM, an app VM, a database VM, networking, DNS), while each provider module translates that intent into native resource definitions for AWS, Azure, or GCP.",
+    "challenges": [
+      {
+        "problem": "Let's Encrypt enforces a limit of 5 certificates per exact domain per week. Iterative testing across multiple cloud providers during development hit this limit for the configured subdomain.",
+        "solution": "Switched to a different test subdomain (`test2.evanbrooks.me`) to continue development without waiting out the rate limit window."
+      },
+      {
+        "problem": "OpenTofu's `null_resource` only re-runs its provisioners when the resource is destroyed and recreated. Without explicit handling, switching cloud providers would replace the infrastructure but leave stale Ansible configuration and DNS records in place.",
+        "solution": "Declared explicit triggers on each `null_resource` tied to meaningful values like the active platform and the web VM's public IP, forcing OpenTofu to detect the change and rerun the full provisioning and configuration cycle."
+      },
+      {
+        "problem": "Certbot requires a running HTTP server to complete domain validation, but the final HTTPS Nginx configuration references certificate files that don't exist until Certbot has already run.",
+        "solution": "Deployed Nginx in two stages — first with an HTTP-only configuration to allow Certbot to complete validation, then replaced it with the final configuration including TLS and HTTP-to-HTTPS redirect once the certificate was issued."
+      },
+      {
+        "problem": "Each cloud provider models core infrastructure differently — Azure requires an explicit resource group and NIC objects, AWS requires explicit routing via an Internet Gateway and route tables, and GCP handles public IPs and internet routing implicitly. These structural differences meant the same logical infrastructure (a VM with networking and SSH access) could not be expressed as a single shared set of resource blocks across providers without extensive conditional logic.",
+        "solution": "Built a cloud-neutral interface layer that sits above the provider-specific implementations. The interface expresses architectural intent through a consistent set of inputs and outputs, while individual provider modules act as adapters that translate those inputs into each provider's native resource blocks. This achieves portability at the interface level rather than forcing uniformity at the resource level, letting each module remain structurally correct and native to its provider."
+      }
+    ],
     "tags": [
       "OpenTofu",
       "Ansible",
       "AWS",
       "GCP",
       "Azure",
-      "IaC",
-      "Terraform",
       "WordPress",
       "Nginx",
       "MariaDB",
       "DNS",
       "TLS",
-      "Let's Encrypt",
-      "DevOps"
+      "Let's Encrypt"
     ],
     "github": "https://github.com/eb613819/cloud-portability-experiment",
     "images": [
       "https://raw.githubusercontent.com/eb613819/portfolio-site-data/main/images/cloudportability.png"
-    ]
+    ],
+    "learned": "True cloud portability requires abstraction at the interface level, not the resource level. Forcing all three providers into identical resource blocks would have required extensive conditional logic and obscured each provider's native semantics. Defining a consistent contract of inputs and outputs, then letting each provider module implement that contract natively, achieved portability without sacrificing clarity or maintainability."
   },
   {
     "title": "3D Printer Closet Environment Monitor",
