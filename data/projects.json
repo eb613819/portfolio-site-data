@@ -201,25 +201,30 @@
       "Enclosure: Leather briefcase"
     ],
     "design": "Designed a fully modular chassis from scratch in CAD. Individual pieces screw together using heat-set inserts and connector pieces, allowing for disassembly, reconfiguration, and reprinting of individual sections without replacing the entire chassis. A smooth magnetic panel system snaps onto the outside of the chassis to create a clean, unified interior appearance while remaining removable for access to components.",
-    "challenges": [],
+    "challenges": [
+      {
+        "problem": "Designing screw joints with heat-set insert threads added significant complexity to the CAD work compared to the friction-fit approach used in the Apache case rig — every connection point required precise placement and clearance modeling.",
+        "solution": "Worked through the CAD complexity carefully, and the result was worth it — screwed heat-set connections produced a far more repeatable and serviceable chassis than friction fit."
+      },
+      {
+        "problem": "The leather briefcase has internal hinges that protrude into the usable space. The chassis had to be designed around them precisely to avoid interference while still using as much of the interior volume as possible.",
+        "solution": "Modeled the hinge positions carefully in CAD and designed cutouts and clearances into the chassis pieces to accommodate them."
+      }
+    ],
     "tags": [
       "Raspberry Pi 5",
       "Kali Linux",
-      "Penetration Testing",
-      "Cybersecurity",
       "CAD",
       "3D Printing",
-      "Heat-Set Inserts",
-      "Modular Design",
       "NVMe",
-      "WiFi Adapter",
-      "Embedded Linux"
+      "WiFi Adapter"
     ],
     "printables": "https://www.printables.com/model/1597507-raspberry-pi-briefcase-pentesting-rig",
     "images": [
       "https://raw.githubusercontent.com/eb613819/portfolio-site-data/main/images/briefcasepentest2.jpg",
       "https://raw.githubusercontent.com/eb613819/portfolio-site-data/main/images/breifcasepentest1.jpg"
-    ]
+    ],
+    "learned": "Heat-set inserts are straightforward to install and produce strong, reliable threaded connections in 3D printed parts. The extra CAD work required to design for screwed joints is worth it over friction fit for any multi-piece assembly that needs to be disassembled or adjusted."
   },
   {
     "title": "Home Lab Server",
