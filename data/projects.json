@@ -646,24 +646,35 @@
     ],
     "status": "Completed",
     "overview": "A self-managed Kubernetes cluster spanning two Azure regions, built as a testbed for future RL-driven microservice scheduling research. Uses OpenTofu for infrastructure provisioning and Ansible for cluster setup and application deployment.",
-    "challenges": [],
+    "challenges": [
+      {
+        "problem": "The initially chosen VM size (`Standard_B2pts_v2`, ARM64) was unavailable in every region tried. A second size (`Standard_B2ats_v2`, AMD64) showed no capacity restrictions when checked via the Azure CLI, but still failed with a capacity error in multiple regions.",
+        "solution": "Discovered that Azure checks SKU availability and physical capacity independently — a SKU can appear unrestricted while having no actual capacity in a given region. Tested multiple regions until finding two (`northcentralus` and `mexicocentral`) where provisioning actually succeeded."
+      },
+      {
+        "problem": "Worker nodes appeared to hang indefinitely during installation, unable to join the cluster.",
+        "solution": "Diagnosed two separate issues in sequence. First, the Network Security Group did not allow inbound traffic on port 6443 (the k3s API server) between the peered VNets, so workers had no network path to the control plane at all. After adding an explicit NSG rule scoped to the Azure VirtualNetwork source tag, workers could reach the control plane but still failed to join — the control plane readiness check was using a flawed health endpoint poll that could pass before the API was actually ready to authenticate requests. Replacing the check with `k3s kubectl get nodes`, which only succeeds once the control plane is fully initialized, resolved the remaining timing issue and allowed workers to join cleanly."
+      }
+    ],
     "tags": [
       "Kubernetes",
       "k3s",
       "Azure",
       "OpenTofu",
-      "Ansible",
-      "Terraform",
-      "Networking",
-      "IaC"
+      "Ansible"
     ],
     "images": [
       "https://raw.githubusercontent.com/eb613819/portfolio-site-data/main/images/azure_k3s.png"
     ],
     "completionDate": "04-24-2026",
     "motivation": "Managed Kubernetes services like AKS abstract away the control plane, making it impossible to experiment with custom schedulers. A self-managed k3s cluster on raw VMs provides full control over `kube-scheduler`, enabling future replacement with a custom RL-based implementation.",
-    "architecture": "5 Azure VMs across `northcentralus` and `mexicocentral`. One control plane node and four workers distributed across both regions. Regions connected via bidirectional VNet peering. k3s installed across all nodes forming a single cluster.",
-    "github": "https://github.com/eb613819/multiregion-k3s-azure"
+    "architecture": "5 Azure VMs across `northcentralus` and `mexicocentral`, with one control plane node and four workers distributed across both regions. Regions are connected via bidirectional VNet peering with non-overlapping CIDR ranges (10.0.0.0/16 and 10.1.0.0/16), allowing all nodes to communicate over private IPs across Azure's backbone network rather than the public internet. Each region has its own Network Security Group restricting traffic to the Azure VirtualNetwork source tag, with explicit rules for SSH, the Kubernetes API server, the Flannel VXLAN overlay, and the Kubelet API. k3s is installed across all five nodes via Ansible to form a single unified cluster. OpenTofu provisions all infrastructure and automatically generates the Ansible inventory from its outputs, so no manual IP management is needed between provisioning and cluster setup.",
+    "github": "https://github.com/eb613819/multiregion-k3s-azure",
+    "features": [
+      "Automated Ansible inventory generation from OpenTofu outputs",
+      "Deploys a containerized latency visualization tool to validate cross-region scheduling"
+    ],
+    "learned": "Cloud provider capacity and SKU availability checks don't always reflect real provisioning capability — confirming a region actually works requires testing, not just querying. I also learned to diagnose multi-layered failures methodically: when workers failed to join, the instinct was to assume one cause, but the real fix required separating the networking layer (was the connection even possible) from the application layer (was the control plane actually ready), and fixing each independently rather than guessing at a single root cause.\n\n\nThe ~52ms ping difference and consistent 50-100ms+ HTTP RTT gap between intra-region and cross-region nodes confirms the cluster produces a real, measurable latency signal — not just a theoretical one. That makes this a valid testbed for the eventual RL-driven scheduler: any placement decisions the scheduler makes can be evaluated against latency differences that are large and consistent enough to be meaningful, rather than noise-level variation that wouldn't actually validate scheduling quality."
   },
   {
     "title": "Kubernetes Node Latency Map",
