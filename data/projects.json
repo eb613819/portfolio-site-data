@@ -592,10 +592,7 @@
       "scikit-learn",
       "UMAP",
       "pandas",
-      "matplotlib",
-      "Machine Learning",
-      "Clustering",
-      "Data Science"
+      "matplotlib"
     ],
     "github": "https://github.com/eb613819/ml_book_shelf_organizer",
     "images": [
