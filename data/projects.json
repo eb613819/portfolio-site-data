@@ -52,7 +52,7 @@
     "learned": "Separating content from presentation by storing all project data in a dedicated repository and fetching it at runtime was a deliberate architectural choice that paid off; updating project data never requires touching the application code or triggering a redeployment.\n\nThe token exchange itself is a small amount of code but understanding why it has to live server-side is the important part. Cloudflare Workers make this essentially free and trivial to deploy for low-traffic personal tools."
   },
   {
-    "title": "NAS Build",
+    "title": "Home Lab NAS Build",
     "types": [
       "Home Lab",
       "Networking / Infrastructure"
@@ -227,7 +227,7 @@
     "learned": "Heat-set inserts are straightforward to install and produce strong, reliable threaded connections in 3D printed parts. The extra CAD work required to design for screwed joints is worth it over friction fit for any multi-piece assembly that needs to be disassembled or adjusted."
   },
   {
-    "title": "Home Lab Server",
+    "title": "Home Lab Server Build",
     "types": [
       "Home Lab",
       "Networking / Infrastructure"
