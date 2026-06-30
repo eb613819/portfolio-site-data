@@ -156,24 +156,31 @@
       "Enclosure: Apache hard-shell case"
     ],
     "design": "Fully designed the internal chassis from scratch in CAD, modeled to fit the exact interior dimensions of the Apache case with precise cutouts and mounts for every component. 3D printed the entire chassis including fan mounts, port extensions, and component brackets.",
-    "challenges": [],
+    "challenges": [
+      {
+        "problem": "Internal chassis pieces were designed to friction fit next to each other, but this caused alignment issues during assembly — pieces would shift or not seat properly against each other.",
+        "solution": "Addressed in the briefcase version by redesigning the connection system to use screwed joints with heat-set inserts, giving each piece a fixed and repeatable position."
+      },
+      {
+        "problem": "The chassis was not modular enough, making it difficult to route wiring and access components during assembly and iteration.",
+        "solution": "Addressed in the briefcase version by designing fully modular individual pieces that can be disassembled, reconfigured, and reprinted independently without replacing the entire chassis."
+      }
+    ],
     "tags": [
       "Raspberry Pi 5",
       "Kali Linux",
-      "Penetration Testing",
-      "Cybersecurity",
       "CAD",
       "3D Printing",
       "NVMe",
-      "WiFi Adapter",
-      "Embedded Linux"
+      "WiFi Adapter"
     ],
     "printables": "https://www.printables.com/model/1606964-raspberry-pi-apache-2800-pentesting-rig",
     "images": [
       "https://raw.githubusercontent.com/eb613819/portfolio-site-data/main/images/pentest.jpg",
       "https://raw.githubusercontent.com/eb613819/portfolio-site-data/main/images/pentest2.jpg",
       "https://raw.githubusercontent.com/eb613819/portfolio-site-data/main/images/pentest3.jpg"
-    ]
+    ],
+    "learned": "Friction fit connections are unreliable for multi-piece chassis assemblies at FDM tolerances. Designing for screwed connections with heat-set inserts from the start produces a much more repeatable and serviceable result."
   },
   {
     "title": "Briefcase Pen Testing Rig",
