@@ -684,14 +684,16 @@
     ],
     "status": "Completed",
     "overview": "A lightweight Kubernetes latency visualization tool. Deploys one pod per node via a DaemonSet, measures HTTP round-trip latency between all pods, and displays a live updating matrix in a web UI.",
-    "challenges": [],
+    "challenges": [
+      {
+        "problem": "Measuring latency between pods using ICMP ping requires the `NET_RAW` capability, which is restricted by default in most Kubernetes clusters for security reasons.",
+        "solution": "Used HTTP round-trip time instead of ICMP ping. This works without elevated pod permissions, though it measures slightly higher absolute latency than raw network ping due to HTTP overhead. Since this overhead is consistent across all measurements, relative differences between pods remain meaningful — and each pod's loopback probe (a request to itself) provides a rough baseline for that overhead specific to that node."
+      }
+    ],
     "tags": [
       "Kubernetes",
       "Node.js",
-      "Docker",
-      "Networking",
-      "Observability",
-      "Visualization"
+      "Docker"
     ],
     "images": [
       "https://raw.githubusercontent.com/eb613819/portfolio-site-data/main/images/kube_latency_map.png"
@@ -706,7 +708,8 @@
       "Dynamic color scale based on observed latency range"
     ],
     "github": "https://github.com/eb613819/kube-latency-map",
-    "dockerhub": "https://hub.docker.com/r/eb613819/kube-latency-map"
+    "dockerhub": "https://hub.docker.com/r/eb613819/kube-latency-map",
+    "learned": "The latency matrix wasn't perfectly symmetric in practice — node A to node B didn't always exactly match node B to node A. This likely reflects momentary differences in processing load or network path rather than a true directional latency difference, which is a useful reminder that real-world network measurements have natural variance even between fixed points."
   },
   {
     "title": "To-Do Thermal Receipt Web",
