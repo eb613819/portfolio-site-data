@@ -240,7 +240,7 @@
       "RAM: 192GB DDR3 ECC",
       "Case: Fractal Design Define 7",
       "CPUs: 2x Intel Xeon X5680",
-      "Storage: 500GB SSD (Proxmox OS), 2x 1TB SATA SSD (VM storage + backup)"
+      "Storage: 2x 1TB SATA SSD (WD Blue + Samsung 870 EVO), mirrored as a single ZFS pool holding the Proxmox OS and all VM/container storage. 500GB SSD used as an L2ARC read cache."
     ],
     "design": "Configured Proxmox as the hypervisor and provisioned a mix of VMs and LXC containers for self-hosted services, each named after Avatar: The Last Airbender characters. Tenzin is an Ubuntu VM running Nginx as a reverse proxy, routing subdomains under evanbrooks.me to internal services. Each service runs in its own dedicated VM or LXC container for isolation, independent resource allocation, and the ability to snapshot or restore services individually without affecting others.",
     "challenges": [
