@@ -5,29 +5,50 @@
       "Software / Web"
     ],
     "status": "Completed",
-    "completionDate": "01-12-2026",
-    "overview": "Designed and developed a personal portfolio website using Angular standalone components and TypeScript, deployed as a static site on GitHub Pages.",
-    "architecture": "Architected a decoupled data layer by storing all project and experience content in a dedicated GitHub repository, fetched at runtime via HTTP. This separates content from presentation and the site never needs to be rebuilt or redeployed when data changes. Developed using a structured Git workflow with feature branches, issue tracking, and pull requests into an always-deployable main branch. Branch names follow a type/issue-number-description convention for full traceability.",
+    "completionDate": "01-06-2026",
+    "overview": "Designed and developed a personal portfolio website using Angular standalone components and TypeScript, deployed as a static site on GitHub Pages. Includes a built-in content editor at `evanbrooks.me/editor` for managing project data without manually editing JSON, backed by a Cloudflare Worker for secure GitHub OAuth authentication.",
+    "architecture": "Architected a decoupled data layer by storing all project and experience content in a dedicated GitHub repository, fetched at runtime via HTTP. This separates content from presentation and the site never needs to be rebuilt or redeployed when data changes. The editor is an Angular route at `/editor` that reads and writes `projects.json` in the data repository directly via the GitHub Contents API, base64-encoding file content for each commit. A separate Cloudflare Worker handles the GitHub OAuth token exchange — the client secret lives in Cloudflare's encrypted environment variables and never touches the frontend. The resulting access token is stored in `sessionStorage` for the tab's lifetime and attached to every GitHub API request as a Bearer token. Developed using a structured Git workflow with feature branches, issue tracking, and pull requests into an always-deployable main branch.",
     "features": [
       "Filterable project gallery by type, tag, and status",
       "Filterable experience gallery by type and tag",
       "Expandable responsive cards with image carousels",
       "Markdown-rendered project and experience descriptions",
-      "Resume download"
+      "Resume download",
+      "Form-based content editor with GitHub OAuth login",
+      "Image upload directly to the data repository",
+      "Changes committed to the data repository with descriptive commit messages"
     ],
-    "challenges": [],
+    "challenges": [
+      {
+        "problem": "Deploying to GitHub Pages with a custom domain required getting the `--base-href` flag right in the build command. An incorrect value caused the app to load a blank page in production while working fine locally.",
+        "solution": "Setting `--base-href /` in the production build command resolved it. The full deploy command is documented in the README."
+      },
+      {
+        "problem": "The site is hosted as a static Angular app on GitHub Pages, which means there is no server to hold sensitive credentials. The editor needed to authenticate with GitHub OAuth to commit changes to the data repository, but the OAuth client secret cannot be stored in frontend code without being publicly readable.",
+        "solution": "Deployed a Cloudflare Worker as a minimal serverless backend whose only job is to hold the client secret and perform the token exchange. The Worker is the only place the secret exists — the frontend sends it the one-time code and receives back only the access token."
+      },
+      {
+        "problem": "When testing the editor locally, requests from `http://localhost:4200` were blocked by the Worker's CORS policy which only allowed `https://evanbrooks.me`. Additionally the `redirect_uri` hardcoded in the auth service pointed at the production domain, causing GitHub to reject the OAuth callback when testing locally.",
+        "solution": "Updated the Worker to dynamically set Access-Control-Allow-Origin based on a whitelist of allowed origins so both production and localhost are accepted. The `redirect_uri` is passed dynamically from the Angular app to the Worker so it always forwards the correct URI to GitHub."
+      },
+      {
+        "problem": "Special characters were getting corrupted when the editor loaded and re-saved the JSON, because the base64 decode on load was not symmetric with the encode on save.",
+        "solution": "Used a matched encode/decode pair — `encodeURIComponent` and `unescape` before `btoa` on save, and `atob` then `escape` and `decodeURIComponent` on load — to correctly handle UTF-8 characters through the base64 round trip."
+      }
+    ],
     "tags": [
       "Angular",
       "TypeScript",
       "GitHub Pages",
-      "Responsive Design",
-      "SPA",
-      "OAuth"
+      "OAuth",
+      "Cloudflare Workers",
+      "GitHub API"
     ],
     "github": "https://github.com/eb613819/portfolio-site",
     "images": [
       "https://raw.githubusercontent.com/eb613819/portfolio-site-data/main/images/site_logo.png"
-    ]
+    ],
+    "learned": "Separating content from presentation by storing all project data in a dedicated repository and fetching it at runtime was a deliberate architectural choice that paid off; updating project data never requires touching the application code or triggering a redeployment.\n\nThe token exchange itself is a small amount of code but understanding why it has to live server-side is the important part. Cloudflare Workers make this essentially free and trivial to deploy for low-traffic personal tools."
   },
   {
     "title": "NAS Build",
