@@ -434,14 +434,9 @@
     "design": "Before purchasing anything, calculated the total amperage draw across all equipment and verified it fit within the circuit's 20A breaker limit. Selected a properly rated extension cable and power strip to handle the load safely without risk of overheating or tripping the breaker. Designed and 3D printed a set of pegboard hooks and holders from scratch in CAD, mounted to the back of the closet door for storing extra filament rolls, tools, and printer accessories.",
     "challenges": [],
     "tags": [
-      "Electrical",
-      "Circuit Planning",
       "3D Printing",
       "CAD",
-      "Home Lab",
-      "Safety",
-      "Infrastructure",
-      "FDM"
+      "Circuit Planning"
     ],
     "printables": "https://www.printables.com/model/1605799-over-the-door-pegboard-hanger",
     "images": [
