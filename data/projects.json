@@ -506,22 +506,18 @@
       "Software / Web"
     ],
     "status": "In Progress",
-    "overview": "Building a portfolio website for a local artist to display their work, share contact information, and establish an online presence.",
-    "plan": "Exploring options for integrating an e-commerce shop to allow the artist to sell work directly from the site. If a shop is added, the site will require traditional hosting rather than GitHub Pages to support server-side payment processing. Implementation approach is still being evaluated.",
-    "architecture": "Built with Angular standalone components, following the same component-driven architecture used for this portfolio site.",
-    "features": [
-      "Gallery for displaying artwork",
-      "Contact information and inquiry section",
-      "Clean, visually focused layout suited to showcasing creative work"
-    ],
+    "overview": "Building a WordPress-based e-commerce site for a local artist to display and sell their work, handling inventory, orders, and payments without requiring ongoing developer involvement.",
+    "plan": "Final steps before launch: uploading artwork and product listings, customizing the theme to match the artist's branding, and publishing the site.",
+    "architecture": "Hosted on Namecheap EasyWP with WooCommerce for the storefront and order management, and Stripe integrated for payment processing supporting both online checkout and in-person Tap to Pay.",
+    "features": [],
     "challenges": [],
     "tags": [
-      "Angular",
-      "TypeScript",
-      "E-Commerce",
-      "SPA"
+      "WordPress",
+      "WooCommerce",
+      "PHP",
+      "Stripe"
     ],
-    "github": "https://github.com/eb613819/art-site",
+    "github": "",
     "images": []
   },
   {
