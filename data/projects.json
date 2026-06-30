@@ -242,7 +242,7 @@
       "CPUs: 2x Intel Xeon X5680",
       "Storage: 500GB SSD (Proxmox OS), 2x 1TB SATA SSD (VM storage + backup)"
     ],
-    "design": "Configured Proxmox as the hypervisor and provisioned VMs for self-hosted services: a Calibre Content Server for ebook library access, and a reverse proxy enforcing HTTPS on a subdomain. A media server (Plex or Jellyfin) and a 3D print file server are planned.",
+    "design": "Configured Proxmox as the hypervisor and provisioned VMs for self-hosted services, with a reverse proxy enforcing HTTPS on a subdomain.",
     "challenges": [
       {
         "problem": "All running VMs lost access to media data when the NAS drives failed, taking down all self-hosted media services.",
@@ -263,6 +263,14 @@
     ],
     "images": [
       "https://raw.githubusercontent.com/eb613819/portfolio-site-data/main/images/server.jpg"
+    ],
+    "features": [
+      "Reverse proxy (Tenzin) — Nginx routing subdomains under `evanbrooks.me` to internal services",
+      "Ebook server (Wan-shi-tong) — Calibre Content Server for personal library access",
+      "Todo tracking (Piandao) — Discord bot and web dashboard sharing a common task file",
+      "Planned: Jellyfin media server (Momo)",
+      "Planned: 3D print file sharing server for family use",
+      "Planned: Vaultwarden, Pi-hole, Tailscale, Grafana, Nextcloud, Kubernetes cluster"
     ]
   },
   {
