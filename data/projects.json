@@ -407,14 +407,7 @@
     "motivation": "3D printers run unattended for hours at a time inside a closet. Without monitoring, a thermal runaway, filament jam, or electrical issue could go undetected. Humidity also directly affects filament quality and storage life.",
     "plan": "Raspberry Pi with an Enviro-style multi-sensor HAT covering temperature, humidity, and air quality in a single board. Monitor temperature for thermal runaway or abnormal heat buildup, humidity for filament quality, air quality for fumes from printing activity, and smoke or sudden temperature spikes as early fire warning. Local status display showing current readings. Remote alerts via email or SMS for any out-of-range conditions. Environmental data logging over time to inform airflow tuning and filament storage decisions.",
     "tags": [
-      "Raspberry Pi",
-      "Temperature Sensing",
-      "Humidity",
-      "Air Quality",
-      "Fire Safety",
-      "IoT",
-      "Alerts",
-      "Home Lab"
+      "Raspberry Pi"
     ],
     "images": [
       "https://raw.githubusercontent.com/eb613819/portfolio-site-data/main/images/thermometer.jpg"
