@@ -783,14 +783,15 @@
       "ESC/POS",
       "Proxmox",
       "LXC",
-      "Debian",
-      "systemd",
-      "Home Lab",
-      "Thermal Printer"
+      "systemd"
     ],
     "github": "https://github.com/eb613819/todo-printer",
     "images": [
       "https://raw.githubusercontent.com/eb613819/portfolio-site-data/main/images/printerbot.jpg"
-    ]
+    ],
+    "hardware": [
+      "Rongta RP326 80mm Thermal Receipt Printer (Ethernet, ESC/POS)"
+    ],
+    "learned": "This was my first time building a Discord bot. discord.py made it straightforward to listen for messages in a specific channel and parse them into structured commands."
   }
 ]
