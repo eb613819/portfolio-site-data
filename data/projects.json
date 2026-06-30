@@ -626,15 +626,12 @@
       "Ansible",
       "Buildbot",
       "Linux",
-      "Networking",
-      "Virtualization",
       "Proxmox",
       "DTN",
       "SPARC",
       "ARM",
       "Solaris",
-      "Raspbian",
-      "Research"
+      "Raspbian"
     ],
     "github": "https://github.com/eb613819/ion-dtn-qemu-test-environment",
     "images": [
