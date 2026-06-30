@@ -5,7 +5,7 @@
       "Software / Web"
     ],
     "status": "Completed",
-    "completionDate": "01-06-2026",
+    "completionDate": "04-06-2026",
     "overview": "Designed and developed a personal portfolio website using Angular standalone components and TypeScript, deployed as a static site on GitHub Pages. Includes a built-in content editor at `evanbrooks.me/editor` for managing project data without manually editing JSON, backed by a Cloudflare Worker for secure GitHub OAuth authentication.",
     "architecture": "Architected a decoupled data layer by storing all project and experience content in a dedicated GitHub repository, fetched at runtime via HTTP. This separates content from presentation and the site never needs to be rebuilt or redeployed when data changes. The editor is an Angular route at `/editor` that reads and writes `projects.json` in the data repository directly via the GitHub Contents API, base64-encoding file content for each commit. A separate Cloudflare Worker handles the GitHub OAuth token exchange — the client secret lives in Cloudflare's encrypted environment variables and never touches the frontend. The resulting access token is stored in `sessionStorage` for the tab's lifetime and attached to every GitHub API request as a Bearer token. Developed using a structured Git workflow with feature branches, issue tracking, and pull requests into an always-deployable main branch.",
     "features": [
