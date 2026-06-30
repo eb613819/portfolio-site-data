@@ -551,7 +551,7 @@
     ],
     "status": "In Progress",
     "overview": "Customizing and extending an existing WordPress site for a local author, focused on theme customization and adding e-commerce functionality for selling books directly.",
-    "plan": "Custom WordPress theme modifications to match the author's brand and style, plus shop integration for direct book sales. Shop implementation approach is currently being evaluated.",
+    "plan": "Implementing WooCommerce for direct book sales with Square for payment processing, and customizing the site theme to match the author's branding.",
     "challenges": [
       {
         "problem": "The client has an established subscriber base managed through a WordPress plugin, making a full platform migration impractical without risking subscriber loss.",
@@ -561,14 +561,14 @@
     "tags": [
       "WordPress",
       "PHP",
-      "Theme Development",
-      "E-Commerce",
-      "CMS",
-      "Bluehost"
+      "Bluehost",
+      "WooCommerce",
+      "Square"
     ],
     "images": [
       "https://raw.githubusercontent.com/eb613819/portfolio-site-data/main/images/wordpresslogo.png"
-    ]
+    ],
+    "website": "https://sam-flynn.com/"
   },
   {
     "title": "ML Book Shelf Organizer",
