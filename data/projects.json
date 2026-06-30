@@ -272,7 +272,8 @@
   {
     "title": "LED Drum Kit Lights",
     "types": [
-      "Electronics / Embedded"
+      "Electronics / Embedded",
+      "3D Printing / CAD"
     ],
     "status": "Completed",
     "completionDate": "12-07-2019",
@@ -284,7 +285,7 @@
       "Custom wiring harness routed through the drum kit",
       "LED strips"
     ],
-    "design": "Mounted piezo sensors on each drum to detect strike vibration. Each sensor feeds into the Arduino, which maps triggers to individual LED strips on the corresponding drum. Programmed to handle debouncing, sensitivity thresholds, and LED timing for clean, responsive visual feedback synchronized to playing.",
+    "design": "Mounted piezo sensors on each drum to detect strike vibration. Each sensor feeds into the Arduino, which maps triggers to individual LED strips on the corresponding drum. Programmed to handle debouncing, sensitivity thresholds, and LED timing for clean, responsive visual feedback synchronized to playing. Designed and 3D printed a custom enclosure to house the central Arduino, keeping it protected and cleanly mounted on the drum kit.",
     "challenges": [
       {
         "problem": "Piezo sensors mounted on each drum picked up vibration from neighboring drums in addition to the one they were attached to, causing false triggers on adjacent LED strips.",
