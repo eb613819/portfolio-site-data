@@ -285,17 +285,22 @@
       "LED strips"
     ],
     "design": "Mounted piezo sensors on each drum to detect strike vibration. Each sensor feeds into the Arduino, which maps triggers to individual LED strips on the corresponding drum. Programmed to handle debouncing, sensitivity thresholds, and LED timing for clean, responsive visual feedback synchronized to playing.",
-    "challenges": [],
+    "challenges": [
+      {
+        "problem": "Piezo sensors mounted on each drum picked up vibration from neighboring drums in addition to the one they were attached to, causing false triggers on adjacent LED strips.",
+        "solution": "Tuned sensitivity thresholds in the Arduino code for each sensor so that only strikes strong enough to indicate a direct hit would trigger the corresponding LEDs, filtering out crosstalk vibration from nearby drums."
+      }
+    ],
     "tags": [
       "Arduino",
       "LED Strips",
       "Piezo Sensors",
-      "Embedded C",
-      "Prototyping"
+      "Embedded C"
     ],
     "images": [
       "https://raw.githubusercontent.com/eb613819/portfolio-site-data/main/images/drum_lights.jpg"
-    ]
+    ],
+    "learned": "This was my first time working with piezo sensors. They're simple to wire and read as analog vibration sensors, but get sensitivity tuning right requires real-world testing since the same threshold that catches a deliberate hit can also catch crosstalk from nearby surfaces."
   },
   {
     "title": "H2Load HTTP/3 Docker Container",
