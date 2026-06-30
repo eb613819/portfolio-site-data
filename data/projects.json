@@ -107,16 +107,16 @@
     "challenges": [],
     "tags": [
       "Raspberry Pi 5",
-      "IoT",
       "Linux",
       "SSH",
-      "Smart Home",
-      "MagicMirror"
+      "MagicMirror",
+      "PM2"
     ],
     "github": "https://github.com/MichMich/MagicMirror",
     "images": [
       "https://raw.githubusercontent.com/eb613819/portfolio-site-data/main/images/magicmirror.jpg"
-    ]
+    ],
+    "learned": "Configuring `PM2` to launch MagicMirror automatically on boot was my first time setting up a process to run on startup. `PM2` handles the startup registration with a single command and manages restarts if the process crashes, which is simpler than writing a `systemd` service file manually."
   },
   {
     "title": "Insulin Temperature Monitor",
