@@ -450,7 +450,7 @@
       "Software / Web",
       "DevOps / Cloud"
     ],
-    "status": "In Progress",
+    "status": "Completed",
     "overview": "An ongoing research project to integrate and maintain Backstage, an open-source internal developer portal, into Ohio University's on-premises Kubernetes platform. The portal centralizes developer tooling, service discovery, documentation, and infrastructure visibility across the university's engineering teams.",
     "plan": "Continuing to develop the Homepage plugin with custom theme and layout. Evaluating additional community plugins for expanded visibility into university infrastructure.",
     "architecture": "Deployed to on-premises Kubernetes clusters using Helm charts, with Rancher for cluster management. Azure AD SSO configured via the Backstage auth plugin, with Microsoft Graph API integration for automated user provisioning. All credentials managed using Sealed Secrets - encrypted at rest, stored in version control, and injected into the Backstage pod via Kubernetes secret references at runtime, keeping the deployment fully GitOps-compatible. Dockerfile iteratively improved with multi-stage builds and layer caching to separate dependency installation from application code and significantly reduce rebuild times.",
@@ -462,7 +462,24 @@
       "Jira (community plugin) - issue tracking and project visibility surfaced within the portal",
       "Prometheus & Grafana (community plugins) - real-time Kubernetes cluster metrics and dashboards"
     ],
-    "challenges": [],
+    "challenges": [
+      {
+        "problem": "Attempting to deploy Sealed Secrets resources failed with a Kubernetes RBAC error — the service account lacked permission to create `sealedsecrets` resources in the `bitnami.com` API group within the target namespace.",
+        "solution": "Worked with the university's platform team to grant the correct RBAC permissions for the namespace, since Sealed Secrets requires its own CRD-level permissions beyond standard Kubernetes resource access."
+      },
+      {
+        "problem": "Automated user and group import from Microsoft Graph API failed with an `Authorization_RequestDenied` error, even though the integration had been granted permissions.",
+        "solution": "Diagnosed that the issue was a permission type mismatch — Microsoft Graph distinguishes between delegated permissions (scoped to a signed-in user) and application permissions (a background service with its own identity). Reading organization-wide groups requires application permissions, not delegated, so the Azure AD app registration had to be reconfigured with the correct permission type."
+      },
+      {
+        "problem": "After configuring Azure AD SSO, the Backstage catalog API began returning 401 Unauthorized errors even while logged in through SSO.",
+        "solution": "Traced the issue to the previous guest authentication flow leaving a stale guest token active in the browser session. Removing the guest sign-in option entirely from the configuration, rather than just adding SSO alongside it, resolved the conflict."
+      },
+      {
+        "problem": "The Backstage instance became unreachable in the browser with a certificate date invalid error, despite no recent changes to the deployment.",
+        "solution": "Diagnosed that the issue was unrelated to the application itself — the TLS certificate on the cluster's ingress had expired. Flagged it to the platform team for renewal, confirming the importance of monitoring certificate expiration independently of application health."
+      }
+    ],
     "tags": [
       "Backstage",
       "Kubernetes",
@@ -475,14 +492,13 @@
       "Sealed Secrets",
       "Jira",
       "Docker",
-      "IDP",
-      "GitHub",
-      "DevOps",
-      "On-Prem"
+      "GitHub"
     ],
     "images": [
       "https://raw.githubusercontent.com/eb613819/portfolio-site-data/main/images/backstagelogo.jpg"
-    ]
+    ],
+    "learned": "Working within a managed university Kubernetes platform surfaced a different category of problem than self-managed infrastructure: most issues weren't application bugs but permission and identity configuration — RBAC scopes, Azure AD permission types, and stale authentication state. Diagnosing these required understanding not just Backstage itself but how Kubernetes RBAC, sealed secrets, and OAuth/OIDC permission models interact with each other.",
+    "completionDate": "06-01-2026"
   },
   {
     "title": "Artist Portfolio Website",
