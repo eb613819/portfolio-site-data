@@ -733,9 +733,7 @@
       "ESC/POS",
       "Proxmox",
       "LXC",
-      "Debian",
-      "systemd",
-      "Thermal Printer"
+      "systemd"
     ],
     "images": [
       "https://raw.githubusercontent.com/eb613819/portfolio-site-data/main/images/preview.png",
@@ -743,7 +741,7 @@
     ],
     "completionDate": "05-04-2026",
     "motivation": "I already had a Discord bot handling task capture and printing, but wanted a way to manage lists from a browser without opening Discord. I also wanted a dedicated UI where I could see all my groups at once as receipt-styled cards.",
-    "architecture": "A FastAPI backend handles all file I/O and printer communication, exposing a REST API that the Angular frontend consumes. Tasks persist in a JSON file shared with the Discord bot via a `TASKS_FILE` environment variable, so no syncing is needed and both services read and write the same file. FastAPI also serves the compiled Angular app as static files in production, so one process handles everything. The Angular app is built with standalone components and talks to the API through a dedicated service layer.",
+    "architecture": "A FastAPI backend handles all file I/O and printer communication, exposing a REST API that the Angular frontend consumes. Tasks persist in a JSON file shared with the Discord bot via a `TASKS_FILE` environment variable, so no syncing is needed and both services read and write the same file. FastAPI also serves the compiled Angular app as static files in production, so one process handles everything. The Angular app is built with standalone components and talks to the API through a dedicated service layer.\n\nRuns as a systemd service in production, so the API starts automatically on boot and restarts on failure without manual intervention.",
     "design": "The UI is styled to look like the receipts it produces: monospace font, asterisk and divider borders, and numbered checkboxes. What you see on screen matches what comes out of the printer. Cards sit on a dark dot-grid background with paper texture and large shadows to give the feel of physical receipts sitting on a desk.",
     "features": [
       "Receipt-styled group cards matching the thermal printer output format",
@@ -753,8 +751,11 @@
       "Print a single group or all groups directly from the browser",
       "Shared task data with the Discord bot via a common JSON file"
     ],
-    "learned": "This was my first time using FastAPI. The auto-generated Swagger UI at /docs made it easy to visualize and test each endpoint as I built them. Being able to send real requests at a route immediately after writing it was a much tighter feedback loop than I expected. \n\nI also thought more carefully about where logic should live. There was a temptation to keep `api.py` thin, just load and save, and let the Angular services handle checks like whether a group exists before adding to it. But that logic belongs in the API because it is the only thing with direct access to the data and the only true source of truth. The frontend's view of the data could be stale. \n\nI also got a clearer picture of the browser sandbox. Angular runs on the user's machine, not the server, so it has no filesystem access at all. The API is not just a convenience layer, it is the only path to the data.",
-    "github": "https://github.com/eb613819/todo-printer-web"
+    "learned": "This was my first time using FastAPI. The auto-generated Swagger UI at /docs made it easy to visualize and test each endpoint as I built them. Being able to send real requests at a route immediately after writing it was a much tighter feedback loop than I expected. \n\nI also thought more carefully about where logic should live. There was a temptation to keep `api.py` thin, just load and save, and let the Angular services handle checks like whether a group exists before adding to it. But that logic belongs in the API because it is the only thing with direct access to the data and the only true source of truth. The frontend's view of the data could be stale.",
+    "github": "https://github.com/eb613819/todo-printer-web",
+    "hardware": [
+      "Rongta RP326 80mm Thermal Receipt Printer (Ethernet, ESC/POS)"
+    ]
   },
   {
     "title": "To-Do Thermal Receipt Bot",
